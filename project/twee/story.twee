@@ -1,10 +1,8 @@
 :: StoryData
 {
-    "ifid": "EECB013A-0FC6-41CB-9CF1-07D791258C06"
+    "ifid": "EECB013A-0FC6-41CB-9CF1-07D791258C06",
+    "start": "Central Hub"
 }
 
 :: StoryTitle
 Mars Colony
-
-:: Start
-Hello World!

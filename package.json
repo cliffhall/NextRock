@@ -8,8 +8,8 @@
   },
   "scripts": {
     "build": "gulp build && npm run tweego",
-    "tweego": "tweego -f $npm_package_config_format -o dist/index.html -m src/modules/ --head=src/head-content.html project",
-    "tweego-test": "tweego -f $npm_package_config_format -t -o dist/index.html -m src/modules/ --head=src/head-content.html project"
+    "tweego": "tweego -f $npm_package_config_format -w -o dist/index.html -m src/modules/ --head=src/head-content.html project",
+    "tweego-test": "tweego -f $npm_package_config_format -w -t -o dist/index.html -m src/modules/ --head=src/head-content.html project"
   },
   "keywords": [
     "twine",
