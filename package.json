@@ -1,0 +1,47 @@
+{
+  "name": "mars-colony",
+  "version": "1.0.0",
+  "description": "Run a colony on the red planet. A Twine game",
+  "main": "./dist/index.html",
+  "config": {
+    "format": "harlowe-3"
+  },
+  "scripts": {
+    "build": "gulp build && npm run tweego",
+    "tweego": "tweego -f $npm_package_config_format -o dist/index.html -m src/modules/ --head=src/head-content.html project",
+    "tweego-test": "tweego -f $npm_package_config_format -t -o dist/index.html -m src/modules/ --head=src/head-content.html project"
+  },
+  "keywords": [
+    "twine",
+    "tweego",
+    "twee"
+  ],
+  "author": "Cliff Hall",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-external-helpers": "^7.2.0",
+    "@babel/preset-env": "^7.5.5",
+    "babel-preset-env": "^1.7.0",
+    "del": "^5.1.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csslint": "^1.0.1",
+    "gulp-jshint": "^2.1.0",
+    "gulp-noop": "^1.0.0",
+    "gulp-uglify": "^3.0.2",
+    "jshint": "^2.10.2",
+    "opn-cli": "^3.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cliffhall/mars-colony.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cliffhall/mars-colony/issues"
+  },
+  "homepage": "https://github.com/cliffhall/mars-colony#readme"
+}

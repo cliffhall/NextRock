@@ -1,0 +1,38 @@
+{
+
+  "javascript": {
+    "minify": true,
+    "transpile": true
+  },
+
+  "css": {
+    "minify": true,
+    "autoprefix": true
+  },
+
+  "directories": {
+    "vendor-js": "./src/vendor/**/*.js",
+    "vendor-css": "./src/vendor/**/*.css",
+    "vendor-min-js": "vendor.min.js",
+    "vendor-min-css": "vendor.min.css",
+
+    "app-js": "./src/scripts/**/*.js",
+    "app-css": "./src/styles/**/*.css",
+    "app-min-js": "app.min.js",
+    "app-min-css": "app.min.css",
+
+    "out": "./project",
+    "out-js": "./project/scripts",
+    "out-css": "./project/styles"
+  },
+
+  "browsers": [
+    "> 1%",
+    "last 3 versions",
+    "last 10 Chrome versions",
+    "last 10 Firefox versions",
+    "IE >= 9",
+    "Opera >= 12"
+  ]
+
+}
