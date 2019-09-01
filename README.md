@@ -65,6 +65,6 @@ It is a two-step build whose final output lands in ```dist/index.html```, which 
 This is achieved with ```gulp``` as configured in ```gulpfile.js``` with additional configuration found in ```src/config.js```. All of the ```.css``` and ```.js``` files found in ```src/app``` are transpiled from ES6 to ES5 and minified to ```/project/styles/app.min.css``` and ```project/scripts/app.min.js```. Similarly, any third party ```.css``` and ```.js``` files found in ```src/vendor``` are processed and placed in ```/project/styles/vendor.min.css``` and ```project/scripts/vendor.min.js```.
 
 #### 2. Compile twee source and bundled styles and scripts from step 1.
-This is achieved with ```tweego``` as scripted in ```package.json``` in the ```scripts``` section. It compiles your ```.twee``` source code in ```project/twee``` and picks up any fonts you may have placed in the ```project/fonts```. All this stuff -- fonts, transpiled/minified JS & CSS, and compiled TWEE -- are then baked into a single output file at ```dist/index.html```.
+This is achieved with ```tweego``` as scripted in ```package.json``` in the ```scripts``` section. It compiles your ```.twee``` source code in ```project/twee``` and picks up any fonts you may have placed in the ```project/fonts``` folder. All this stuff -- fonts, transpiled/minified JS & CSS, and compiled TWEE -- are then baked into a single output file at ```dist/index.html```.
 
 
