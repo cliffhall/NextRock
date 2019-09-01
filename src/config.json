@@ -16,8 +16,8 @@
     "vendor-min-js": "vendor.min.js",
     "vendor-min-css": "vendor.min.css",
 
-    "app-js": "./src/scripts/**/*.js",
-    "app-css": "./src/styles/**/*.css",
+    "app-js": "./src/app/**/*.js",
+    "app-css": "./src/app/**/*.css",
     "app-min-js": "app.min.js",
     "app-min-css": "app.min.css",
 
