@@ -4,7 +4,7 @@ Run a colony on the Red Planet. A Twine game.
 ![Colony Map](map.png)
 
 ## STATUS
-Work in Progress
+**Work in Progress** All locations on map exist and you can navigate between them via links. There are no descriptions or logic yet.
 
 ## DEVELOPER SETUP
 ### Prerequisites
