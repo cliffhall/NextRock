@@ -74,10 +74,10 @@ That said, a *lot* of changes have been made.
 ### How and what does this thing build?
 It is a two-step build whose final output lands in ```dist/index.html```, which then is hopefully a playable [Twine](https://twinery.org/) game.
 
-#### 1. Bundle vendor and app-specific JS.
+#### 1. Bundle vendor and app-specific JS/CSS.
 This is achieved with ```gulp``` as configured in ```gulpfile.js```. All of the ```.css``` and ```.js``` files found in ```src/app``` are transpiled from ES6 to ES5 and minified to ```/project/modules/app.min.css``` and ```project/modules/app.min.js```. Similarly, any third party ```.css``` and ```.js``` files found in ```src/vendor``` are processed and placed in ```/project/modules/vendor.min.css``` and ```project/modules/vendor.min.js```.
 
 #### 2. Compile twee source and bundled styles and scripts from step 1.
-This is achieved with ```tweego``` as scripted in ```package.json``` in the ```scripts``` section. It compiles your ```.twee``` source code in ```project/twee``` and picks up any fonts you may have placed in the ```project/modules``` folder as well as minified app or vendor CSS/JS that has been left there by step 1. All this stuff -- fonts, transpiled/minified JS & CSS, and compiled TWEE -- are then baked into a single output file at ```dist/index.html```.
+This is achieved with ```tweego``` as scripted in ```package.json``` in the ```scripts``` section. It compiles your ```.twee``` source code in ```project/twee``` and picks up any fonts you may have placed in the ```project/modules``` folder as well as minified app and/or vendor files that were left there by step 1. All this stuff -- fonts, transpiled/minified JS & CSS, and compiled TWEE -- are then baked into a single output file at ```dist/index.html```.
 
 
