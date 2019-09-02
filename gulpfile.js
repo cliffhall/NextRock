@@ -154,24 +154,31 @@ function validateAppCSS() {
 }
 
 /**
- * Compile Vendor and App CSS/JS
- * @param target
- * @returns {*}
+ * Compile the vendor JS
  */
-function compile (target) {
-    switch (target) {
-        case CFG.SRC.VENDOR_JS:
-            return processJS(CFG.SRC.VENDOR_JS, CFG.OUT.VENDOR_MIN_JS);
+function compileVendorJS() {
+    return processJS(CFG.SRC.VENDOR_JS, CFG.OUT.VENDOR_MIN_JS);
+}
 
-        case CFG.SRC.VENDOR_CSS:
-            return processCSS(CFG.SRC.VENDOR_CSS, CFG.OUT.VENDOR_MIN_CSS);
+/**
+ * Compile the vendor CSS
+ */
+function compileVendorCSS() {
+    return processCSS(CFG.SRC.VENDOR_CSS, CFG.OUT.VENDOR_MIN_CSS);
+}
 
-        case CFG.SRC.APP_JS:
-            return processJS(CFG.SRC.APP_JS, CFG.OUT.APP_MIN_JS);
+/**
+ * Compile the app JS
+ */
+function compileAppJS() {
+    return processJS(CFG.SRC.APP_JS, CFG.OUT.APP_MIN_JS)
+}
 
-        case CFG.SRC.APP_CSS:
-            return processCSS(CFG.SRC.APP_CSS, CFG.OUT.APP_MIN_CSS);
-    }
+/**
+ * Compile the app CSS
+ */
+function compileAppCSS() {
+    return processCSS(CFG.SRC.APP_CSS, CFG.OUT.APP_MIN_CSS);
 }
 
 /**
@@ -186,24 +193,23 @@ function watchSourceFiles() {
 // EXPORT GULP TASKS
 // -----------------
 
-
 // LINT APP JS
-exports[CFG.TASKS.LINT_APP_JS] = () => lintAppJS();
+exports[CFG.TASKS.LINT_APP_JS] = lintAppJS;
 
 // VALIDATE APP CSS
-exports[CFG.TASKS.VALIDATE_APP_CSS] = () => validateAppCSS();
+exports[CFG.TASKS.VALIDATE_APP_CSS] = validateAppCSS;
 
 // BUILD APP JS
-exports[CFG.TASKS.BUILD_APP_JS] = () => compile(CFG.SRC.APP_JS);
+exports[CFG.TASKS.BUILD_APP_JS] = compileAppJS;
 
 // BUILD APP CSS
-exports[CFG.TASKS.BUILD_APP_CSS] = () => compile(CFG.SRC.APP_CSS);
+exports[CFG.TASKS.BUILD_APP_CSS] = compileAppCSS;
 
 // BUILD VENDOR JS
-exports[CFG.TASKS.BUILD_VENDOR_JS] = () => compile(CFG.SRC.VENDOR_JS);
+exports[CFG.TASKS.BUILD_VENDOR_JS] = compileVendorJS;
 
 // BUILD VENDOR CSS
-exports[CFG.TASKS.BUILD_VENDOR_CSS] = () => compile(CFG.SRC.VENDOR_CSS);
+exports[CFG.TASKS.BUILD_VENDOR_CSS] = compileVendorCSS;
 
 // WATCH SOURCE
 exports[CFG.TASKS.WATCH_SOURCE] = watchSourceFiles;
@@ -228,7 +234,7 @@ exports[CFG.TASKS.BUILD] = gulp.parallel(
     exports[CFG.TASKS.BUILD_APP]
 );
 
-// DEFAULT TASK
+// DEFAULT
 exports[CFG.TASKS.DEFAULT] = gulp.series(
     exports[CFG.TASKS.BUILD],
     exports[CFG.TASKS.WATCH_SOURCE]
