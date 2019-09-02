@@ -61,6 +61,7 @@ The structure and build process were  inspired by and based upon [tweego-setup](
 That said, a *lot* of changes have been made.
 * It does not have batch files for windows (the above project can help with that).
 * Folders have been moved around, renamed, or removed altogether in the interest of streamlining and clarity.
+* Configuration of gulp (previously ```config.json```) has been moved inside ```gulpfile.js``` since it wasn't being used for anything else and there was no need to arbitrarily separate the two.. 
 * Support is added to start gulp and tweego in watch mode, so you can just edit your ```.css```, ```.js```, and ```.twee``` files at will and it will automagically recompile everytime you save.
 
 #### Ok, so where does stuff go?
