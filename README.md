@@ -61,7 +61,7 @@ The structure and build process were  inspired by and based upon [tweego-setup](
 That said, a *lot* of changes have been made.
 * It does not have batch files for windows (the above project can help with that).
 * Folders have been moved around, renamed, or removed altogether in the interest of streamlining and clarity.
-* Tweego is started in watch mode, so after running build once, you just edit your ```.twee``` files and it will automagically recompile everytime you save.
+* Support is added to start gulp and tweego in watch mode, so you can just edit your ```.css```, ```.js```, and ```.twee``` files at will and it will automagically recompile everytime you save.
 
 #### Ok, so where does stuff go?
 * Media files that the project references (images, videos, sounds) should be placed directly into the ```dist/assets``` folder, as they are not handled at any stage in the build process.
