@@ -1,4 +1,8 @@
 /* Custom App CSS */
-.test {
-    display: block;
+body, tw-story
+{
+    background: white;
+    color: black;
+    font-family: "Palatino";
+    font-size: 18px;
 }

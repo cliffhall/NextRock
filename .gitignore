@@ -1,2 +1,2 @@
-/project/scripts/*
-/project/styles/*
+/project/modules/*.css
+/project/modules/*.js

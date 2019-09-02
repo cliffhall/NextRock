@@ -7,9 +7,9 @@
     "format": "harlowe-3"
   },
   "scripts": {
-    "build": "gulp build && npm run tweego",
-    "tweego": "tweego -f $npm_package_config_format -w -o dist/index.html -m project/fonts/ --head=src/head-content.html project",
-    "tweego-test": "tweego -f $npm_package_config_format -w -t -o dist/index.html -m project/fonts/ --head=src/head-content.html project"
+    "build-once":  "gulp build && tweego -f $npm_package_config_format -o dist/index.html --head=src/head-content.html project",
+    "watch:gulp": "gulp default",
+    "watch:twee": "tweego -f $npm_package_config_format -w -o dist/index.html --head=src/head-content.html project"
   },
   "keywords": [
     "twine",

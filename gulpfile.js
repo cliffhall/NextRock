@@ -1,8 +1,7 @@
 'use strict';
 
-// REQUIRED MODULES AND CONFIG
+// REQUIRED MODULES AND CFG
 const gulp       = require('gulp');
-const del        = require('del');
 const concat     = require('gulp-concat');
 const uglify     = require('gulp-uglify');
 const babel      = require('gulp-babel');
@@ -11,103 +10,22 @@ const autoprefix = require('gulp-autoprefixer');
 const jshint     = require('gulp-jshint');
 const csslint    = require('gulp-csslint');
 const noop       = require('gulp-noop');
-const config     = require('./src/config.json');
 
-// GULP TASK NAMES
-const DEFAULT          = 'default';
-const WATCH_JS         = 'watch-js';
-const WATCH_TWEE       = 'watch-twee';
-const BUILD            = 'build';
+// CONFIGURATION
+const CFG = {
 
-const LINT_APP_JS      = 'lint-app-js';
-const VALIDATE_APP_CSS = 'validate-app-css';
+    JS: {
+        MINIFY: true,
+        TRANSPILE: true,
+        LINT: {
+            esversion: 6
+        }
+    },
 
-const BUILD_APP        = 'build-app';
-const BUILD_APP_JS     = 'build-app-js';
-const BUILD_APP_CSS    = 'build-app-css';
-
-const BUILD_VENDOR     = 'build-vendor';
-const BUILD_VENDOR_JS  = 'build-vendor-js';
-const BUILD_VENDOR_CSS = 'build-vendor-css';
-
-// COMPILE TARGETS
-const APP_JS           = 'app-js';
-const APP_CSS          = 'app-css';
-const VENDOR_JS        = 'vendor-js';
-const VENDOR_CSS       = 'vendor-css';
-const BROWSERS         = config.browsers;
-
-
-// GULP TASKS
-gulp.task(BUILD_VENDOR_JS,   () => compile(VENDOR_JS));
-gulp.task(BUILD_VENDOR_CSS,  () => compile(VENDOR_CSS));
-gulp.task(BUILD_VENDOR,      gulp.parallel(BUILD_VENDOR_JS, BUILD_VENDOR_CSS));
-
-gulp.task(LINT_APP_JS,       lintAppJS);
-gulp.task(VALIDATE_APP_CSS,  validateAppCSS);
-gulp.task(BUILD_APP_JS,     () => compile(APP_JS));
-gulp.task(BUILD_APP_CSS,    () => compile(APP_CSS));
-gulp.task(BUILD_APP,        gulp.parallel(LINT_APP_JS, VALIDATE_APP_CSS, BUILD_APP_JS, BUILD_APP_CSS));
-
-gulp.task(BUILD,            gulp.parallel(BUILD_VENDOR, BUILD_APP));
-
-
-/**
- * Convert and minify App and Vendor JS
- * @param dir
- * @param out
- * @param name
- * @returns {*}
- */
-function processScripts (dir, out, name) {
-    return gulp.src(dir)
-        .pipe(concat(name))
-        .pipe(config.javascript.transpile ? babel({
-            presets : [
-                ['@babel/preset-env', {
-                    targets : BROWSERS
-                }]
-            ]
-        }) : noop())
-        .pipe(config.javascript.minify ?
-            uglify().on('error', (e) => {console.log(e);}) : noop())
-        .pipe(gulp.dest(out));
-}
-
-/**
- * Minify and autoprefix App and Vendor CSS
- * @param dir
- * @param out
- * @param name
- * @returns {*}
- */
-function processStyles (dir, out, name) {
-    return gulp.src(dir)
-        .pipe(concat(name))
-        .pipe(config.css.minify ? clean() : noop())
-        .pipe(config.css.autoprefix ? autoprefix({
-            browsers:BROWSERS
-        }) : noop())
-        .pipe(gulp.dest(out));
-}
-
-/**
- * Lint App JS
- * @returns {*}
- */
-function lintAppJS() {
-    return gulp.src(config.directories['app-js'])
-        .pipe(jshint())
-        .pipe(jshint.reporter('default', { beep : true }));
-}
-
-/**
- * Validate App CSS
- * @returns {*}
- */
-function validateAppCSS() {
-    return gulp.src(config.directories['app-css'])
-        .pipe(csslint({
+    CSS: {
+        MINIFY: true,
+        AUTOPREFIX: true,
+        LINT: {
             'box-model' : false,
             'adjoining-classes' : false,
             'box-sizing' : false,
@@ -130,28 +48,188 @@ function validateAppCSS() {
             'order-alphabetical' : false,
             'qualified-headings' : false,
             'unique-headings' : false
-        }))
+        }
+    },
+
+    SRC: {
+        VENDOR_JS: "./src/vendor/**/*.js",
+        VENDOR_CSS: "./src/vendor/**/*.css",
+        APP_JS: "./src/app/**/*.js",
+        APP_CSS: "./src/app/**/*.css",
+    },
+
+    OUT: {
+        MODULES: "./project/modules",
+        VENDOR_MIN_JS: "vendor.min.js",
+        VENDOR_MIN_CSS: "vendor.min.css",
+        APP_MIN_JS: "app.min.js",
+        APP_MIN_CSS: "app.min.css",
+
+    },
+
+    BROWSERS: [
+        "> 1%",
+        "last 3 versions",
+        "last 10 Chrome versions",
+        "last 10 Firefox versions",
+        "IE >= 9",
+        "Opera >= 12"
+    ],
+
+    TASKS: {
+        DEFAULT: 'default',
+        WATCH_SOURCE: 'watch-src',
+
+        BUILD: 'build',
+
+        BUILD_APP: 'build-app',
+        BUILD_APP_JS: 'build-app-js',
+        BUILD_APP_CSS: 'build-app-css',
+        LINT_APP_JS: 'lint-app-js',
+        VALIDATE_APP_CSS: 'validate-app-css',
+
+        BUILD_VENDOR: 'build-vendor',
+        BUILD_VENDOR_JS: 'build-vendor-js',
+        BUILD_VENDOR_CSS: 'build-vendor-css'
+    }
+
+};
+
+/**
+ * Convert and MINIFY App and Vendor JS
+ * @param src
+ * @param target
+ * @returns {*}
+ */
+function processJS (src, target) {
+    return gulp.src(src)
+        .pipe(concat(target))
+        .pipe(CFG.JS.TRANSPILE ? babel({
+            presets : [
+                ['@babel/preset-env', {
+                    targets : CFG.BROWSERS
+                }]
+            ]
+        }) : noop())
+        .pipe(CFG.JS.MINIFY ?
+            uglify().on('error', (e) => {console.log(e);}) : noop())
+        .pipe(gulp.dest(CFG.OUT.MODULES));
+}
+
+/**
+ * MINIFY and AUTOPREFIX App and Vendor CSS
+ * @param src
+ * @param out
+ * @param target
+ * @returns {*}
+ */
+function processCSS (src, target) {
+    return gulp.src(src)
+        .pipe(concat(target))
+        .pipe(CFG.CSS.MINIFY ? clean() : noop())
+        .pipe(CFG.CSS.AUTOPREFIX ? autoprefix({
+            browsers: CFG.BROWSERS
+        }) : noop())
+        .pipe(gulp.dest(CFG.OUT.MODULES));
+}
+
+/**
+ * Lint App JS
+ * @returns {*}
+ */
+function lintAppJS() {
+    return gulp.src(CFG.SRC.APP_JS)
+        .pipe(jshint(CFG.JS.LINT))
+        .pipe(jshint.reporter('default', { beep : true }));
+}
+
+/**
+ * Validate App CSS
+ * @returns {*}
+ */
+function validateAppCSS() {
+    return gulp.src(CFG.SRC.APP_CSS)
+        .pipe(csslint(CFG.CSS.LINT))
         .pipe(csslint.formatter());
 }
 
 /**
  * Compile Vendor and App CSS/JS
- * @param what
+ * @param target
  * @returns {*}
  */
 function compile (target) {
-    const dir = config.directories;
     switch (target) {
-        case 'vendor-js':
-            return processScripts(dir['vendor-js'], dir['out-js'], dir['vendor-min-js']);
+        case CFG.SRC.VENDOR_JS:
+            return processJS(CFG.SRC.VENDOR_JS, CFG.OUT.VENDOR_MIN_JS);
 
-        case 'vendor-css':
-            return processStyles(dir['vendor-css'], dir['out-css'], dir['vendor-min-css']);
+        case CFG.SRC.VENDOR_CSS:
+            return processCSS(CFG.SRC.VENDOR_CSS, CFG.OUT.VENDOR_MIN_CSS);
 
-        case 'app-js':
-            return processScripts(dir['app-js'], dir['out-js'], dir['app-min-js']);
+        case CFG.SRC.APP_JS:
+            return processJS(CFG.SRC.APP_JS, CFG.OUT.APP_MIN_JS);
 
-        case 'app-css':
-            return processStyles(dir['app-css'], dir['out-css'], dir['app-min-css']);
+        case CFG.SRC.APP_CSS:
+            return processCSS(CFG.SRC.APP_CSS, CFG.OUT.APP_MIN_CSS);
     }
 }
+
+/**
+ * Watch the APP and VENDOR source files for changes
+ */
+function watchSourceFiles() {
+    gulp.watch([CFG.SRC.APP_JS, CFG.SRC.APP_CSS], exports[CFG.TASKS.BUILD_APP]);
+    gulp.watch([CFG.SRC.VENDOR_JS, CFG.SRC.VENDOR_CSS], exports[CFG.TASKS.BUILD_VENDOR]);
+}
+
+// -----------------
+// EXPORT GULP TASKS
+// -----------------
+
+
+// LINT APP JS
+exports[CFG.TASKS.LINT_APP_JS] = () => lintAppJS();
+
+// VALIDATE APP CSS
+exports[CFG.TASKS.VALIDATE_APP_CSS] = () => validateAppCSS();
+
+// BUILD APP JS
+exports[CFG.TASKS.BUILD_APP_JS] = () => compile(CFG.SRC.APP_JS);
+
+// BUILD APP CSS
+exports[CFG.TASKS.BUILD_APP_CSS] = () => compile(CFG.SRC.APP_CSS);
+
+// BUILD VENDOR JS
+exports[CFG.TASKS.BUILD_VENDOR_JS] = () => compile(CFG.SRC.VENDOR_JS);
+
+// BUILD VENDOR CSS
+exports[CFG.TASKS.BUILD_VENDOR_CSS] = () => compile(CFG.SRC.VENDOR_CSS);
+
+// WATCH SOURCE
+exports[CFG.TASKS.WATCH_SOURCE] = watchSourceFiles;
+
+// BUILD VENDOR CODE
+exports[CFG.TASKS.BUILD_VENDOR] = gulp.parallel(
+    exports[CFG.TASKS.BUILD_VENDOR_JS],
+    exports[CFG.TASKS.BUILD_VENDOR_CSS]
+);
+
+// BUILD APP CODE
+exports[CFG.TASKS.BUILD_APP] = gulp.parallel(
+    exports[CFG.TASKS.LINT_APP_JS],
+    exports[CFG.TASKS.VALIDATE_APP_CSS],
+    exports[CFG.TASKS.BUILD_APP_JS],
+    exports[CFG.TASKS.BUILD_APP_CSS]
+);
+
+// BUILD ALL
+exports[CFG.TASKS.BUILD] = gulp.parallel(
+    exports[CFG.TASKS.BUILD_VENDOR],
+    exports[CFG.TASKS.BUILD_APP]
+);
+
+// DEFAULT TASK
+exports[CFG.TASKS.DEFAULT] = gulp.series(
+    exports[CFG.TASKS.BUILD],
+    exports[CFG.TASKS.WATCH_SOURCE]
+);
