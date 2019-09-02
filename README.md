@@ -41,7 +41,7 @@ npm run build-once
 ### Test the output
 Open ```dist/index.html``` in your browser of choice
 
-### Contiuous development 
+## CONTINUOUS DEVELOPMENT
 To work on JS, CSS, and TWEE sources and have them continuously compiled as you make changes, you need to open two dedicated terminal windows and run:
 ```
 npm run watch:gulp
@@ -53,7 +53,7 @@ and
 npm run watch:twee
 ```
 
-### Project structure and build process
+## Project structure and build process
 You might want to fiddle with the source code of this game, contribute to it, or use its skeleton as a basis for your own project. So, it's worth describing how things work and where things go here.
 
 The structure and build process were  inspired by and based upon [tweego-setup](https://github.com/ChapelR/tweego-setup) by Chapel.
