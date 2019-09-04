@@ -1,8 +1,111 @@
-/* Custom App CSS */
-body, tw-story
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body, tw-story {
+    background-image: url("assets/colonists.jpg");
+    color: #839496;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+
+}
+
+h2 {
+    color: #000000;
+}
+
+tw-passage {
+    background-color: #e7c19c;
+    border-radius: 10px;
+    padding-top: 1em;
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-bottom: 3em;
+    box-shadow: 0 1px 3px #000000;
+}
+
+tw-sidebar {
+    background: #fff;
+    color: #93a1a1;
+    border-radius: 10px;
+}
+
+/* LINKS */
+
+.enchantment-link, tw-link, a {
+    color: #cb4b16;
+    font-weight: bold;
+
+}
+
+.enchantment-link:visited, tw-link:visited, .enchantment-link.visited, tw-link.visited, a:visited {
+    color: #268bd2;
+    font-weight: bold;
+}
+
+.enchantment-link:hover, tw-link:hover, a:hover .visited:hover {
+    color: #cb4b16 !important;
+    font-weight: bold;
+    text-decoration-line: underline;
+}
+
+
+/* EFFECTS */
+@keyframes pulsein {
+    from { color: #00fbf7; text-shadow: 0 0 1em #00fbf7; }
+    to { color: #ADC3D8; text-shadow: 0 0; }
+}
+.pulse-in {
+    color: #ADC3D8;
+    font-size: 1.1em;
+    animation: pulsein 1.2s linear 3;
+}
+span.pulse-in {
+    font-size: inherit;
+}
+
+/* IMAGE STYLES */
+
+img {
+    /* for example */
+    /* border: 1px solid black; */
+}
+
+img.full-width {
+    display:block; margin-right:auto; margin-left:auto;
+    width: 100%;
+}
+
+
+
+/*
+	TABLET-SPECIFIC RULES / SMALL WIDTH BROWSERS
+*/
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
 {
-    background: white;
-    color: black;
-    font-family: "Palatino";
-    font-size: 18px;
+
+    tw-story {
+        font-size: 1em;
+        width: 100%;
+        max-width: 95%;
+        margin: 0 auto 0 auto;
+    }
+
+}
+
+/*
+	MOBILE-SPECIFIC RULES
+
+	You often want to make fonts much larger.
+*/
+@media only screen and (max-device-width: 767px) {
+
+    tw-story {
+        font-size: 3.2em;
+        width: 55em;
+        margin: 0 auto 0 auto;
+        padding: 20% 5%;
+    }
+
 }
