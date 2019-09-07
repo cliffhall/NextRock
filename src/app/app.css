@@ -16,17 +16,14 @@ h2 {
 tw-passage {
     background-color: #e7c19c;
     border-radius: 10px;
-    padding-top: 1em;
-    padding-left: 3em;
-    padding-right: 3em;
-    padding-bottom: 3em;
+    padding: 1em 3em 3em;
     box-shadow: 0 1px 3px #000000;
 }
 
 tw-sidebar {
-    background: #fff;
-    color: #93a1a1;
+    background: #e7c19c;
     border-radius: 10px;
+    box-shadow: 0 1px 3px #000000;
 }
 
 /* LINKS */
