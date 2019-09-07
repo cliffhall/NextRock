@@ -4,7 +4,7 @@
   "description": "Run a colony on the red planet. A Twine game",
   "main": "./dist/index.html",
   "config": {
-    "format": "harlowe-3"
+    "format": "sugarcube-2"
   },
   "scripts": {
     "build-once": "gulp build && tweego -f $npm_package_config_format -o dist/index.html --head=src/head-content.html project",
