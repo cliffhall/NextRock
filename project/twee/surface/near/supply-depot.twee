@@ -1,4 +1,5 @@
 :: Supply Depot [surface]
-Destinations:
-[[Airlock]] | [[Rover Bay]]
-[[Comms Station]]
+
+
+<div class="nav"><div class="section">Destinations</div>
+<div>[[Airlock]] [[Rover Bay]] [[Comms Station]]</div></div>
