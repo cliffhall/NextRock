@@ -1,7 +1,5 @@
 :: Work Hub [hub]
-Exits:
-[[Central Hub]]
-[[Mechanical Fabrication]] | [[Electrical Engineering]]
-[[Network Operations]] | [[Life Support]]
-[[Greenhouse]] | [[Waste Recycling]]
-[[Infirmary]] | [[Science Lab]]
+
+
+<div class="nav"><div class="section">Exits</div>
+<div>[[Central Hub]] [[Life Support]] [[Science Lab]] [[Greenhouse]] [[Recycling]] [[Fabrication]] [[Engineering]] [[Network Operations]]</div></div>
