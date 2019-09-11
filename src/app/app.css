@@ -129,3 +129,17 @@ body {
     background-color: #cb4b16;
     color: #ccc;
 }
+
+/* Dialogue Widget */
+#dialogue > div {
+    padding: 0.5em 0;
+}
+div.choice {
+    font-weight: bold;
+}
+ul.choices {
+    list-style: none;
+}
+q {
+    quotes: "“" "”" "‘" "’";
+}

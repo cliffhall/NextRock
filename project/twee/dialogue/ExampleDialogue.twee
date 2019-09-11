@@ -1,0 +1,30 @@
+:: ExampleDialogue [dialogue]
+/* An example setup and display of the DialogueWidget
+   USAGE: <<include "ExampleDialogue">>
+ */
+\<<set _dialogue = {
+    "": {
+        text: "<div>Before you stands a wizard, clad in heavy robes, scarves, and a pointed hat. He gives a cheerful but heavily muffled greeting. <q>Ownt fon?</q> the wizard inquires as he holds out a handful of rings which radiate magical energy.</div><div>Take one?</div>",
+        choices: [
+            { text: "One with a shiny jewel on top!", next: "death" },
+            { text: "A band with runes glowing around it!", next: "runes" },
+            { text: "Mom told me not to accept strange items from people I don't know&hellip;", next: "death"}
+        ]},
+    "runes": {
+        text: "<div><q>A fifve foil</q> the wizard responds as he starts watching you closely.</div><div>The ring starts to glow brighter as it sits in your hand, and hum softly with arcane power.</div>",
+        choices: [
+            { text: "Drop it like it's hot!", next: "death" },
+            { text: "<q>So how do I use this thing?</q>", next: "death" },
+            { text: "Put it on!", next: "mistake" }
+        ]},
+    "mistake": {
+        text: "<div>Your mistake quickly becomes apparent. As the ring slips past your knuckles a burning rock falls from the sky, striking you down where you stand. Perhaps it was a ring of wishes&hellip; or just a ring of improbable luck.</div>",
+        choices: [
+            { text: "ded", next: "death" }
+        ]},
+    "death": {
+        text: "You're death. Game over man, game over."
+    }
+}>>\
+<<set _dialogueIdx = "">>\
+<<showDialogue>>
