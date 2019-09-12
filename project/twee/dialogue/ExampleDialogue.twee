@@ -1,6 +1,14 @@
 :: ExampleDialogue [dialogue]
 /* An example setup and display of the DialogueWidget
    USAGE: <<include "ExampleDialogue">>
+
+   Each key of _dialogue object is a branch of the dialogue, with "" being the beginning.
+   The text property of the branch is shown, followed by the choices, rendered as links.
+   The choices property of a branch contains an object with:
+     - "text" for the link text
+     - "next" if present will be the branch to render next when the link is clicked
+     - "click" if present will be macro to be executed, in quotes
+     - "filter" if present will be a condition in quotes, which if evaluating to true will allow the link to be rendered
  */
 \<<set _dialogue = {
     "": {
@@ -8,7 +16,8 @@
         choices: [
             { text: "One with a shiny jewel on top!", next: "death" },
             { text: "A band with runes glowing around it!", next: "runes" },
-            { text: "Mom told me not to accept strange items from people I don't know&hellip;", next: "death"}
+            { text: "Mom told me not to accept strange items from people I don't know&hellip;", next: "death"},
+            { text: "Go away.", next: "death", filter: "$day != 7" }
         ]},
     "runes": {
         text: "<div><q>A fifve foil</q> the wizard responds as he starts watching you closely.</div><div>The ring starts to glow brighter as it sits in your hand, and hum softly with arcane power.</div>",
@@ -23,8 +32,11 @@
             { text: "ded", next: "death" }
         ]},
     "death": {
-        text: "You're death. Game over man, game over."
-    }
+    		text: "You're death. Game over man, game over.",
+    		choices: [
+    			{ text: "Try again.", click: "<<goto `passage()`>>" }
+    		]
+    	}
 }>>\
 <<set _dialogueIdx = "">>\
 <<showDialogue>>

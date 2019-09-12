@@ -111,6 +111,14 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 /* twine-user-stylesheet #3: "vendor.min.css" */
 body{color:#111;background-color:#fff}a{color:#35c}a:hover{color:#57e}span.link-disabled{color:#777}button{color:#111;background-color:#acf;border-color:#8ad}button:hover{background-color:#8ad;border-color:#68b}button:disabled{background-color:#ccc;border-color:#aaa}input,select,textarea{color:#111;border-color:#ccc}input:not(:disabled):focus,input:not(:disabled):hover,select:not(:disabled):focus,select:not(:disabled):hover,textarea:not(:disabled):focus,textarea:not(:disabled):hover{background-color:#ddd;border-color:#111}hr{border-color:#111}.error-view{background-color:#eaa;border-left-color:#d77}.error-view>.error-source:not([hidden]){background-color:rgba(255,255,255,.2)}#ui-bar{background-color:#eee;border-color:#ccc}#ui-bar hr{border-color:#ccc}#ui-bar-history [id|=history],#ui-bar-toggle{color:#111;border-color:#ccc}#ui-bar-history [id|=history]:hover,#ui-bar-toggle:hover{background-color:#ddd;border-color:#111}#ui-bar-history [id|=history]:disabled{color:#ccc;background-color:transparent;border-color:#ccc}#menu ul{border-color:#ccc}#menu li:not(:first-child){border-top-color:#ccc}#menu li a{color:#111}#menu li a:hover{background-color:#ddd;border-color:#111}#ui-overlay{background-color:#777}#ui-dialog-titlebar{background-color:#ccc}#ui-dialog-close:hover{background-color:#b44;border-color:#a33}#ui-dialog-body{background-color:#fff;border-color:#ccc}#ui-dialog-body hr{background-color:#ccc}#ui-dialog-body.list li:not(:first-child){border-top-color:#ccc}#ui-dialog-body.list li a{color:#111}#ui-dialog-body.list li a:hover{background-color:#ddd;border-color:#111}#ui-dialog-body.saves tr:not(:first-child),#ui-dialog-body.saves>:not(:first-child){border-top-color:#ccc}#ui-dialog-body.saves .empty{color:#777}#ui-dialog-body.settings button[id|=setting-control]{color:#111;border-color:#ccc}#ui-dialog-body.settings button[id|=setting-control]:hover{background-color:#ddd;border-color:#111}#ui-dialog-body.settings button[id|=setting-control].enabled{background-color:#9e9;border-color:#7c7}#ui-dialog-body.settings button[id|=setting-control].enabled:hover{background-color:#7c7;border-color:#5a5}#debug-bar,#debug-bar-toggle,#debug-bar-watch{background-color:#eee;border-color:#ccc}#debug-bar-watch div{color:#777}#debug-bar-toggle,#debug-bar-views-toggle,#debug-bar-watch-toggle{color:#111;border-color:#ccc}#debug-bar-toggle:hover,#debug-bar-views-toggle:hover,#debug-bar-watch-toggle:hover{background-color:#ddd;border-color:#111}#debug-bar-watch:not([hidden])~div #debug-bar-watch-toggle,html[data-debug-view] #debug-bar-views-toggle{background-color:#9e9;border-color:#7c7}#debug-bar-watch:not([hidden])~div #debug-bar-watch-toggle:hover,html[data-debug-view] #debug-bar-views-toggle:hover{background-color:#7c7;border-color:#5a5}html:not([data-debug-view]) #debug-view-toggle{color:#111;border-color:#ccc}html:not([data-debug-view]) #debug-view-toggle:hover{background-color:#eee;border-color:#111}html[data-debug-view] #debug-view-toggle{background-color:#9e9;border-color:#7c7}html[data-debug-view] #debug-view-toggle:hover{background-color:#7c7;border-color:#5a5}html[data-debug-view] .debug{background-color:#dc9}html[data-debug-view] .debug.hidden,html[data-debug-view] .debug.hidden .debug{background-color:#bbb}</style><script role="script" id="twine-user-script" type="text/twine-javascript">"use strict";var test=444;</script><tw-passagedata pid="1" name="ExampleDialogue" tags="dialogue" position="100,100" size="100,100">/* An example setup and display of the DialogueWidget
    USAGE: &lt;&lt;include &quot;ExampleDialogue&quot;&gt;&gt;
+
+   Each key of _dialogue object is a branch of the dialogue, with &quot;&quot; being the beginning.
+   The text property of the branch is shown, followed by the choices, rendered as links.
+   The choices property of a branch contains an object with:
+     - &quot;text&quot; for the link text
+     - &quot;next&quot; if present will be the branch to render next when the link is clicked
+     - &quot;click&quot; if present will be macro to be executed, in quotes
+     - &quot;filter&quot; if present will be a condition in quotes, which if evaluating to true will allow the link to be rendered
  */
 \&lt;&lt;set _dialogue = {
     &quot;&quot;: {
@@ -118,7 +126,8 @@ body{color:#111;background-color:#fff}a{color:#35c}a:hover{color:#57e}span.link-
         choices: [
             { text: &quot;One with a shiny jewel on top!&quot;, next: &quot;death&quot; },
             { text: &quot;A band with runes glowing around it!&quot;, next: &quot;runes&quot; },
-            { text: &quot;Mom told me not to accept strange items from people I don&#39;t know&amp;hellip;&quot;, next: &quot;death&quot;}
+            { text: &quot;Mom told me not to accept strange items from people I don&#39;t know&amp;hellip;&quot;, next: &quot;death&quot;},
+            { text: &quot;Go away.&quot;, next: &quot;death&quot;, filter: &quot;$day != 7&quot; }
         ]},
     &quot;runes&quot;: {
         text: &quot;&lt;div&gt;&lt;q&gt;A fifve foil&lt;/q&gt; the wizard responds as he starts watching you closely.&lt;/div&gt;&lt;div&gt;The ring starts to glow brighter as it sits in your hand, and hum softly with arcane power.&lt;/div&gt;&quot;,
@@ -133,8 +142,11 @@ body{color:#111;background-color:#fff}a{color:#35c}a:hover{color:#57e}span.link-
             { text: &quot;ded&quot;, next: &quot;death&quot; }
         ]},
     &quot;death&quot;: {
-        text: &quot;You&#39;re death. Game over man, game over.&quot;
-    }
+    		text: &quot;You&#39;re death. Game over man, game over.&quot;,
+    		choices: [
+    			{ text: &quot;Try again.&quot;, click: &quot;&lt;&lt;goto `passage()`&gt;&gt;&quot; }
+    		]
+    	}
 }&gt;&gt;\
 &lt;&lt;set _dialogueIdx = &quot;&quot;&gt;&gt;\
 &lt;&lt;showDialogue&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Central Hub" tags="hub" position="225,100" size="100,100">This is the heart of the colony. More foot traffic passes through here than any other pod or hub.
@@ -229,38 +241,53 @@ body{color:#111;background-color:#fff}a{color:#35c}a:hover{color:#57e}span.link-
 &lt;div class=&quot;nav&quot;&gt;&lt;div class=&quot;section&quot;&gt;Exits&lt;/div&gt;
 &lt;div&gt;[[Central Hub]] [[Life Support-&gt;Life Support Pod]] [[Laboratory-&gt;Laboratory Pod]] [[Greenhouse-&gt;Greenhouse Pod]] [[Recycling-&gt;Waste Recycling Pod]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="32" name="DialogWidget" tags="widget" position="225,475" size="100,100">/* A widget to manage a dialogue with another character.
    USAGE: see ExampleDialogue.twee
+   Tip o&#39; the propeller beanie to Akjosch: https://gist.github.com/Akjosch/54efa4ad24c23e4a2091d8a4fcc2d23e
  */
 &lt;&lt;widget &quot;dialogueLink&quot;&gt;&gt;&lt;&lt;nobr&gt;&gt;
-    &lt;&lt;capture _text, _next&gt;&gt; /* make them local variables */
-        &lt;&lt;set _text = $args[0]&gt;&gt;
-        &lt;&lt;set _next = $args[1]&gt;&gt;
-        &lt;&lt;link _text&gt;&gt;
-            &lt;&lt;remove &quot;ul.choices&quot;&gt;&gt;
-            &lt;&lt;append &quot;#dialogue&quot;&gt;&gt;&lt;div class=&quot;choice&quot;&gt;&lt;&lt;= _text&gt;&gt;&lt;/div&gt;&lt;&lt;/append&gt;&gt;
-            &lt;&lt;if _next&gt;&gt;
-                &lt;&lt;set _dialogueIdx = _next&gt;&gt;
-                &lt;&lt;updateDialogue&gt;&gt;
-            &lt;&lt;/if&gt;&gt;
-        &lt;&lt;/link&gt;&gt;
-    &lt;&lt;/capture&gt;&gt;
+	&lt;&lt;capture _text, _next&gt;&gt; /* make them local variables */
+		&lt;&lt;set _text = $args[0]&gt;&gt;
+		&lt;&lt;set _next = $args[1]&gt;&gt;
+		&lt;&lt;set _click = $args[2]&gt;&gt;
+		&lt;&lt;link _text&gt;&gt;
+			&lt;&lt;remove &quot;ul.choices&quot;&gt;&gt;
+			&lt;&lt;append &quot;#dialoguebox&quot;&gt;&gt;&lt;div class=&quot;choice&quot;&gt;&lt;&lt;= _text&gt;&gt;&lt;/div&gt;&lt;&lt;/append&gt;&gt;
+			&lt;&lt;if _next&gt;&gt;
+				&lt;&lt;set _dialogueIdx = _next&gt;&gt;
+				&lt;&lt;updateDialogue&gt;&gt;
+			&lt;&lt;/if&gt;&gt;
+			&lt;&lt;if _click&gt;&gt;
+				/* run what&#39;s there */
+				&lt;&lt;= _click&gt;&gt;
+			&lt;&lt;/if&gt;&gt;
+		&lt;&lt;/link&gt;&gt;
+	&lt;&lt;/capture&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;&lt;&lt;/widget&gt;&gt;
-&lt;&lt;widget &quot;updateDialogue&quot;&gt;&gt;&lt;&lt;silently&gt;&gt;
+&lt;&lt;widget &quot;updateDialogue&quot;&gt;&gt;&lt;&lt;silently&gt;&gt;&lt;&lt;nobr&gt;&gt;
 	&lt;&lt;timed 0s&gt;&gt;
 		&lt;&lt;set _current = _dialogue[_dialogueIdx]&gt;&gt;
-        &lt;&lt;run console.log(_current)&gt;&gt;
 		&lt;&lt;if !_current&gt;&gt;
-            /* Display some error */
+			/* Display some error */
 		&lt;&lt;else&gt;&gt;
-			&lt;&lt;if _current.text&gt;&gt;&lt;&lt;append &quot;#dialogue&quot;&gt;&gt;&lt;&lt;= _current.text&gt;&gt;&lt;&lt;/append&gt;&gt;&lt;&lt;/if&gt;&gt;
-            &lt;&lt;if _current.choices&gt;&gt;&lt;&lt;append &quot;#dialogue&quot;&gt;&gt;&lt;&lt;= &quot;&lt;ul class=&#39;choices&#39;&gt;&quot; + _current.choices.map(function(choice) {
-                return &quot;&lt;li&gt;&lt;&lt;dialogueLink `unescape(&#39;&quot; + escape(choice.text) + &quot;&#39;)` &#39;&quot; + (choice.next||&quot;&quot;) + &quot;&#39;&gt;&gt;&lt;/li&gt;&quot;;
-            }).join(&quot;&quot;) + &quot;&lt;/ul&gt;&quot;&gt;&gt;&lt;&lt;/append&gt;&gt;&lt;&lt;/if&gt;&gt;
+			&lt;&lt;if _current.text&gt;&gt;&lt;&lt;append &quot;#dialoguebox&quot;&gt;&gt;&lt;&lt;= _current.text&gt;&gt;&lt;&lt;/append&gt;&gt;&lt;&lt;/if&gt;&gt;
+			&lt;&lt;if _current.choices&gt;&gt;&lt;&lt;append &quot;#dialoguebox&quot;&gt;&gt;&lt;ul class=&quot;choices&quot;&gt;
+				&lt;&lt;for _choice range _current.choices&gt;&gt;
+					&lt;&lt;if _choice.filter&gt;&gt;
+						&lt;&lt;capture _filter&gt;&gt; /* make _filter a local variable */
+							&lt;&lt;run jQuery.wiki(&quot;&lt;&lt;set _filter = !!(&quot; + _choice.filter + &quot;)&gt;&gt;&quot;)&gt;&gt;
+							&lt;&lt;if _filter&gt;&gt;
+								&lt;&lt;continue&gt;&gt; /* don&#39;t create this link */
+							&lt;&lt;/if&gt;&gt;
+						&lt;&lt;/capture&gt;&gt;
+					&lt;&lt;/if&gt;&gt;
+					&lt;li&gt;&lt;&lt;dialogueLink _choice.text _choice.next _choice.click&gt;&gt;&lt;/li&gt;
+				&lt;&lt;/for&gt;&gt;
+			&lt;/ul&gt;&lt;&lt;/append&gt;&gt;&lt;&lt;/if&gt;&gt;
 		&lt;&lt;/if&gt;&gt;
 	&lt;&lt;/timed&gt;&gt;
-&lt;&lt;/silently&gt;&gt;&lt;&lt;/widget&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;&lt;&lt;/silently&gt;&gt;&lt;&lt;/widget&gt;&gt;
 &lt;&lt;widget &quot;showDialogue&quot;&gt;&gt;&lt;&lt;nobr&gt;&gt;
-	&lt;div id=&quot;dialogue&quot;&gt;
-    &lt;/div&gt;
+	&lt;div id=&quot;dialoguebox&quot;&gt;
+	&lt;/div&gt;
 	&lt;&lt;updateDialogue&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="PassageHeader" tags="header" position="350,475" size="100,100">!!&lt;&lt;print passage()&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="StoryCaption" tags="" position="475,475" size="100,100">&lt;&lt;print &quot;This is turn #&quot; + turns()&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Airlock" tags="pod" position="600,475" size="100,100">
 

@@ -1,37 +1,52 @@
 :: DialogWidget [widget]
 /* A widget to manage a dialogue with another character.
    USAGE: see ExampleDialogue.twee
+   Tip o' the propeller beanie to Akjosch: https://gist.github.com/Akjosch/54efa4ad24c23e4a2091d8a4fcc2d23e
  */
 <<widget "dialogueLink">><<nobr>>
-    <<capture _text, _next>> /* make them local variables */
-        <<set _text = $args[0]>>
-        <<set _next = $args[1]>>
-        <<link _text>>
-            <<remove "ul.choices">>
-            <<append "#dialogue">><div class="choice"><<= _text>></div><</append>>
-            <<if _next>>
-                <<set _dialogueIdx = _next>>
-                <<updateDialogue>>
-            <</if>>
-        <</link>>
-    <</capture>>
+	<<capture _text, _next>> /* make them local variables */
+		<<set _text = $args[0]>>
+		<<set _next = $args[1]>>
+		<<set _click = $args[2]>>
+		<<link _text>>
+			<<remove "ul.choices">>
+			<<append "#dialoguebox">><div class="choice"><<= _text>></div><</append>>
+			<<if _next>>
+				<<set _dialogueIdx = _next>>
+				<<updateDialogue>>
+			<</if>>
+			<<if _click>>
+				/* run what's there */
+				<<= _click>>
+			<</if>>
+		<</link>>
+	<</capture>>
 <</nobr>><</widget>>
-<<widget "updateDialogue">><<silently>>
+<<widget "updateDialogue">><<silently>><<nobr>>
 	<<timed 0s>>
 		<<set _current = _dialogue[_dialogueIdx]>>
-        <<run console.log(_current)>>
 		<<if !_current>>
-            /* Display some error */
+			/* Display some error */
 		<<else>>
-			<<if _current.text>><<append "#dialogue">><<= _current.text>><</append>><</if>>
-            <<if _current.choices>><<append "#dialogue">><<= "<ul class='choices'>" + _current.choices.map(function(choice) {
-                return "<li><<dialogueLink `unescape('" + escape(choice.text) + "')` '" + (choice.next||"") + "'>></li>";
-            }).join("") + "</ul>">><</append>><</if>>
+			<<if _current.text>><<append "#dialoguebox">><<= _current.text>><</append>><</if>>
+			<<if _current.choices>><<append "#dialoguebox">><ul class="choices">
+				<<for _choice range _current.choices>>
+					<<if _choice.filter>>
+						<<capture _filter>> /* make _filter a local variable */
+							<<run jQuery.wiki("<<set _filter = !!(" + _choice.filter + ")>>")>>
+							<<if _filter>>
+								<<continue>> /* don't create this link */
+							<</if>>
+						<</capture>>
+					<</if>>
+					<li><<dialogueLink _choice.text _choice.next _choice.click>></li>
+				<</for>>
+			</ul><</append>><</if>>
 		<</if>>
 	<</timed>>
-<</silently>><</widget>>
+<</nobr>><</silently>><</widget>>
 <<widget "showDialogue">><<nobr>>
-	<div id="dialogue">
-    </div>
+	<div id="dialoguebox">
+	</div>
 	<<updateDialogue>>
 <</nobr>><</widget>>
