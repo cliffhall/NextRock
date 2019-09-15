@@ -1,5 +1,20 @@
 :: Central Hub [hub]
-This is the heart of the colony. More foot traffic passes through here than any other pod or hub.
+<<switch visited()>>\
+<<case 1>>\
+    This is the heart of the colony. More foot traffic passes through here than any other pod or hub. \
+    Connections lead to all the other major hubs, the stockade, and the airlock.
+
+    In a nod to NYC's Grand Central Station, a four-faced clock stands on a pedestal in the middle of the room. \
+    A domed glass ceiling lets in what scant light the Martian day has to offer.
+<<case 2 9 15>>\
+	You look up at the dome. What's to stop that thing from crashing in at any moment? \
+	Its designers meant for it to offer a feeling of openness, but it just makes you anxious. \
+	Anxious to move on.
+<<case 3 5 8 11 14>>\
+	As usual, the clock reminds you that even 150 million miles from Earth, you should be busy somewhere else.
+<<default>>\
+    You come here a lot. Too bad there's not more to see.
+<</switch>>\
 
 <div class="nav"><div class="section">Exits</div>
 <div>[[Living->Living Hub]] [[Facilities->Facilities Hub]] [[Engineering->Engineering Hub]] [[Science->Science Hub]] [[Medical->Medical Hub]] [[Stockade->Stockade Pod]] [[Airlock]]</div></div>

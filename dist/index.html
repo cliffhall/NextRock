@@ -149,7 +149,22 @@ body{color:#111;background-color:#fff}a{color:#35c}a:hover{color:#57e}span.link-
     	}
 }&gt;&gt;\
 &lt;&lt;set _dialogueIdx = &quot;&quot;&gt;&gt;\
-&lt;&lt;showDialogue&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Central Hub" tags="hub" position="225,100" size="100,100">This is the heart of the colony. More foot traffic passes through here than any other pod or hub.
+&lt;&lt;showDialogue&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Central Hub" tags="hub" position="225,100" size="100,100">&lt;&lt;switch visited()&gt;&gt;\
+&lt;&lt;case 1&gt;&gt;\
+    This is the heart of the colony. More foot traffic passes through here than any other pod or hub. \
+    Connections lead to all the other major hubs, the stockade, and the airlock.
+
+    In a nod to NYC&#39;s Grand Central Station, a four-faced clock stands on a pedestal in the middle of the room. \
+    A domed glass ceiling lets in what scant light the Martian day has to offer.
+&lt;&lt;case 2 9 15&gt;&gt;\
+	You look up at the dome. What&#39;s to stop that thing from crashing in at any moment? \
+	Its designers meant for it to offer a feeling of openness, but it just makes you anxious. \
+	Anxious to move on.
+&lt;&lt;case 3 5 8 11 14&gt;&gt;\
+	As usual, the clock reminds you that even 150 million miles from Earth, you should be busy somewhere else.
+&lt;&lt;default&gt;&gt;\
+    You come here a lot. Too bad there&#39;s not more to see.
+&lt;&lt;/switch&gt;&gt;\
 
 &lt;div class=&quot;nav&quot;&gt;&lt;div class=&quot;section&quot;&gt;Exits&lt;/div&gt;
 &lt;div&gt;[[Living-&gt;Living Hub]] [[Facilities-&gt;Facilities Hub]] [[Engineering-&gt;Engineering Hub]] [[Science-&gt;Science Hub]] [[Medical-&gt;Medical Hub]] [[Stockade-&gt;Stockade Pod]] [[Airlock]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Stockade Pod" tags="pod" position="350,100" size="100,100">Good Glorb, What have you done now?
@@ -292,28 +307,31 @@ body{color:#111;background-color:#fff}a{color:#35c}a:hover{color:#57e}span.link-
 &lt;&lt;/nobr&gt;&gt;&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="PassageHeader" tags="header" position="350,475" size="100,100">!!&lt;&lt;print passage()&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="StoryCaption" tags="" position="475,475" size="100,100">&lt;&lt;print &quot;This is turn #&quot; + turns()&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Airlock" tags="pod" position="600,475" size="100,100">
 
 &lt;div class=&quot;nav&quot;&gt;&lt;div class=&quot;section&quot;&gt;Exits&lt;/div&gt;
-&lt;div&gt;[[Central Hub]] [[Rover Bay]] [[Surface on Foot]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="36" name="Equipment Depot" tags="surface" position="725,475" size="100,100"></tw-passagedata><tw-passagedata pid="37" name="Landing Pad" tags="surface" position="850,475" size="100,100"></tw-passagedata><tw-passagedata pid="38" name="Launch Pad" tags="surface" position="975,475" size="100,100"></tw-passagedata><tw-passagedata pid="39" name="Power Station" tags="surface" position="1100,475" size="100,100"></tw-passagedata><tw-passagedata pid="40" name="Reactor" tags="surface" position="1225,475" size="100,100"></tw-passagedata><tw-passagedata pid="41" name="Solar Array" tags="surface" position="100,600" size="100,100"></tw-passagedata><tw-passagedata pid="42" name="Water Ice Mine" tags="surface" position="225,600" size="100,100"></tw-passagedata><tw-passagedata pid="43" name="Comms Station" tags="surface" position="350,600" size="100,100">
+&lt;div&gt;[[Central Hub]] [[Rover Bay]] [[Surface on Foot]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="36" name="Equipment Depot" tags="surface" position="725,475" size="100,100"></tw-passagedata><tw-passagedata pid="37" name="Landing Pad" tags="surface" position="850,475" size="100,100"></tw-passagedata><tw-passagedata pid="38" name="Launch Pad" tags="surface" position="975,475" size="100,100"></tw-passagedata><tw-passagedata pid="39" name="Reactor" tags="surface" position="1100,475" size="100,100"></tw-passagedata><tw-passagedata pid="40" name="Solar Array" tags="surface" position="1225,475" size="100,100"></tw-passagedata><tw-passagedata pid="41" name="Water Ice Mine" tags="surface" position="100,600" size="100,100"></tw-passagedata><tw-passagedata pid="42" name="Comms Station" tags="surface" position="225,600" size="100,100">
 
 &lt;div class=&quot;nav&quot;&gt;&lt;div class=&quot;section&quot;&gt;Destinations&lt;/div&gt;
-&lt;div&gt;[[Airlock]] [[Rover Bay]] [[Supply Depot]] [[Water Pumping Station]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="44" name="Supply Depot" tags="surface" position="475,600" size="100,100">
+&lt;div&gt;[[Airlock]] [[Rover Bay]] [[Power Station]] [[Supply Depot]] [[Water Pumping Station]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="43" name="Power Station" tags="surface" position="350,600" size="100,100">
 
 &lt;div class=&quot;nav&quot;&gt;&lt;div class=&quot;section&quot;&gt;Destinations&lt;/div&gt;
-&lt;div&gt;[[Airlock]] [[Rover Bay]] [[Comms Station]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="45" name="Surface on Foot" tags="surface" position="600,600" size="100,100">
+&lt;div&gt;[[Airlock]] [[Rover Bay]] [[Comms Station]] [[Supply Depot]] [[Water Pumping Station]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="44" name="Supply Depot" tags="surface" position="475,600" size="100,100">
 
 &lt;div class=&quot;nav&quot;&gt;&lt;div class=&quot;section&quot;&gt;Destinations&lt;/div&gt;
-&lt;div&gt;[[Airlock]] [[Rover Bay]] [[Comms Station]] [[Supply Depot]] [[Water Pumping Station]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="46" name="Water Pumping Station" tags="surface" position="725,600" size="100,100">
+&lt;div&gt;[[Airlock]] [[Rover Bay]] [[Power Station]] [[Comms Station]] [[Water Pumping Station]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="45" name="Surface on Foot" tags="surface" position="600,600" size="100,100">
 
 &lt;div class=&quot;nav&quot;&gt;&lt;div class=&quot;section&quot;&gt;Destinations&lt;/div&gt;
-&lt;div&gt;[[Airlock]] [[Rover Bay]] [[Comms Station]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="47" name="Rover 1" tags="rover" position="850,600" size="100,100">
+&lt;div&gt;[[Airlock]] [[Rover Bay]] [[Power Station]] [[Comms Station]] [[Supply Depot]] [[Water Pumping Station]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="46" name="Water Pumping Station" tags="surface" position="725,600" size="100,100">
 
 &lt;div class=&quot;nav&quot;&gt;&lt;div class=&quot;section&quot;&gt;Destinations&lt;/div&gt;
-&lt;div&gt;[[Rover Bay]] [[Equipment Depot]] [[Solar Array]] [[Power Station]] [[Landing Pad]] [[Launch Pad]] [[Reactor]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="48" name="Rover 2" tags="rover" position="975,600" size="100,100">
+&lt;div&gt;[[Airlock]] [[Rover Bay]] [[Power Station]] [[Comms Station]] [[Supply Depot]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="47" name="Rover 1" tags="rover" position="850,600" size="100,100">
 
 &lt;div class=&quot;nav&quot;&gt;&lt;div class=&quot;section&quot;&gt;Destinations&lt;/div&gt;
-&lt;div&gt;[[Rover Bay]] [[Equipment Depot]] [[Solar Array]] [[Power Station]] [[Landing Pad]] [[Launch Pad]] [[Reactor]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="49" name="Rover 3" tags="rover" position="1100,600" size="100,100">
+&lt;div&gt;[[Rover Bay]] [[Equipment Depot]] [[Solar Array]] [[Landing Pad]] [[Launch Pad]] [[Reactor]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="48" name="Rover 2" tags="rover" position="975,600" size="100,100">
 
 &lt;div class=&quot;nav&quot;&gt;&lt;div class=&quot;section&quot;&gt;Destinations&lt;/div&gt;
-&lt;div&gt;[[Rover Bay]] [[Equipment Depot]] [[Solar Array]] [[Power Station]] [[Landing Pad]] [[Launch Pad]] [[Reactor]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="50" name="Rover Bay" tags="pod" position="1225,600" size="100,100">
+&lt;div&gt;[[Rover Bay]] [[Equipment Depot]] [[Solar Array]] [[Landing Pad]] [[Launch Pad]] [[Reactor]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="49" name="Rover 3" tags="rover" position="1100,600" size="100,100">
+
+&lt;div class=&quot;nav&quot;&gt;&lt;div class=&quot;section&quot;&gt;Destinations&lt;/div&gt;
+&lt;div&gt;[[Rover Bay]] [[Equipment Depot]] [[Solar Array]] [[Landing Pad]] [[Launch Pad]] [[Reactor]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="50" name="Rover Bay" tags="pod" position="1225,600" size="100,100">
 
 &lt;div class=&quot;nav&quot;&gt;&lt;div class=&quot;section&quot;&gt;Rovers&lt;/div&gt;&lt;div&gt;[[Rover 1]] [[Rover 2]] [[Rover 3]]&lt;/div&gt;
 &lt;div class=&quot;section&quot;&gt;Exits&lt;/div&gt;&lt;div&gt;[[Airlock]] [[Surface on Foot]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata></tw-storydata>
