@@ -17,8 +17,16 @@
     "twee"
   ],
   "contributors": [
-    {"name":"Cliff Hall", "url":"https://github.com/cliffhall", "email":"cliff@futurescale.com"},
-    {"name": "Chapel", "url":"https://github.com/ChapelR", "email":"chapel@twinelab.net"}
+    {
+      "name": "Cliff Hall",
+      "url": "https://github.com/cliffhall",
+      "email": "cliff@futurescale.com"
+    },
+    {
+      "name": "Chapel",
+      "url": "https://github.com/ChapelR",
+      "email": "chapel@twinelab.net"
+    }
   ],
   "license": "BSD-3-Clause",
   "devDependencies": {

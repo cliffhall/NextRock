@@ -7,6 +7,5 @@
 :: StoryTitle
 Mars Colony
 
-
 :: StoryCaption
 <<print "This is turn #" + turns()>>

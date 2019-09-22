@@ -254,12 +254,13 @@ body{color:#111;background-color:#fff}a{color:#35c}a:hover{color:#57e}span.link-
 &lt;div&gt;[[Science Hub]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="31" name="Science Hub" tags="hub" position="100,475" size="100,100">
 
 &lt;div class=&quot;nav&quot;&gt;&lt;div class=&quot;section&quot;&gt;Exits&lt;/div&gt;
-&lt;div&gt;[[Central Hub]] [[Life Support-&gt;Life Support Pod]] [[Laboratory-&gt;Laboratory Pod]] [[Greenhouse-&gt;Greenhouse Pod]] [[Recycling-&gt;Waste Recycling Pod]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="32" name="DialogWidget" tags="widget" position="225,475" size="100,100">/* A widget to manage a dialogue with another character.
+&lt;div&gt;[[Central Hub]] [[Life Support-&gt;Life Support Pod]] [[Laboratory-&gt;Laboratory Pod]] [[Greenhouse-&gt;Greenhouse Pod]] [[Recycling-&gt;Waste Recycling Pod]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="32" name="DialogWidget" tags="widget" position="225,475" size="100,100">&lt;!--
+   A widget to manage a dialogue with another character.
    USAGE: see ExampleDialogue.twee
-   Tip o&#39; the propeller beanie to Akjosch: https://gist.github.com/Akjosch/54efa4ad24c23e4a2091d8a4fcc2d23e
- */
+   Tip o the propeller beanie to Akjosch: https://gist.github.com/Akjosch/54efa4ad24c23e4a2091d8a4fcc2d23e
+--&gt;
 &lt;&lt;widget &quot;dialogueLink&quot;&gt;&gt;&lt;&lt;nobr&gt;&gt;
-	&lt;&lt;capture _text, _next&gt;&gt; /* make them local variables */
+	&lt;&lt;capture _text, _next&gt;&gt;
 		&lt;&lt;set _text = $args[0]&gt;&gt;
 		&lt;&lt;set _next = $args[1]&gt;&gt;
 		&lt;&lt;set _click = $args[2]&gt;&gt;
@@ -271,7 +272,7 @@ body{color:#111;background-color:#fff}a{color:#35c}a:hover{color:#57e}span.link-
 				&lt;&lt;updateDialogue&gt;&gt;
 			&lt;&lt;/if&gt;&gt;
 			&lt;&lt;if _click&gt;&gt;
-				/* run what&#39;s there */
+				&lt;!-- run what&#39;s there --&gt;
 				&lt;&lt;= _click&gt;&gt;
 			&lt;&lt;/if&gt;&gt;
 		&lt;&lt;/link&gt;&gt;
@@ -281,16 +282,16 @@ body{color:#111;background-color:#fff}a{color:#35c}a:hover{color:#57e}span.link-
 	&lt;&lt;timed 0s&gt;&gt;
 		&lt;&lt;set _current = _dialogue[_dialogueIdx]&gt;&gt;
 		&lt;&lt;if !_current&gt;&gt;
-			/* Display some error */
+			&lt;!-- Display some error --&gt;
 		&lt;&lt;else&gt;&gt;
 			&lt;&lt;if _current.text&gt;&gt;&lt;&lt;append &quot;#dialoguebox&quot;&gt;&gt;&lt;&lt;= _current.text&gt;&gt;&lt;&lt;/append&gt;&gt;&lt;&lt;/if&gt;&gt;
 			&lt;&lt;if _current.choices&gt;&gt;&lt;&lt;append &quot;#dialoguebox&quot;&gt;&gt;&lt;ul class=&quot;choices&quot;&gt;
 				&lt;&lt;for _choice range _current.choices&gt;&gt;
 					&lt;&lt;if _choice.filter&gt;&gt;
-						&lt;&lt;capture _filter&gt;&gt; /* make _filter a local variable */
+						&lt;&lt;capture _filter&gt;&gt; &lt;!-- make _filter a local variable --&gt;
 							&lt;&lt;run jQuery.wiki(&quot;&lt;&lt;set _filter = !!(&quot; + _choice.filter + &quot;)&gt;&gt;&quot;)&gt;&gt;
 							&lt;&lt;if _filter&gt;&gt;
-								&lt;&lt;continue&gt;&gt; /* don&#39;t create this link */
+								&lt;&lt;continue&gt;&gt; &lt;!-- don&#39;t create this link --&gt;
 							&lt;&lt;/if&gt;&gt;
 						&lt;&lt;/capture&gt;&gt;
 					&lt;&lt;/if&gt;&gt;
@@ -304,7 +305,7 @@ body{color:#111;background-color:#fff}a{color:#35c}a:hover{color:#57e}span.link-
 	&lt;div id=&quot;dialoguebox&quot;&gt;
 	&lt;/div&gt;
 	&lt;&lt;updateDialogue&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="PassageHeader" tags="header" position="350,475" size="100,100">!!&lt;&lt;print passage()&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="StoryCaption" tags="" position="475,475" size="100,100">&lt;&lt;print &quot;This is turn #&quot; + turns()&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Airlock" tags="pod" position="600,475" size="100,100">
+&lt;&lt;/nobr&gt;&gt;&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="PassageHeader" tags="" position="350,475" size="100,100">!!&lt;&lt;print passage()&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="StoryCaption" tags="" position="475,475" size="100,100">&lt;&lt;print &quot;This is turn #&quot; + turns()&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Airlock" tags="pod" position="600,475" size="100,100">
 
 &lt;div class=&quot;nav&quot;&gt;&lt;div class=&quot;section&quot;&gt;Exits&lt;/div&gt;
 &lt;div&gt;[[Central Hub]] [[Rover Bay]] [[Surface on Foot]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="36" name="Equipment Depot" tags="surface" position="725,475" size="100,100"></tw-passagedata><tw-passagedata pid="37" name="Landing Pad" tags="surface" position="850,475" size="100,100"></tw-passagedata><tw-passagedata pid="38" name="Launch Pad" tags="surface" position="975,475" size="100,100"></tw-passagedata><tw-passagedata pid="39" name="Reactor" tags="surface" position="1100,475" size="100,100"></tw-passagedata><tw-passagedata pid="40" name="Solar Array" tags="surface" position="1225,475" size="100,100"></tw-passagedata><tw-passagedata pid="41" name="Water Ice Mine" tags="surface" position="100,600" size="100,100"></tw-passagedata><tw-passagedata pid="42" name="Comms Station" tags="surface" position="225,600" size="100,100">

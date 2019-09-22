@@ -1,2 +1,2 @@
-:: PassageHeader [header]
+:: PassageHeader
 !!<<print passage()>>

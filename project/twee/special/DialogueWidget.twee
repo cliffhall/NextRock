@@ -1,10 +1,11 @@
 :: DialogWidget [widget]
-/* A widget to manage a dialogue with another character.
+<!--
+   A widget to manage a dialogue with another character.
    USAGE: see ExampleDialogue.twee
-   Tip o' the propeller beanie to Akjosch: https://gist.github.com/Akjosch/54efa4ad24c23e4a2091d8a4fcc2d23e
- */
+   Tip o the propeller beanie to Akjosch: https://gist.github.com/Akjosch/54efa4ad24c23e4a2091d8a4fcc2d23e
+-->
 <<widget "dialogueLink">><<nobr>>
-	<<capture _text, _next>> /* make them local variables */
+	<<capture _text, _next>>
 		<<set _text = $args[0]>>
 		<<set _next = $args[1]>>
 		<<set _click = $args[2]>>
@@ -16,7 +17,7 @@
 				<<updateDialogue>>
 			<</if>>
 			<<if _click>>
-				/* run what's there */
+				<!-- run what's there -->
 				<<= _click>>
 			<</if>>
 		<</link>>
@@ -26,16 +27,16 @@
 	<<timed 0s>>
 		<<set _current = _dialogue[_dialogueIdx]>>
 		<<if !_current>>
-			/* Display some error */
+			<!-- Display some error -->
 		<<else>>
 			<<if _current.text>><<append "#dialoguebox">><<= _current.text>><</append>><</if>>
 			<<if _current.choices>><<append "#dialoguebox">><ul class="choices">
 				<<for _choice range _current.choices>>
 					<<if _choice.filter>>
-						<<capture _filter>> /* make _filter a local variable */
+						<<capture _filter>> <!-- make _filter a local variable -->
 							<<run jQuery.wiki("<<set _filter = !!(" + _choice.filter + ")>>")>>
 							<<if _filter>>
-								<<continue>> /* don't create this link */
+								<<continue>> <!-- don't create this link -->
 							<</if>>
 						<</capture>>
 					<</if>>
