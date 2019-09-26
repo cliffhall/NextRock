@@ -157,11 +157,11 @@ Notes
 
 </Text>
         </Document>
-        <Document ID="74C2A2F6-0A45-4B0E-A248-76B6D0CD1F74">
-            <Title>Central Hub</Title>
-            <Text>Central Hub
+        <Document ID="AAC710E4-82EA-4B86-B761-91E98E21747B">
+            <Title>Infirmary</Title>
+            <Text>Infirmary Pod
 Role in Story
-	Connects all the hubs to each other. Gets more foot traffic than any other location in the colony.
+
 
 Related Characters
 
@@ -170,7 +170,7 @@ Season
 
 
 Unique Features
-In a nod to NYC’s Grand Central Station, has a four-faced clock on a pedestal in the center of the room.
+
 
 Description
 
@@ -312,40 +312,6 @@ Notes
 
 </Text>
         </Document>
-        <Document ID="AAC710E4-82EA-4B86-B761-91E98E21747B">
-            <Title>Infirmary</Title>
-            <Text>Infirmary Pod
-Role in Story
-
-
-Related Characters
-
-
-Season
-
-
-Unique Features
-
-
-Description
-
-
-Sights
-
-
-Sounds
-
-
-Smell
-
-
-Notes
-
-</Text>
-        </Document>
-        <Document ID="06C0455C-36DD-4F38-BB7B-F7DD2453A8A5">
-            <Title>Characters</Title>
-        </Document>
         <Document ID="B3486267-74BA-4F8A-9ACC-E891F795D059">
             <Title>Recylcling</Title>
             <Text>Waste Recycling Pod
@@ -377,6 +343,9 @@ Notes
 
 </Text>
         </Document>
+        <Document ID="06C0455C-36DD-4F38-BB7B-F7DD2453A8A5">
+            <Title>Characters</Title>
+        </Document>
         <Document ID="FDB02CD4-3E76-418A-BC6A-0EF742D5025E">
             <Title>Laboratory</Title>
             <Text>Science Lab Pod
@@ -391,6 +360,37 @@ Season
 
 Unique Features
 
+
+Description
+
+
+Sights
+
+
+Sounds
+
+
+Smell
+
+
+Notes
+
+</Text>
+        </Document>
+        <Document ID="74C2A2F6-0A45-4B0E-A248-76B6D0CD1F74">
+            <Title>Central Hub</Title>
+            <Text>Central Hub
+Role in Story
+	Connects all the hubs to each other. Gets more foot traffic than any other location in the colony.
+
+Related Characters
+
+
+Season
+
+
+Unique Features
+In a nod to NYC’s Grand Central Station, has a four-faced clock on a pedestal in the center of the room.
 
 Description
 
@@ -538,9 +538,9 @@ Notes
 
 </Text>
         </Document>
-        <Document ID="F490C22E-794D-4A28-A0DB-A4B78129DF4A">
-            <Title>Rover 4-1</Title>
-            <Text>Name of Setting
+        <Document ID="15ED3AA3-30F7-4AFD-8030-48B4B528005F">
+            <Title>Electrical</Title>
+            <Text>Electrical Engineering Pod
 Role in Story
 
 
@@ -569,9 +569,9 @@ Notes
 
 </Text>
         </Document>
-        <Document ID="15ED3AA3-30F7-4AFD-8030-48B4B528005F">
-            <Title>Electrical</Title>
-            <Text>Electrical Engineering Pod
+        <Document ID="F490C22E-794D-4A28-A0DB-A4B78129DF4A">
+            <Title>Rover 4-1</Title>
+            <Text>Name of Setting
 Role in Story
 
 
@@ -1253,9 +1253,9 @@ Notes
 
 </Text>
         </Document>
-        <Document ID="3DE1DA59-62A9-4355-81E2-D9380E1150D4">
-            <Title>Supply Depot</Title>
-            <Text>Supply Depot
+        <Document ID="437ECB90-D2E8-4590-9113-0D7D3D407848">
+            <Title>Natatorium</Title>
+            <Text>Natatorium
 Role in Story
 
 
@@ -1284,9 +1284,9 @@ Notes
 
 </Text>
         </Document>
-        <Document ID="437ECB90-D2E8-4590-9113-0D7D3D407848">
-            <Title>Natatorium</Title>
-            <Text>Natatorium
+        <Document ID="3DE1DA59-62A9-4355-81E2-D9380E1150D4">
+            <Title>Supply Depot</Title>
+            <Text>Supply Depot
 Role in Story
 
 
@@ -1480,7 +1480,44 @@ Notes
             <Title>Notes</Title>
         </Document>
         <Document ID="4A61588C-66DD-4BD1-9BB4-6F2CEB4E58E4">
-            <Title>Scene</Title>
+            <Synopsis>Chip n’ Bill in the Rover Bay</Synopsis>
+            <Text>Just as you enter the Rover Bay, Rover Three rolls silently in from the surface, coming to a perfect, auto-piloted stop at its charging station. The bay doors clang shut and Bill Brewster, the colony’s life sciences officer, hops down from the cab, struggling with his ill-fitting suit. You are reminded of that old saw about packing 50 pounds of manure into a 10 pound bag.
+
+“They’re real,” Brewster shouts over his suit-to-suit radio. His eyes are wild. Light from his helmet’s HUD glint off the beads of sweat dotting his forehead. “Aliens! Honest to god aliens, Chip. They exist!”
+
+&gt; Try and talk some sense to him.
+&gt; Ask him to tell you about them.
+&gt; Ask him to show you.
+
+Talk Sense
+He looks like a man with a serious case of the space willies. More likely, you think, he’s had a little too much of that Martian Hydro he grows in some unknown location.
+
+You chin your suit-to-suit mic and walk toward him. “Listen, man. This place gets to everyone sooner or later. But if this is your way of trying to get a spot back to Earth on the return leg of the next supply run, you’re gonna have to come up with something a tad more believable.”
+
+Brewster takes a step backward, shaking his head and stamping a boot angrily. “I know what I saw, Chip. I know…” He raises one gloved hand to his heaving chest. Little puffs of C02 vent from his helmet. He drops to his knees then crumples softly to the floor in the light gravity.
+
+&gt; Drag Brewster into the airlock and call for medical assistance.
+&gt; Climb into the Rover’s cab and review the travel logs.
+
+Tell me
+“Aliens, huh?” You chuckle, goading him. “What did they look like? Did they have tentacles?”
+
+Brewster hangs his head, as far as helmet will let him. A drop of sweat plops onto the faceplate. “I didn’t…” he starts then stops. “I don’t know. I only saw…” 
+
+He holds up one hand, and you can hear him huffing and puffing. Despite the circulators in his helmet, his faceplate begins to fog. 
+
+&gt; Try and talk some sense to him.
+&gt; Ask him to show you.
+
+Show me
+“If we’re not alone on this rock then we’re the aliens here, Brew. You get that right?”
+
+“Semantics,” he says, frowning at you. “You could talk your own kid into not being born. If you had a gal to knock up, that is.”
+
+That was a low blow. As leader of this colony, you can’t afford be distracted by female dalliances and Brewster knows it. And it’s not like he could ever attract one himself.
+
+“Why don’t you take me out there and introduce me to these new friends of yours.” 
+</Text>
         </Document>
         <Document ID="5EE4A416-6EB0-4A68-BB97-9B9D89358EF4">
             <Title>Living Pod 1</Title>

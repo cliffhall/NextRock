@@ -131,15 +131,15 @@ body {
 }
 
 /* Dialogue Widget */
-#dialogue > div {
+#dialoguebox > div {
     padding: 0.5em 0;
 }
-div.choice {
-    font-weight: bold;
+#dialoguebox > div.choice {
+    font-style: italic;
 }
-ul.choices {
-    list-style: none;
+#dialoguebox > ul.choices {
+    list-style: disc;
 }
-q {
+#dialoguebox > q {
     quotes: "“" "”" "‘" "’";
 }
