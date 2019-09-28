@@ -1,4 +1,4 @@
-# mars-colony
+# nextrock-colony
 Run a colony on the Red Planet. A Twine game.
 
 ![Colony Map](map.png)
@@ -21,16 +21,16 @@ Run a colony on the Red Planet. A Twine game.
 * Create a symbolic link to the storyformats: ```ln -s ~/tweego-2.0.0-macos-x86/storyformats ~/.storyformats```
 
 ### Download the project
-* [Download the project](https://github.com/cliffhall/mars-colony/archive/master.zip) as a ```.zip``` file and unzip wherever you keep your projects.
+* [Download the project](https://github.com/cliffhall/nextrock-colony/archive/master.zip) as a ```.zip``` file and unzip wherever you keep your projects.
 * OR if you have ```git``` installed on your system:
 ```
 cd path/to/your/projects
-git clone https://github.com/cliffhall/mars-colony.git
+git clone https://github.com/cliffhall/nextrock-colony.git
 ```
 
 ### Install dependencies
 ```
-cd path/to/mars-colony
+cd path/to/nextrock-colony
 npm install
 ```
 
