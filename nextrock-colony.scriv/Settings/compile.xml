@@ -1,7 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CompileSettings Template="Yes">
+<CompileSettings>
     <ProjectSettings>
+        <Content Scope="Included">
+            <Filter State="Off" Exclude="No" Type="Label">
+                <CollectionID>2655DDF6-4AB8-42CB-A433-1CD76FC351D2</CollectionID>
+                <Label>-1</Label>
+                <Status>-1</Status>
+            </Filter>
+        </Content>
+        <Options>
+            <RemoveComments>Yes</RemoveComments>
+            <RemoveAnnotations>Yes</RemoveAnnotations>
+            <ResampleImages DPI="72">No</ResampleImages>
+            <ConvertTablesAndListToMMD>Yes</ConvertTablesAndListToMMD>
+            <PDF>
+                <Cover Source="FrontMatter" Bleed="9.0" BleedUnits="pt"/>
+                <Compression Enabled="No">
+                    <ImageResolutionCompressionType>Set</ImageResolutionCompressionType>
+                    <ImageResolution>150</ImageResolution>
+                    <CompressionQuality>0.5</CompressionQuality>
+                </Compression>
+            </PDF>
+            <Scriptwriting>
+                <IncludeTitles>Yes</IncludeTitles>
+                <IncludeSynopses>Yes</IncludeSynopses>
+                <CommentsAsScriptNotes>Yes</CommentsAsScriptNotes>
+            </Scriptwriting>
+            <Ebook>
+                <StartAfterFrontMatter>Yes</StartAfterFrontMatter>
+                <Cover>
+                    <ImageDocument Source="FrontMatter"/>
+                    <Title>Cover</Title>
+                    <SVG Width="600" Height="800"><![CDATA[]]></SVG>
+                </Cover>
+                <TOC PandocDepth="3">
+                    <HTML Generate="Yes">
+                        <Title>Contents</Title>
+                    </HTML>
+                </TOC>
+            </Ebook>
+        </Options>
         <MetaData>
+            <ProjectTitle>mars-colony</ProjectTitle>
+            <ProjectAbbreviatedTitle>mars-colony</ProjectAbbreviatedTitle>
+            <Authors>
+                <Author FileAs="Hall, Clifford" Role="aut">Clifford Hall</Author>
+            </Authors>
+            <Surname>Hall</Surname>
+            <Forename>Clifford</Forename>
+            <EbookLanguage>en</EbookLanguage>
+            <FountainTitlePageMetaData>
+                <Value Key="Title"><![CDATA[<$projecttitle>]]></Value>
+                <Value Key="Author"><![CDATA[<$author>]]></Value>
+            </FountainTitlePageMetaData>
             <MMDMetaData>
                 <Value Key="Title"><![CDATA[<$projecttitle>]]></Value>
                 <Value Key="Author"><![CDATA[<$author>]]></Value>
@@ -9,6 +60,7 @@
             </MMDMetaData>
         </MetaData>
     </ProjectSettings>
+    <CurrentFileType>mmd-html</CurrentFileType>
     <FormatSettings>
         <Format ID="mmd-latex-custom-modern">
             <SectionLayouts>
@@ -69,22 +121,22 @@
             </FrontAndBackMatter>
         </Format>
     </FormatSettings>
-    <CurrentFileType>Print</CurrentFileType>
     <LastUsedFormats>
         <Print>short-story-times</Print>
         <rtf>DEFAULT</rtf>
+        <mmd-html>DEFAULT</mmd-html>
         <kf8>e-book</kf8>
         <epub3>e-book</epub3>
         <fdx>script-screenplay</fdx>
         <txt>plain-text-screenplay</txt>
         <mmd>DEFAULT</mmd>
-        <pdf>DEFAULT</pdf>
+        <pdf>short-story-times</pdf>
         <mobi>e-book-legacy</mobi>
         <mmd-pdf>1B809FE1-5AE7-4232-A813-181D5CE8CB75</mmd-pdf>
         <Fountain>script-screenplay</Fountain>
         <mmd-latex>1B809FE1-5AE7-4232-A813-181D5CE8CB75</mmd-latex>
+        <odt>DEFAULT</odt>
         <epub2>e-book-legacy</epub2>
         <html>DEFAULT</html>
-        <odt>DEFAULT</odt>
     </LastUsedFormats>
 </CompileSettings>

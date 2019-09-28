@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ScrivenerProject Identifier="A7D1C1AF-AAC9-4F7A-B5D0-7885832C3E4F" Version="2.0" Creator="SCRMAC-3.1.3-11945" Device="Nostromo" Author="Clifford Hall" Modified="2019-09-23 10:54:03 -0400" ModID="2D1A68B3-3C1B-44D6-9F2C-C0300B726460">
+<ScrivenerProject Identifier="A7D1C1AF-AAC9-4F7A-B5D0-7885832C3E4F" Version="2.0" Creator="SCRMAC-3.1.3-11945" Device="Nostromo" Author="Clifford Hall" Modified="2019-09-28 19:02:56 -0400" ModID="9A0BCAED-D706-41AD-822F-646784C97832">
     <Binder>
         <BinderItem UUID="F8F9FDEF-FD9F-4A8C-B33D-3434A1220ADC" Type="Text" Created="2019-09-15 18:46:12 -0400" Modified="2019-09-15 18:46:12 -0400">
             <Title>Short Story Format</Title>
@@ -13,15 +13,110 @@
         </BinderItem>
         <BinderItem UUID="4A1D6B18-0952-42EB-A487-D17915DD3BA1" Type="DraftFolder" Created="2019-09-15 18:46:12 -0400" Modified="2019-09-15 18:46:12 -0400">
             <Title>Manuscript</Title>
+            <CorkboardAndOutliner>
+                <SelectedSubdocumentUUIDs>4E8308B8-5D70-45EC-B4FE-9E146FAF95B1</SelectedSubdocumentUUIDs>
+            </CorkboardAndOutliner>
             <Children>
-                <BinderItem UUID="4A61588C-66DD-4BD1-9BB4-6F2CEB4E58E4" Type="Text" Created="2019-09-15 18:46:12 -0400" Modified="2019-09-23 10:52:42 -0400">
-                    <Title>Rover Bay - Chip &amp; Brewster</Title>
+                <BinderItem UUID="4E8308B8-5D70-45EC-B4FE-9E146FAF95B1" Type="Text" Created="2019-09-28 14:41:43 -0400" Modified="2019-09-28 18:33:09 -0400">
+                    <Title>Harlan (Airlock)</Title>
                     <MetaData>
                         <IncludeInCompile>Yes</IncludeInCompile>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>446,0</TextSelection>
+                        <TextSelection>1006,0</TextSelection>
                     </TextSettings>
+                    <Children>
+                        <BinderItem UUID="1595A0B2-8FA5-43B0-9062-5475B0302AFC" Type="Text" Created="2019-09-28 17:01:51 -0400" Modified="2019-09-28 18:13:01 -0400">
+                            <Title>Unsuit and go pee</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>221,0</TextSelection>
+                            </TextSettings>
+                            <Bookmarks>
+                                <Bookmark BinderUUID="4E8308B8-5D70-45EC-B4FE-9E146FAF95B1"/>
+                            </Bookmarks>
+                        </BinderItem>
+                    </Children>
+                </BinderItem>
+                <BinderItem UUID="4A61588C-66DD-4BD1-9BB4-6F2CEB4E58E4" Type="Text" Created="2019-09-15 18:46:12 -0400" Modified="2019-09-28 18:16:03 -0400">
+                    <Title>Harlan &amp; Bill (Rover Bay)</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>741,0</TextSelection>
+                    </TextSettings>
+                    <Bookmarks>
+                        <Bookmark BinderUUID="4E8308B8-5D70-45EC-B4FE-9E146FAF95B1"/>
+                    </Bookmarks>
+                    <Children>
+                        <BinderItem UUID="791AAA1B-FC89-47B4-8824-0DD2F0D66620" Type="Text" Created="2019-09-28 14:26:15 -0400" Modified="2019-09-28 18:24:54 -0400">
+                            <Title>Talk eense</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>938,0</TextSelection>
+                            </TextSettings>
+                            <Bookmarks>
+                                <Bookmark BinderUUID="4A61588C-66DD-4BD1-9BB4-6F2CEB4E58E4"/>
+                                <Bookmark BinderUUID="15A95207-E0DD-4D74-BFA3-3ACF9ECDBA3E"/>
+                            </Bookmarks>
+                        </BinderItem>
+                        <BinderItem UUID="15A95207-E0DD-4D74-BFA3-3ACF9ECDBA3E" Type="Text" Created="2019-09-28 14:25:15 -0400" Modified="2019-09-28 17:17:27 -0400">
+                            <Title>Tell me</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>454,0</TextSelection>
+                            </TextSettings>
+                            <Bookmarks>
+                                <Bookmark BinderUUID="4A61588C-66DD-4BD1-9BB4-6F2CEB4E58E4"/>
+                            </Bookmarks>
+                        </BinderItem>
+                        <BinderItem UUID="862863EC-0715-4588-AD17-6824940CBD71" Type="Text" Created="2019-09-28 14:27:03 -0400" Modified="2019-09-28 18:58:51 -0400">
+                            <Title>Show me</Title>
+                            <MetaData>
+                                <IncludeInCompile>Yes</IncludeInCompile>
+                            </MetaData>
+                            <TextSettings>
+                                <TextSelection>1231,0</TextSelection>
+                            </TextSettings>
+                            <Bookmarks>
+                                <Bookmark BinderUUID="4A61588C-66DD-4BD1-9BB4-6F2CEB4E58E4"/>
+                                <Bookmark BinderUUID="15A95207-E0DD-4D74-BFA3-3ACF9ECDBA3E"/>
+                            </Bookmarks>
+                            <Children>
+                                <BinderItem UUID="14FECC50-DC64-40C3-B123-C188931B1BC5" Type="Text" Created="2019-09-28 18:32:33 -0400" Modified="2019-09-28 19:02:56 -0400">
+                                    <Title>Ramrod Bill into rover</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>111,0</TextSelection>
+                                    </TextSettings>
+                                    <Bookmarks>
+                                        <Bookmark BinderUUID="862863EC-0715-4588-AD17-6824940CBD71"/>
+                                    </Bookmarks>
+                                </BinderItem>
+                                <BinderItem UUID="D18B7638-DCC7-48F2-AB75-0688A47FC453" Type="Text" Created="2019-09-28 18:56:47 -0400" Modified="2019-09-28 18:58:11 -0400">
+                                    <Title>Harlan &amp; Bill (Stockade)</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>10,0</TextSelection>
+                                    </TextSettings>
+                                    <Bookmarks>
+                                        <Bookmark BinderUUID="862863EC-0715-4588-AD17-6824940CBD71"/>
+                                    </Bookmarks>
+                                </BinderItem>
+                            </Children>
+                        </BinderItem>
+                    </Children>
                 </BinderItem>
             </Children>
         </BinderItem>
@@ -35,6 +130,30 @@
                 <TextSelection>0,0</TextSelection>
             </TextSettings>
             <DefaultChildTemplateUUID>BE948F87-BDA3-4551-8E08-AC248FE89301</DefaultChildTemplateUUID>
+            <Children>
+                <BinderItem UUID="B23F6C0E-BE2C-4B0B-84E3-99FB45FD72DF" Type="Text" Created="2019-09-28 14:08:29 -0400" Modified="2019-09-28 14:21:25 -0400">
+                    <Title>Harlan Whetsel</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                        <IconFileName>Characters (Character Sheet)</IconFileName>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,6</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem UUID="2D9C232A-99FC-4DDA-970D-A1A980204E36" Type="Text" Created="2019-09-28 14:04:38 -0400" Modified="2019-09-28 14:16:32 -0400">
+                    <Title>Bill Brewster</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                        <ShowSynopsisImage>Yes</ShowSynopsisImage>
+                        <IconFileName>Characters (Character Sheet)</IconFileName>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>326,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+            </Children>
         </BinderItem>
         <BinderItem UUID="6830B6AC-686B-4370-A979-2FD1D7288BDA" Type="Folder" Created="2019-09-15 18:46:12 -0400" Modified="2019-09-15 18:46:12 -0400">
             <Title>Places</Title>
@@ -659,6 +778,30 @@
                         <TextSelection>16,0</TextSelection>
                     </TextSettings>
                 </BinderItem>
+                <BinderItem UUID="4E7C0F71-BBCE-4AEA-8ECE-EB80086AAEF7" Type="Text" Created="2019-09-28 14:29:56 -0400" Modified="2019-09-28 14:29:56 -0400">
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem UUID="8B8A6F8C-47C2-4227-A425-F4B479653A75" Type="Text" Created="2019-09-28 16:02:39 -0400" Modified="2019-09-28 16:02:39 -0400">
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem UUID="DCDD0494-403C-4BFB-96A5-921475C3D2A2" Type="Text" Created="2019-09-28 16:25:54 -0400" Modified="2019-09-28 16:25:59 -0400">
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>297,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
             </Children>
         </BinderItem>
     </Binder>
@@ -720,14 +863,14 @@
     </ProjectBookmarks>
     <ProjectTargets Notify="No">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="Yes" Deadline="2011-04-12 08:24:39 -0400" IgnoreDeadline="Yes">0</DraftTarget>
-        <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="No" NextResetDate="2019-09-24 01:00:00 -0400" ResetType="Time" ResetTime="00:00" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
-        <PreviousSession Words="459" Characters="2492" Date="2019-09-23 10:53:58 -0400"/>
+        <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="No" NextResetDate="2019-09-29 01:00:00 -0400" ResetType="Time" ResetTime="00:00" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
+        <PreviousSession Words="576" Characters="3273" Date="2019-09-28 14:03:06 -0400"/>
     </ProjectTargets>
-    <RecentWritingHistory Date="2019-09-23 00:00:00 -0400">
-        <DraftWordCount>459</DraftWordCount>
-        <DraftCharCount>2492</DraftCharCount>
-        <OtherWordCount>0</OtherWordCount>
-        <OtherCharCount>0</OtherCharCount>
+    <RecentWritingHistory Date="2019-09-28 00:00:00 -0400">
+        <DraftWordCount>574</DraftWordCount>
+        <DraftCharCount>3261</DraftCharCount>
+        <OtherWordCount>59</OtherWordCount>
+        <OtherCharCount>327</OtherCharCount>
     </RecentWritingHistory>
     <TemplateFolderUUID>5C03DE09-C285-48ED-827F-78E62B7D0F72</TemplateFolderUUID>
     <BookmarksFolderUUID>69822417-D015-4BDD-90BD-18AAA6198D15</BookmarksFolderUUID>
