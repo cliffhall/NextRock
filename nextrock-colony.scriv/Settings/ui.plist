@@ -5,17 +5,65 @@
 	<key>.lockedInPlace</key>
 	<false/>
 	<key>CompileFolder</key>
-	<string>/Users/amberv/outbox</string>
+	<string>/Users/cliffhall/Documents</string>
 	<key>NotesScaleFactor</key>
 	<real>1</real>
+	<key>QRPanelSettings</key>
+	<dict>
+		<key>06C0455C-36DD-4F38-BB7B-F7DD2453A8A5</key>
+		<dict>
+			<key>BinderUUID</key>
+			<string>06C0455C-36DD-4F38-BB7B-F7DD2453A8A5</string>
+			<key>CurrentMetaData</key>
+			<integer>-1</integer>
+			<key>MainPaneWidth</key>
+			<real>475</real>
+			<key>ProjectBookmarksSplitInfo</key>
+			<array>
+				<string>{{0, 0}, {225, 495}}</string>
+				<string>{{235, 0}, {443, 495}}</string>
+			</array>
+			<key>ProjectBookmarksVisible</key>
+			<false/>
+			<key>ShowsFormatBar</key>
+			<true/>
+			<key>ShowsMetaData</key>
+			<false/>
+			<key>SplitInfo</key>
+			<array>
+				<string>{{0, 277}, {475, 167}}</string>
+			</array>
+			<key>TextSettings</key>
+			<dict>
+				<key>hasMultiplePages</key>
+				<false/>
+				<key>isRulerVisible</key>
+				<false/>
+				<key>lineNumberingInterval</key>
+				<integer>1</integer>
+				<key>showsLineNumbers</key>
+				<false/>
+				<key>textFocusMode</key>
+				<integer>0</integer>
+				<key>textScaleFactor</key>
+				<real>1</real>
+				<key>usesFacingPages</key>
+				<false/>
+				<key>usesTypewriterScrolling</key>
+				<false/>
+			</dict>
+			<key>WindowFrame</key>
+			<string>445 184 475 522 0 0 1366 768 </string>
+		</dict>
+	</dict>
 	<key>binderSelection</key>
 	<array>
 		<integer>0</integer>
 	</array>
 	<key>binderSplitFrames</key>
 	<array>
-		<string>{{0, 0}, {257, 687}}</string>
-		<string>{{258, 0}, {941, 687}}</string>
+		<string>{{0, 0}, {257, 728}}</string>
+		<string>{{258, 0}, {1108, 728}}</string>
 	</array>
 	<key>binderState</key>
 	<array>
@@ -54,6 +102,11 @@
 			<key>Row</key>
 			<integer>-1</integer>
 		</dict>
+		<key>06C0455C-36DD-4F38-BB7B-F7DD2453A8A5</key>
+		<dict>
+			<key>Row</key>
+			<integer>-1</integer>
+		</dict>
 		<key>090ED826-C744-4727-92D1-D2766D87C199</key>
 		<dict>
 			<key>Row</key>
@@ -74,10 +127,31 @@
 			<key>Row</key>
 			<integer>-1</integer>
 		</dict>
+		<key>14FECC50-DC64-40C3-B123-C188931B1BC5</key>
+		<dict>
+			<key>DocID</key>
+			<string>862863EC-0715-4588-AD17-6824940CBD71</string>
+			<key>Row</key>
+			<integer>0</integer>
+		</dict>
 		<key>154100ED-04B1-44CD-B3AA-F4BCE9C7CB80</key>
 		<dict>
 			<key>Row</key>
 			<integer>-1</integer>
+		</dict>
+		<key>1595A0B2-8FA5-43B0-9062-5475B0302AFC</key>
+		<dict>
+			<key>DocID</key>
+			<string>4E8308B8-5D70-45EC-B4FE-9E146FAF95B1</string>
+			<key>Row</key>
+			<integer>0</integer>
+		</dict>
+		<key>15A95207-E0DD-4D74-BFA3-3ACF9ECDBA3E</key>
+		<dict>
+			<key>DocID</key>
+			<string>4A61588C-66DD-4BD1-9BB4-6F2CEB4E58E4</string>
+			<key>Row</key>
+			<integer>0</integer>
 		</dict>
 		<key>15E59B4B-0A15-4B74-BA32-F4B0E52DEBB4</key>
 		<dict>
@@ -119,6 +193,11 @@
 			<key>Row</key>
 			<integer>-1</integer>
 		</dict>
+		<key>2D9C232A-99FC-4DDA-970D-A1A980204E36</key>
+		<dict>
+			<key>Row</key>
+			<integer>-1</integer>
+		</dict>
 		<key>3DE1DA59-62A9-4355-81E2-D9380E1150D4</key>
 		<dict>
 			<key>Row</key>
@@ -139,6 +218,13 @@
 			<key>Row</key>
 			<integer>-1</integer>
 		</dict>
+		<key>4A61588C-66DD-4BD1-9BB4-6F2CEB4E58E4</key>
+		<dict>
+			<key>DocID</key>
+			<string>4E8308B8-5D70-45EC-B4FE-9E146FAF95B1</string>
+			<key>Row</key>
+			<integer>0</integer>
+		</dict>
 		<key>4A6FFB8B-B015-4F7E-9766-F0E63CC9443F</key>
 		<dict>
 			<key>Row</key>
@@ -150,6 +236,16 @@
 			<integer>-1</integer>
 		</dict>
 		<key>4DF4D865-A8A1-476D-9DCA-BA8F5F8C6818</key>
+		<dict>
+			<key>Row</key>
+			<integer>-1</integer>
+		</dict>
+		<key>4E7C0F71-BBCE-4AEA-8ECE-EB80086AAEF7</key>
+		<dict>
+			<key>Row</key>
+			<integer>-1</integer>
+		</dict>
+		<key>4E8308B8-5D70-45EC-B4FE-9E146FAF95B1</key>
 		<dict>
 			<key>Row</key>
 			<integer>-1</integer>
@@ -204,6 +300,13 @@
 			<key>Row</key>
 			<integer>-1</integer>
 		</dict>
+		<key>791AAA1B-FC89-47B4-8824-0DD2F0D66620</key>
+		<dict>
+			<key>DocID</key>
+			<string>4A61588C-66DD-4BD1-9BB4-6F2CEB4E58E4</string>
+			<key>Row</key>
+			<integer>0</integer>
+		</dict>
 		<key>7A313C45-E302-4BB8-B439-49EECEEC6B9A</key>
 		<dict>
 			<key>Row</key>
@@ -214,7 +317,19 @@
 			<key>Row</key>
 			<integer>-1</integer>
 		</dict>
+		<key>862863EC-0715-4588-AD17-6824940CBD71</key>
+		<dict>
+			<key>DocID</key>
+			<string>4A61588C-66DD-4BD1-9BB4-6F2CEB4E58E4</string>
+			<key>Row</key>
+			<integer>0</integer>
+		</dict>
 		<key>86C80C7F-1FF9-4DEE-8EAF-8D74712DCA11</key>
+		<dict>
+			<key>Row</key>
+			<integer>-1</integer>
+		</dict>
+		<key>8B8A6F8C-47C2-4227-A425-F4B479653A75</key>
 		<dict>
 			<key>Row</key>
 			<integer>-1</integer>
@@ -259,6 +374,11 @@
 			<key>Row</key>
 			<integer>-1</integer>
 		</dict>
+		<key>B23F6C0E-BE2C-4B0B-84E3-99FB45FD72DF</key>
+		<dict>
+			<key>Row</key>
+			<integer>-1</integer>
+		</dict>
 		<key>B3486267-74BA-4F8A-9ACC-E891F795D059</key>
 		<dict>
 			<key>Row</key>
@@ -275,6 +395,18 @@
 			<integer>-1</integer>
 		</dict>
 		<key>CFCB5132-951F-47F5-AA23-A0BD7281E40D</key>
+		<dict>
+			<key>Row</key>
+			<integer>-1</integer>
+		</dict>
+		<key>D18B7638-DCC7-48F2-AB75-0688A47FC453</key>
+		<dict>
+			<key>DocID</key>
+			<string>862863EC-0715-4588-AD17-6824940CBD71</string>
+			<key>Row</key>
+			<integer>0</integer>
+		</dict>
+		<key>DCDD0494-403C-4BFB-96A5-921475C3D2A2</key>
 		<dict>
 			<key>Row</key>
 			<integer>-1</integer>
@@ -324,6 +456,13 @@
 			<key>Row</key>
 			<integer>-1</integer>
 		</dict>
+		<key>Project</key>
+		<dict>
+			<key>DocID</key>
+			<string>06C0455C-36DD-4F38-BB7B-F7DD2453A8A5</string>
+			<key>Row</key>
+			<integer>0</integer>
+		</dict>
 	</dict>
 	<key>closedSuccessfully</key>
 	<true/>
@@ -342,8 +481,7 @@
 	<false/>
 	<key>editorSplitFrames</key>
 	<array>
-		<string>{{0, 0}, {632, 301}}</string>
-		<string>{{0, 311}, {632, 302}}</string>
+		<string>{{0, 0}, {844, 349}}</string>
 	</array>
 	<key>editorSplitType</key>
 	<integer>0</integer>
@@ -368,8 +506,8 @@
 	<integer>0</integer>
 	<key>inspectorSplitFrames</key>
 	<array>
-		<string>{{0, 0}, {677, 657}}</string>
-		<string>{{678, 0}, {263, 657}}</string>
+		<string>{{0, 0}, {835, 698}}</string>
+		<string>{{836, 0}, {272, 698}}</string>
 	</array>
 	<key>inspectorWidth</key>
 	<real>201</real>
@@ -420,18 +558,18 @@
 	<key>mainDocumentEditor.rulerIsVisible</key>
 	<false/>
 	<key>mainDocumentEditor.scrollRect</key>
-	<string>{{0, 0}, {620, 601}}</string>
+	<string>{{0, 0}, {620, 234.40000000000001}}</string>
 	<key>mainDocumentEditor.selectedRanges</key>
 	<string>{0, 0}</string>
 	<key>mainDocumentEditor.textEditorState</key>
 	<dict>
 		<key>textScaleFactor</key>
-		<real>1</real>
+		<real>1.25</real>
 	</dict>
 	<key>mainDocumentEditor.textMode</key>
 	<integer>0</integer>
 	<key>mainWindowFrame</key>
-	<string>1 698 1199 719 0 0 2560 1417 </string>
+	<string>39 64 1199 656 0 0 1366 745 </string>
 	<key>projectStatsSheet</key>
 	<dict>
 		<key>excludeAnnots</key>
@@ -506,7 +644,7 @@
 		<array/>
 	</dict>
 	<key>supportingDocumentEditor.scrollRect</key>
-	<string>{{0, 0}, {620, 294}}</string>
+	<string>{{0, 0}, {620, 513.60000000000002}}</string>
 	<key>supportingDocumentEditor.selectedItemIDs</key>
 	<array/>
 	<key>supportingDocumentEditor.selectedItemUUIDs</key>
@@ -514,7 +652,7 @@
 	<key>supportingDocumentEditor.textEditorState</key>
 	<dict>
 		<key>textScaleFactor</key>
-		<real>1</real>
+		<real>1.25</real>
 	</dict>
 	<key>supportingDocumentEditor.textMode</key>
 	<integer>0</integer>

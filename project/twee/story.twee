@@ -1,11 +1,11 @@
 :: StoryData
 {
     "ifid": "EECB013A-0FC6-41CB-9CF1-07D791258C06",
-    "start": "Central Hub"
+    "start": "Airlock"
 }
 
 :: StoryTitle
-Mars Colony
+NextRock Colony
 
 :: StoryCaption
 <<print "This is turn #" + turns()>>

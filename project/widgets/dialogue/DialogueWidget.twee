@@ -1,0 +1,73 @@
+:: DialogWidget [widget]
+/*
+  Dialogue widget
+
+ */
+<<widget "Dialogue">><<nobr>>
+    <<capture _passage, _section>>
+        <<set _passage = $args[0]>>
+        <<set _section = $args[1]>>
+        <div id="dialoguebox"></div>
+        <<UpdateDialogue _passage _section>>
+	<</capture>>
+<</nobr>><</widget>>
+
+/*
+  UpdateDialogue widget
+ */
+<<widget "UpdateDialogue">><<silently>><<nobr>>
+    <<capture _passage, _section>>
+        <<set _passage = $args[0]>>
+        <<set _section = $args[1]>>
+        <<timed 0s>>
+            <<set _current = _dialogue[_section]>>
+            <<if !_current>>
+                <!-- Display some error -->
+            <<else>>
+                <<append "#dialoguebox">><<include _passage>><</append>>
+                <<if _current.choices>><<append "#dialoguebox">><ul class="choices">
+                    <<for _choice range _current.choices>>
+                        <<if _choice.filter>>
+                            <<capture _filter>>
+                                <<run jQuery.wiki("<<set _filter = !!(" + _choice.filter + ")>>")>>
+                                <<if _filter>>
+                                    <<continue>> <!-- don't create this link -->
+                                <</if>>
+                            <</capture>>
+                        <</if>>
+                        <li><<DialogueChoice _passage _section _choice.text _choice.next _choice.click>></li>
+                    <</for>>
+                </ul><</append>><</if>>
+            <</if>>
+        <</timed>>
+    <</capture>>
+<</nobr>><</silently>><</widget>>
+
+/*
+   DialogueChoice widget
+   The choices property of a dialogue branch contains an object with:
+     - "text"   : the link text
+     - "next"   : [optional] the dialogue section to render next when the link is clicked
+     - "click"  : [optional] macro to be executed, in quotes
+     - "filter" : [optional] a condition in quotes, which if evaluating to true will allow the link to be rendered
+ */
+<<widget "DialogueChoice">><<nobr>>
+	<<capture _passage, _section, _text, _next>>
+        <<set _passage = $args[0]>>
+        <<set _section = $args[1]>>
+		<<set _text = $args[2]>>
+		<<set _next = $args[3]>>
+		<<set _click = $args[4]>>
+		<<link _text>>
+			<<remove "ul.choices">>
+			<<replace "#dialoguebox">><div class="choice"> > <<= _text>></div><</replace>>
+			<<if _next>>
+				<<set _section = _next>>
+				<<UpdateDialogue _passage _section>>
+			<</if>>
+			<<if _click>>
+				<<= _click>>
+			<</if>>
+		<</link>>
+	<</capture>>
+<</nobr>><</widget>>
