@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NotesScaleFactor</key>
+	<real>1</real>
+	<key>binderSplitFrames</key>
+	<array>
+		<string>{{0, 0}, {224, 651}}</string>
+		<string>{{225, 0}, {775, 651}}</string>
+	</array>
+	<key>bookmarksPreviewTextSettings</key>
+	<dict>
+		<key>hasMultiplePages</key>
+		<false/>
+		<key>isRulerVisible</key>
+		<false/>
+		<key>lineNumberingInterval</key>
+		<integer>1</integer>
+		<key>showsLineNumbers</key>
+		<false/>
+		<key>textFocusMode</key>
+		<integer>0</integer>
+		<key>textScaleFactor</key>
+		<real>1</real>
+		<key>usesFacingPages</key>
+		<false/>
+		<key>usesTypewriterScrolling</key>
+		<false/>
+	</dict>
+	<key>bookmarksSelectionInfo</key>
+	<dict>
+		<key>06BA67D0-F2E8-4D11-AA6C-6A3A2548E2D4</key>
+		<dict>
+			<key>DocID</key>
+			<string>14FECC50-DC64-40C3-B123-C188931B1BC5</string>
+			<key>Row</key>
+			<integer>0</integer>
+		</dict>
+		<key>14FECC50-DC64-40C3-B123-C188931B1BC5</key>
+		<dict>
+			<key>DocID</key>
+			<string>862863EC-0715-4588-AD17-6824940CBD71</string>
+			<key>Row</key>
+			<integer>0</integer>
+		</dict>
+		<key>1595A0B2-8FA5-43B0-9062-5475B0302AFC</key>
+		<dict>
+			<key>DocID</key>
+			<string>4E8308B8-5D70-45EC-B4FE-9E146FAF95B1</string>
+			<key>Row</key>
+			<integer>0</integer>
+		</dict>
+		<key>15A95207-E0DD-4D74-BFA3-3ACF9ECDBA3E</key>
+		<dict>
+			<key>DocID</key>
+			<string>4A61588C-66DD-4BD1-9BB4-6F2CEB4E58E4</string>
+			<key>Row</key>
+			<integer>0</integer>
+		</dict>
+		<key>4A61588C-66DD-4BD1-9BB4-6F2CEB4E58E4</key>
+		<dict>
+			<key>DocID</key>
+			<string>4E8308B8-5D70-45EC-B4FE-9E146FAF95B1</string>
+			<key>Row</key>
+			<integer>0</integer>
+		</dict>
+		<key>4E8308B8-5D70-45EC-B4FE-9E146FAF95B1</key>
+		<dict>
+			<key>Row</key>
+			<integer>-1</integer>
+		</dict>
+		<key>791AAA1B-FC89-47B4-8824-0DD2F0D66620</key>
+		<dict>
+			<key>DocID</key>
+			<string>4A61588C-66DD-4BD1-9BB4-6F2CEB4E58E4</string>
+			<key>Row</key>
+			<integer>0</integer>
+		</dict>
+		<key>862863EC-0715-4588-AD17-6824940CBD71</key>
+		<dict>
+			<key>DocID</key>
+			<string>4A61588C-66DD-4BD1-9BB4-6F2CEB4E58E4</string>
+			<key>Row</key>
+			<integer>0</integer>
+		</dict>
+		<key>D18B7638-DCC7-48F2-AB75-0688A47FC453</key>
+		<dict>
+			<key>DocID</key>
+			<string>862863EC-0715-4588-AD17-6824940CBD71</string>
+			<key>Row</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>collectionsRepresentedBinderDocumentsInfo</key>
+	<dict>
+		<key>MainID</key>
+		<string></string>
+		<key>SupportingID</key>
+		<string></string>
+	</dict>
+	<key>editorSplitFrames</key>
+	<array>
+		<string>{{530, 0}, {529, 698}}</string>
+	</array>
+	<key>fullScreenBackgroundFade</key>
+	<real>1</real>
+	<key>fullScreenHorizontalPaperPosition</key>
+	<integer>2</integer>
+	<key>fullScreenInspectorMode</key>
+	<integer>0</integer>
+	<key>fullScreenInspectorVisible</key>
+	<false/>
+	<key>fullScreenPaperHeight</key>
+	<integer>-1</integer>
+	<key>fullScreenPaperWidth</key>
+	<integer>850</integer>
+	<key>fullScreenVerticalPaperPosition</key>
+	<integer>2</integer>
+	<key>inspectorSplitFrames</key>
+	<array>
+		<string>{{0, 0}, {529, 621}}</string>
+		<string>{{530, 0}, {245, 621}}</string>
+	</array>
+	<key>inspectorWidth</key>
+	<real>245</real>
+	<key>lastDocumentSplitType</key>
+	<integer>1</integer>
+	<key>mainDocumentEditor.scrollRect</key>
+	<string>{{0, 0}, {529, 642}}</string>
+	<key>mainWindowFrame</key>
+	<string>308 62 1000 673 0 0 1366 768 </string>
+	<key>supportingDocumentEditor.scrollRect</key>
+	<string>{{0, 0}, {620, 513.60000000000002}}</string>
+	<key>supportingDocumentEditor.textEditorState</key>
+	<dict>
+		<key>textScaleFactor</key>
+		<real>1.25</real>
+	</dict>
+	<key>supportingDocumentViewIsCurrent</key>
+	<false/>
+</dict>
+</plist>
