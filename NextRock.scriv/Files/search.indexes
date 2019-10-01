@@ -60,7 +60,7 @@ This colony may seem to slip further from your control with every passing day, b
 
 “Enough fooling around. You’re either going to show me these aliens, or you’re taking me to your grow operation. Or both!” Spinning him around, you frogmarch him up into the rover’s cab.
 
-“But Harlan, I need to do some maintenance before I take her out again,” he pleads. You know better. Aside from the grime, the rover looks fine. Brewster just doesn’t want you shutting down his weed growing operation.
+“But Harlan, I need to do some maintenance before I take her out again,” he pleads. You know better. Aside from the grime, the rover looks fine. Brewster just doesn’t want you shutting down his weed growing operation. And it’s high time you did just that.
 
 &gt; Get into the rover with him
 &gt; Go pee and let him do his supposed “maintenance”</Text>
@@ -73,6 +73,10 @@ This colony may seem to slip further from your control with every passing day, b
         </Document>
         <Document ID="0EEE4D89-C68B-4335-A29D-41EF7E3C4F5B">
             <Title>Rover 3</Title>
+        </Document>
+        <Document ID="02269AB4-034F-41B5-82BD-6F9061D88A45">
+            <Title>Harlan &amp; Bill (Airlock)</Title>
+            <Text>As you attempt to drag Brewster into the airlock, you in inadvertently cut open his suit on some loose regoligth. It’s fine, but it can slice like a razor.</Text>
         </Document>
         <Document ID="CBA90AB7-6467-4A1F-9347-0CDA6C4368BB">
             <Title>Greenhouse</Title>
@@ -129,14 +133,14 @@ He holds up one hand, and you can hear him huffing and puffing. Despite the circ
         </Document>
         <Document ID="791AAA1B-FC89-47B4-8824-0DD2F0D66620">
             <Title>Talk sense</Title>
-            <Text>He looks like a man with a serious case of the space willies. More likely, you think, he’s had a little too much of that Martian Hydro he grows in some unknown location.
+            <Text>Bill Brewster looks like a man with a serious case of the space willies. More likely, you think, he’s had a little too much of that Martian Hydro he grows in some unknown location.
 
 You chin your suit-to-suit mic and walk toward him. “Listen, man. This place gets to everyone sooner or later. But if this is your way of trying to get a spot back to Earth on the return leg of the next supply run, you’re gonna have to come up with something a tad more believable.”
 
-Brewster takes a step backward, shaking his head and stamping a boot angrily. “I know what I saw, Chip. I know…” He raises one gloved hand to his heaving chest. Little puffs of C02 vent from his helmet. He drops to his knees then crumples softly to the floor in the light gravity.
+Taking a step backward, Brewster shakes his head and stamps a boot angrily. “I know what I saw, Chip. I know…” He raises one gloved hand to his heaving chest. Little puffs of C02 vent from his helmet. He drops to his knees then crumples softly to the floor in the light gravity.
 
-&gt; Drag Brewster into the airlock and call for medical assistance.
-&gt; Climb into the Rover’s cab and review the travel logs.</Text>
+&gt; Drag Brewster into the airlock and call for medical assistance
+&gt; Climb into the Rover’s cab and review the travel logs</Text>
         </Document>
         <Document ID="87D59B4E-F1D6-4025-9FBA-33F60ED8F985">
             <Title>Setting Sketch</Title>

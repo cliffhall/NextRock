@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ScrivenerProject Identifier="A7D1C1AF-AAC9-4F7A-B5D0-7885832C3E4F" Version="2.0" Creator="SCRMAC-3.1.3-11945" Device="Nostromo" Author="Clifford Hall" Modified="2019-09-28 20:15:01 -0400" ModID="E2D625CA-8335-4D94-B546-CED5DAC11066">
+<ScrivenerProject Identifier="A7D1C1AF-AAC9-4F7A-B5D0-7885832C3E4F" Version="2.0" Creator="SCRMAC-3.1.3-11945" Device="Nostromo" Author="Clifford Hall" Modified="2019-09-30 19:15:40 -0400" ModID="3B5198C2-3843-427E-A3DC-2F9B0A5500AD">
     <Binder>
         <BinderItem UUID="F8F9FDEF-FD9F-4A8C-B33D-3434A1220ADC" Type="Text" Created="2019-09-15 18:46:12 -0400" Modified="2019-09-15 18:46:12 -0400">
             <Title>Short Story Format</Title>
@@ -23,7 +23,7 @@
                         <IncludeInCompile>Yes</IncludeInCompile>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>0,0</TextSelection>
+                        <TextSelection>909,0</TextSelection>
                     </TextSettings>
                     <Children>
                         <BinderItem UUID="1595A0B2-8FA5-43B0-9062-5475B0302AFC" Type="Text" Created="2019-09-28 17:01:51 -0400" Modified="2019-09-28 20:06:41 -0400">
@@ -32,7 +32,7 @@
                                 <IncludeInCompile>Yes</IncludeInCompile>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>188,0</TextSelection>
+                                <TextSelection>186,0</TextSelection>
                             </TextSettings>
                             <Bookmarks>
                                 <Bookmark BinderUUID="4E8308B8-5D70-45EC-B4FE-9E146FAF95B1"/>
@@ -46,20 +46,20 @@
                         <IncludeInCompile>Yes</IncludeInCompile>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>679,0</TextSelection>
+                        <TextSelection>694,0</TextSelection>
                     </TextSettings>
                     <Bookmarks>
                         <Bookmark BinderUUID="4E8308B8-5D70-45EC-B4FE-9E146FAF95B1"/>
                         <Bookmark BinderUUID="1595A0B2-8FA5-43B0-9062-5475B0302AFC"/>
                     </Bookmarks>
                     <Children>
-                        <BinderItem UUID="791AAA1B-FC89-47B4-8824-0DD2F0D66620" Type="Text" Created="2019-09-28 14:26:15 -0400" Modified="2019-09-28 20:01:29 -0400">
+                        <BinderItem UUID="791AAA1B-FC89-47B4-8824-0DD2F0D66620" Type="Text" Created="2019-09-28 14:26:15 -0400" Modified="2019-09-30 19:04:28 -0400">
                             <Title>Talk sense</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>454,0</TextSelection>
+                                <TextSelection>866,0</TextSelection>
                             </TextSettings>
                             <Bookmarks>
                                 <Bookmark BinderUUID="4A61588C-66DD-4BD1-9BB4-6F2CEB4E58E4"/>
@@ -84,20 +84,20 @@
                                 <IncludeInCompile>Yes</IncludeInCompile>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>445,0</TextSelection>
+                                <TextSelection>1138,0</TextSelection>
                             </TextSettings>
                             <Bookmarks>
                                 <Bookmark BinderUUID="4A61588C-66DD-4BD1-9BB4-6F2CEB4E58E4"/>
                                 <Bookmark BinderUUID="15A95207-E0DD-4D74-BFA3-3ACF9ECDBA3E"/>
                             </Bookmarks>
                             <Children>
-                                <BinderItem UUID="14FECC50-DC64-40C3-B123-C188931B1BC5" Type="Text" Created="2019-09-28 18:32:33 -0400" Modified="2019-09-28 20:09:22 -0400">
+                                <BinderItem UUID="14FECC50-DC64-40C3-B123-C188931B1BC5" Type="Text" Created="2019-09-28 18:32:33 -0400" Modified="2019-09-30 19:09:18 -0400">
                                     <Title>Ramrod Bill into rover</Title>
                                     <MetaData>
                                         <IncludeInCompile>Yes</IncludeInCompile>
                                     </MetaData>
                                     <TextSettings>
-                                        <TextSelection>587,0</TextSelection>
+                                        <TextSelection>100,0</TextSelection>
                                     </TextSettings>
                                     <Bookmarks>
                                         <Bookmark BinderUUID="862863EC-0715-4588-AD17-6824940CBD71"/>
@@ -129,6 +129,18 @@
                     </TextSettings>
                     <Bookmarks>
                         <Bookmark BinderUUID="14FECC50-DC64-40C3-B123-C188931B1BC5"/>
+                    </Bookmarks>
+                </BinderItem>
+                <BinderItem UUID="02269AB4-034F-41B5-82BD-6F9061D88A45" Type="Text" Created="2019-09-30 19:01:44 -0400" Modified="2019-09-30 19:15:40 -0400">
+                    <Title>Harlan &amp; Bill (Airlock)</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>155,0</TextSelection>
+                    </TextSettings>
+                    <Bookmarks>
+                        <Bookmark BinderUUID="791AAA1B-FC89-47B4-8824-0DD2F0D66620"/>
                     </Bookmarks>
                 </BinderItem>
             </Children>
@@ -876,14 +888,14 @@
     </ProjectBookmarks>
     <ProjectTargets Notify="No">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="Yes" Deadline="2011-04-12 08:24:39 -0400" IgnoreDeadline="Yes">0</DraftTarget>
-        <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="No" NextResetDate="2019-09-29 01:00:00 -0400" ResetType="Time" ResetTime="00:00" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
-        <PreviousSession Words="1492" Characters="8322" Date="2019-09-28 20:14:57 -0400"/>
+        <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="No" NextResetDate="2019-10-01 01:00:00 -0400" ResetType="Time" ResetTime="00:00" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
+        <PreviousSession Words="39" Characters="214" Date="2019-09-30 18:56:48 -0400"/>
     </ProjectTargets>
-    <RecentWritingHistory Date="2019-09-28 00:00:00 -0400">
-        <DraftWordCount>1490</DraftWordCount>
-        <DraftCharCount>8310</DraftCharCount>
-        <OtherWordCount>59</OtherWordCount>
-        <OtherCharCount>327</OtherCharCount>
+    <RecentWritingHistory Date="2019-09-30 00:00:00 -0400">
+        <DraftWordCount>38</DraftWordCount>
+        <DraftCharCount>200</DraftCharCount>
+        <OtherWordCount>0</OtherWordCount>
+        <OtherCharCount>0</OtherCharCount>
     </RecentWritingHistory>
     <TemplateFolderUUID>5C03DE09-C285-48ED-827F-78E62B7D0F72</TemplateFolderUUID>
     <BookmarksFolderUUID>69822417-D015-4BDD-90BD-18AAA6198D15</BookmarksFolderUUID>

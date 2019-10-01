@@ -6,8 +6,8 @@
 	<real>1</real>
 	<key>binderSplitFrames</key>
 	<array>
-		<string>{{0, 0}, {224, 728}}</string>
-		<string>{{225, 0}, {1141, 728}}</string>
+		<string>{{0, 0}, {238, 728}}</string>
+		<string>{{239, 0}, {1127, 728}}</string>
 	</array>
 	<key>bookmarksPreviewTextSettings</key>
 	<dict>
@@ -30,6 +30,13 @@
 	</dict>
 	<key>bookmarksSelectionInfo</key>
 	<dict>
+		<key>02269AB4-034F-41B5-82BD-6F9061D88A45</key>
+		<dict>
+			<key>DocID</key>
+			<string>791AAA1B-FC89-47B4-8824-0DD2F0D66620</string>
+			<key>Row</key>
+			<integer>0</integer>
+		</dict>
 		<key>06BA67D0-F2E8-4D11-AA6C-6A3A2548E2D4</key>
 		<dict>
 			<key>DocID</key>
@@ -119,8 +126,8 @@
 	<integer>2</integer>
 	<key>inspectorSplitFrames</key>
 	<array>
-		<string>{{0, 0}, {895, 698}}</string>
-		<string>{{896, 0}, {245, 698}}</string>
+		<string>{{0, 0}, {881, 698}}</string>
+		<string>{{882, 0}, {245, 698}}</string>
 	</array>
 	<key>inspectorWidth</key>
 	<real>245</real>
