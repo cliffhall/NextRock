@@ -1,7 +1,6 @@
 :: DialogWidget [widget]
 /*
   Dialogue widget
-
  */
 <<widget "Dialogue">><<nobr>>
     <<capture _passage, _section>>
@@ -21,9 +20,7 @@
         <<set _section = $args[1]>>
         <<timed 0s>>
             <<set _current = _dialogue[_section]>>
-            <<if !_current>>
-                <!-- Display some error -->
-            <<else>>
+            <<if _current>>
                 <<append "#dialoguebox">><<include _passage>><</append>>
                 <<if _current.choices>><<append "#dialoguebox">><ul class="choices">
                     <<for _choice range _current.choices>>

@@ -1,4 +1,4 @@
-:: ExampleChat [dialogue]
+:: ExampleDialogue [dialogue]
 /* An example setup and display of the DialogueWidget
    USAGE: <<include "ExampleDialogue">>
 
