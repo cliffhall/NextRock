@@ -1,8 +1,8 @@
 :: Rover Bay [pod]
 <<scene 'Opening Scene'>>
     <<branch first>>
-        Text of the FIRST branch.
-        Lots of it.
+        Text of the "FIRST" branch.
+        'Lots of it.'
         Some more
         <<action second>>Go to second branch
     <</branch>>\

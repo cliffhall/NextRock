@@ -34,9 +34,14 @@
             State.setVar('$currentScene', this.args[0]);
             State.setVar('$currentBranch', null);
 
-            // Parse contained branches
-            $(this.output).wiki(this.payload[0].contents);
+            // Create scene container, store it, and add it to the DOM
+            let container = document.createElement('div');
+            container.setAttribute('id', 'sceneContainer');
+            State.setVar('$sceneContainer', container);
+            $(this.output).append(container);
 
+            // Parse contained branches
+            $.wiki(this.payload[0].contents);
         }
     });
 
@@ -76,11 +81,8 @@
                 });
 
                 let branch = contents.shift();
-                let wrapper = $(document.createElement('p'));
-                wrapper
-                    .wiki(branch)
-                    .appendTo(this.output);
-
+                let container = $(State.getVar('$sceneContainer'));
+                container.wiki(branch);
                 if (contents.length) {
                     let list = $(document.createElement('ul'));
                     contents.forEach(action => {
@@ -89,7 +91,7 @@
                             .wiki(action)
                             .appendTo(list);
                     });
-                    list.appendTo(this.output);
+                    list.appendTo(container);
                 }
             }
         }
