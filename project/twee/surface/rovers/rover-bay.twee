@@ -1,4 +1,20 @@
 :: Rover Bay [pod]
-<<include "ExampleDialogue">>
+<<scene 'Opening Scene'>>
+    <<branch first>>
+        Text of the FIRST branch.
+        Lots of it.
+        Some more
+        <<action second>>Go to second branch
+    <</branch>>\
+    <<branch second start>>
+        Text of the SECOND branch.
+        <<action first>>Return to first branch
+        <<action third>>Go to end
+    <</branch>>\
+    <<branch third>>
+        Final branch, no action.
+    <</branch>>\
+<</scene>>
+
 <div class="nav"><div class="section">Rovers</div><div>[[Rover 1]] [[Rover 2]] [[Rover 3]]</div>
 <div class="section">Exits</div><div>[[Airlock]] [[Surface on Foot]]</div></div>

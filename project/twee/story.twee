@@ -9,3 +9,6 @@ NextRock Colony
 
 :: StoryCaption
 <<print "This is turn #" + turns()>>
+
+:: StoryInit
+<<run Config.cleanupWikifierOutput = true>>

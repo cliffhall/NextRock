@@ -28,8 +28,9 @@
         <Document ID="4A6FFB8B-B015-4F7E-9766-F0E63CC9443F">
             <Title>Surgery</Title>
         </Document>
-        <Document ID="AFCC624F-A078-4448-A9B8-2963C7354589">
-            <Title>Network</Title>
+        <Document ID="02269AB4-034F-41B5-82BD-6F9061D88A45">
+            <Title>Harlan &amp; Bill (Airlock)</Title>
+            <Text>As you attempt to drag Brewster into the airlock, you in inadvertently cut open his suit on some loose regolith. It’s fine, but it can slice like a razor.</Text>
         </Document>
         <Document ID="1595A0B2-8FA5-43B0-9062-5475B0302AFC">
             <Title>Unsuit and go pee</Title>
@@ -45,11 +46,11 @@ This colony may seem to slip further from your control with every passing day, b
         <Document ID="FDB02CD4-3E76-418A-BC6A-0EF742D5025E">
             <Title>Laboratory</Title>
         </Document>
+        <Document ID="AFCC624F-A078-4448-A9B8-2963C7354589">
+            <Title>Network</Title>
+        </Document>
         <Document ID="B3486267-74BA-4F8A-9ACC-E891F795D059">
             <Title>Recylcling</Title>
-        </Document>
-        <Document ID="74C2A2F6-0A45-4B0E-A248-76B6D0CD1F74">
-            <Title>Central Hub</Title>
         </Document>
         <Document ID="2B1F8EC3-D507-48AC-A5DD-C059D03581D0">
             <Title>Near (reachable on foot)</Title>
@@ -74,9 +75,8 @@ This colony may seem to slip further from your control with every passing day, b
         <Document ID="0EEE4D89-C68B-4335-A29D-41EF7E3C4F5B">
             <Title>Rover 3</Title>
         </Document>
-        <Document ID="02269AB4-034F-41B5-82BD-6F9061D88A45">
-            <Title>Harlan &amp; Bill (Airlock)</Title>
-            <Text>As you attempt to drag Brewster into the airlock, you in inadvertently cut open his suit on some loose regoligth. It’s fine, but it can slice like a razor.</Text>
+        <Document ID="74C2A2F6-0A45-4B0E-A248-76B6D0CD1F74">
+            <Title>Central Hub</Title>
         </Document>
         <Document ID="CBA90AB7-6467-4A1F-9347-0CDA6C4368BB">
             <Title>Greenhouse</Title>
@@ -274,7 +274,7 @@ Brewster bends over and rests a hand on one knee. He holds up a gloved forefinge
 
 As he huffs and puffs your keen eye takes in the sad state of Rover 3. All the rovers are meant to be interchangeable. Regardless, everyone (including you) calls this one the “Life Sciences Rover” and refuses to touch it with a ten foot dome strut. It’s plastered with a disgusting mixture of regolith, excrement from the waste processing facility, and slime from the greenhouse filters.
 
-“Come on, Brew. Get hold of yourself.” 
+“Come on, Brew. Get hold of yourself,” you implore.
 
 &gt; Ramrod Bill into the rover
 &gt; Dump him into the stockade until you can go pee and figure out what to do with him</Text>
