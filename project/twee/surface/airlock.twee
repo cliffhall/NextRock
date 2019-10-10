@@ -1,5 +1,5 @@
 :: Airlock [pod]
-
+<<include 'Example Scene 2'>>
 
 <div class="nav"><div class="section">Exits</div>
 <div>[[Central Hub]] [[Rover Bay]] [[Surface on Foot]]</div></div>

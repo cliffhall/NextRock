@@ -50,8 +50,23 @@
                 $(bullet).wiki(action).appendTo(list);
                 if ($(bullet).text().trim().length ===0) $(bullet).remove();
             });
-
+        } else {
+            let completed = State.getVar('$completedScenes');
+            completed.push(currentScene.name);
         }
+    };
+
+    // Function to check if a given scene has been completed
+    setup.sceneHasBeenCompleted = sceneName => {
+        let retVal = false;
+        let completedScenes = State.getVar('$completedScenes');
+        if (Array.isArray(completedScenes)) {
+            if (completedScenes.includes(sceneName)) retVal = true;
+        } else {
+            completedScenes = [];
+            State.setVar('$completedScenes', completedScenes);
+        }
+        return retVal;
     };
 
     Macro.add('scene', {
@@ -63,21 +78,26 @@
                 return this.error('You must name each scene');
             }
 
-            // Set the current scene to this one, and reset the current branch
-            State.setVar('$currentScene', {
-                scene: this.args[0],
-                branch: null,
-                branches: {}
-            });
+            // Process scene if it hasn't been completed
+            let sceneName = this.args[0].trim();
+            if (!setup.sceneHasBeenCompleted(sceneName)) {
 
-            // Create scene container, store it, and add it to the DOM
-            let container = document.createElement('div');
-            container.setAttribute('id', 'sceneContainer');
-            State.setVar('$sceneContainer', container);
-            $(this.output).append(container);
+                // Set the current scene to this one, and reset the current branch
+                State.setVar('$currentScene', {
+                    name: sceneName,
+                    branch: null,
+                    branches: {}
+                });
 
-            // Parse contained branches
-            $.wiki(this.payload[0].contents);
+                // Create scene container, store it, and add it to the DOM
+                let container = document.createElement('div');
+                container.setAttribute('id', 'sceneContainer');
+                State.setVar('$sceneContainer', container);
+                $(this.output).append(container);
+
+                // Parse contained branches
+                $.wiki(this.payload[0].contents);
+            }
         }
     });
 
