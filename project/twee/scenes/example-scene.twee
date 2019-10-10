@@ -1,0 +1,20 @@
+:: Example Scene [scene]
+<<scene 'Example Scene'>>
+    <<branch first start>>
+        Text of the "FIRST" branch.
+        'Lots of it.'
+        Some more
+        <<action second>>Go to second branch
+        <<action "<<goto `passage()`>>">>Rerender passage
+        <<action "<<run console.log($currentScene)>>">>Log current scene to console
+    <</branch>>\
+    <<branch second>>
+        Text of the SECOND branch.
+        <<action first>>Return to first branch
+        <<action second "true === false">>Filter this link out
+        <<action third>>Go to end
+    <</branch>>\
+    <<branch third>>
+        Final branch, no action.
+    <</branch>>\
+<</scene>>
