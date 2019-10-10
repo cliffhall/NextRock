@@ -43,13 +43,14 @@
         // Add the branches actions (if any) to the scene container
         if (actions.length) {
             let list = $(document.createElement('ul'));
-            actions.forEach(action => {
-                let bullet = $(document.createElement('li'));
-                bullet
-                    .wiki(action)
-                    .appendTo(list);
-            });
             list.appendTo(container);
+            actions.forEach((action, index) => {
+                let bullet = document.createElement('li');
+                bullet.setAttribute('id', `action-${index}`);
+                $(bullet).wiki(action).appendTo(list);
+                if ($(bullet).text().trim().length ===0) $(bullet).remove();
+            });
+
         }
     };
 
@@ -101,17 +102,34 @@
             }
 
             // Parse branch contents
-            currentScene.branches[branchName] = this.payload.map(part => {
-                let retVal;
+            currentScene.branches[branchName] = this.payload.map((part,index) => {
+                let retVal, link, arg1, arg2, contents;
                 switch (part.name) {
                     case 'branch':
-                        retVal = String(this.payload[0].contents).trim();
+                        retVal = String(part.contents).trim();
                         break;
                     case 'action':
-                        retVal = `<<link "${String(part.contents).trim()}">>\
-                        <<set $currentScene.branch to "${String(part.args[0]).trim()}">>\
-                        <<run setup.renderCurrentBranch()>>\
-                        <</link>>`;
+                        // Get the first arg to the action
+                        arg1 = String(part.args[0]).trim();
+                        contents = String(part.contents).trim();
+                        // If it isn't a macro, treat it as a branch name
+                        if (!(arg1.includes('<<') && arg1.includes('>>'))) {
+                            arg1 = `<<set $currentScene.branch to "${arg1}">><<run setup.renderCurrentBranch()>>`
+                        }
+
+                        // Create the link
+                        link = `<<link "${contents}">>${arg1}<</link>>`;
+
+                        // If there's a filter condition, wrap the link with it
+                        arg2 = part.args[1];
+
+                        // Return the link
+                        if (arg2) {
+                            retVal = filterWrap(link, arg2, index-1)
+                        } else {
+                            retVal = link
+                        }
+
                         break;
                 }
                 return retVal;
@@ -120,6 +138,17 @@
             // Render branch if current
             if (isCurrent) {
                 setup.renderCurrentBranch();
+            }
+
+            function filterWrap(link, condition, index){
+
+                return`<<capture _filter>>\
+                                <<run jQuery.wiki("<<set _filter = !!( ${condition} )>>")>>\
+                                <<if _filter>>\
+                                    ${link}\
+                                <</if>>\
+                            <</capture>>\
+                `;
             }
 
         }

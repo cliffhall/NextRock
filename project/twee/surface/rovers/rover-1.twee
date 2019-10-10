@@ -1,19 +1,5 @@
 :: Rover 1 [rover]
-<<scene 'Second Scene'>>
-    <<branch first start>>
-        A branch in Rover 1
-        Some more text
-        <<action second>>Go to second branch
-    <</branch>>\
-    <<branch second>>
-        Text of the SECOND branch.
-        <<action first>>Return to first branch
-        <<action third>>Go to end
-    <</branch>>\
-    <<branch third>>
-        Final branch, no action.
-    <</branch>>\
-<</scene>>
+
 
 <div class="nav"><div class="section">Destinations</div>
 <div>[[Rover Bay]] [[Equipment Depot]] [[Solar Array]] [[Landing Pad]] [[Launch Pad]] [[Reactor]]</div></div>
