@@ -3,9 +3,9 @@
     <<branch first start>>
         Text of the "FIRST" branch.
         'Lots of it.'
-        Some more
+        Some more...
         <<action second>>Go to second branch
-        <<action "<<goto `passage()`>>">>Rerender passage
+        <<action "<<goto `passage()`>>">>Re-render this passage
         <<action "<<run console.log($currentScene)>>">>Log current scene to console
     <</branch>>\
     <<branch second>>
@@ -15,6 +15,6 @@
         <<action third>>Go to end
     <</branch>>\
     <<branch third>>
-        Final branch, no action.
+        Final branch. No actions, so scene will be marked complete and cannot be revisited.
     <</branch>>\
 <</scene>>

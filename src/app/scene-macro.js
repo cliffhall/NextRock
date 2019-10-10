@@ -40,8 +40,9 @@
         // Add the branch text to the scene container
         container.wiki(text);
 
-        // Add the branches actions (if any) to the scene container
+        // If actions are present, render them, otherwise mark scene complete
         if (actions.length) {
+            // Add the branche's actions to the scene container
             let list = $(document.createElement('ul'));
             list.appendTo(container);
             actions.forEach((action, index) => {
@@ -51,13 +52,15 @@
                 if ($(bullet).text().trim().length ===0) $(bullet).remove();
             });
         } else {
+            // Mark scene complete and clear the current scene
             let completed = State.getVar('$completedScenes');
             completed.push(currentScene.name);
+            State.setVar('$currentScene', null);
         }
     };
 
     // Function to check if a given scene has been completed
-    setup.sceneHasBeenCompleted = sceneName => {
+    setup.hasSceneBeenCompleted = sceneName => {
         let retVal = false;
         let completedScenes = State.getVar('$completedScenes');
         if (Array.isArray(completedScenes)) {
@@ -80,7 +83,7 @@
 
             // Process scene if it hasn't been completed
             let sceneName = this.args[0].trim();
-            if (!setup.sceneHasBeenCompleted(sceneName)) {
+            if (!setup.hasSceneBeenCompleted(sceneName)) {
 
                 // Set the current scene to this one, and reset the current branch
                 State.setVar('$currentScene', {
