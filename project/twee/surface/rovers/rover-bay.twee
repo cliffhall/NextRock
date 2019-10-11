@@ -1,4 +1,4 @@
-:: Rover Bay [pod]
+:: Rover Bay [location pod]
 <<include 'Example Scene'>>
 
 <div class="nav"><div class="section">Rovers</div><div>[[Rover 1]] [[Rover 2]] [[Rover 3]]</div>

@@ -1,4 +1,4 @@
-:: Central Hub [hub]
+:: Central Hub [location hub]
 <<switch visited()>>\
 <<case 1>>\
     This is the heart of the colony. More foot traffic passes through here than any other pod or hub. \

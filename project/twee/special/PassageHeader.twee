@@ -1,2 +1,3 @@
 :: PassageHeader
-!!<<print passage()>>
+<<if tags().includes("location")>><<set $location to passage()>><</if>>\
+!!<<print $location>>
