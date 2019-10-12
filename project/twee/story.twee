@@ -5,7 +5,7 @@
 }
 
 :: StoryTitle
-NextRock Colony
+NextRock
 
 :: StoryCaption
 <<print "This is turn #" + turns()>>

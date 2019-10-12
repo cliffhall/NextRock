@@ -1,9 +1,10 @@
 /*
-    SCENE MACRO
+    TWINE/SUGARCUBE SCENE MACRO
+    Copyright © 2019 Cliff Hall
 
     <<scene name>>
-        <<branch name ['start']>>
-            Text of scene.
+        <<branch name [start]>>
+            Text of branch.
             <<action branch | '<<macroToExecute>>' ['filterCondition']>>
             Text of first action.
             <<action branch | '<<macroToExecute>>' ['filterCondition']>>
@@ -17,11 +18,35 @@
         .
     <</scene>>
 
+    RATIONALE
+     * Easily write branching narratives using text, macros, and HTML.
+     * Start from any branch, not just the first one (good for development).
+     * Allow each branch to lead to other branches (or execute macros) by definable actions.
+     * Let the actions of a branch be displayed conditionally (e.g., only show 'Use space wrench' if you have one).
+     * Don't render scenes that have been previously completed if they are revisited.
+
+    USAGE
+     * Each scene needs a unique name (no quotes).
+     * Unnamed scenes will throw an error when processed.
+     * Scene tags should contain only branch tags as direct children.
+     * Scenes can contain any number of branches.
+     * Each branch needs a unique name (no quotes).
+     * One and only one branch must have start as its second argument (no quotes).
+     * Branches contain text (which can include SugarCube macros and HTML markup) followed by an optional number of actions.
+     * Actions are rendered as bulleted list after the text of the branch they belong to.
+     * Actions only include an opening tag; no closing <</action>> is required and will throw an error if present.
+     * Actions MUST have EITHER a branch name (not quoted) OR a macro to be executed (in quotes).
+     * Actions MAY optionally have a filter condition (using SugarCube expressions) as a second argument (in quotes).
+     * Filter conditions are evaluated when the link is rendered; if false the link will not be displayed.
+     * When a branch is reached which has no actions, the scene is marked as completed and will not render if visited again.
+     * Use the SugarCube idiom of a backslash at the end of each branch to remove unwanted blank lines: <</branch>>\
+     * It is also a good idea to add the following to your StoryInit passage: <<run Config.cleanupWikifierOutput = true>>
+
  */
 (function () {
     'use strict';
 
-    // Function to render the current branch
+    // Function to render the current branch of the current scene
     setup.renderCurrentBranch = () => {
 
         // Bail if no current scene or branches
@@ -72,6 +97,7 @@
         return retVal;
     };
 
+    // Process a scene
     Macro.add('scene', {
         tags: null,
         handler : function () {
@@ -104,6 +130,7 @@
         }
     });
 
+    // Process a branch and its actions
     Macro.add('branch', {
         tags: ['action'],
         handler : function () {
@@ -119,7 +146,7 @@
             }
 
             // Set the current branch to this one if no branch is set
-            if (!currentScene.branch && this.args.length === 2 || this.args[1] === 'start') {
+            if (!currentScene.branch && this.args[1] === 'start') {
                 currentScene.branch = branchName;
                 isCurrent = true;
             }
@@ -166,11 +193,9 @@
             function filterWrap(link, condition, index){
 
                 return`<<capture _filter>>\
-                                <<run jQuery.wiki("<<set _filter = !!( ${condition} )>>")>>\
-                                <<if _filter>>\
-                                    ${link}\
-                                <</if>>\
-                            <</capture>>\
+                            <<run jQuery.wiki("<<set _filter = !!( ${condition} )>>")>>\
+                            <<if _filter>>${link}<</if>>\
+                       <</capture>>\
                 `;
             }
 

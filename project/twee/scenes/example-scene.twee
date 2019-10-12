@@ -2,7 +2,9 @@
 <<scene 'Example Scene'>>
     <<branch first start>>
         Text of the "FIRST" branch.
-        'Lots of it.'
+        <i>'Lots of it.'</i>
+        <<set _hatchet_man to 'George Washington'>>\
+        _hatchet_man
         Some more...
         <<action second>>Go to second branch
         <<action "<<goto `passage()`>>">>Re-render this passage
