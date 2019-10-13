@@ -2,12 +2,12 @@
     TWINE/SUGARCUBE SCENE MACRO
     Copyright © 2019 Cliff Hall
 
-    <<scene name>>
+    <<scene 'name'>>
         <<branch name [start]>>
             Text of branch.
-            <<action branch | '<<macroToExecute>>' ['filterCondition']>>
+            <<action targetBranch | '<<macroToExecute>>' ['filterCondition']>>
             Text of first action.
-            <<action branch | '<<macroToExecute>>' ['filterCondition']>>
+            <<action targetBranch | '<<macroToExecute>>' ['filterCondition']>>
             Text of second action.
             .
             .
@@ -26,16 +26,16 @@
      * Don't render scenes that have been previously completed if they are revisited.
 
     USAGE
-     * Each scene needs a unique name (no quotes).
+     * Each scene needs a unique name (in quotes if more than one word).
      * Unnamed scenes will throw an error when processed.
      * Scene tags should contain only branch tags as direct children.
      * Scenes can contain any number of branches.
-     * Each branch needs a unique name (no quotes).
+     * Each branch needs a unique name (in quotes if more than one word).
      * One and only one branch must have start as its second argument (no quotes).
      * Branches contain text (which can include SugarCube macros and HTML markup) followed by an optional number of actions.
      * Actions are rendered as bulleted list after the text of the branch they belong to.
      * Actions only include an opening tag; no closing <</action>> is required and will throw an error if present.
-     * Actions MUST have EITHER a branch name (not quoted) OR a macro to be executed (in quotes).
+     * Actions MUST have EITHER a target branch name (in quotes if more than one word) OR a macro to be executed (in quotes).
      * Actions MAY optionally have a filter condition (using SugarCube expressions) as a second argument (in quotes).
      * Filter conditions are evaluated when the link is rendered; if false the link will not be displayed.
      * When a branch is reached which has no actions, the scene is marked as completed and will not render if visited again.
@@ -67,7 +67,7 @@
 
         // If actions are present, render them, otherwise mark scene complete
         if (actions.length) {
-            // Add the branche's actions to the scene container
+            // Add the branch's actions to the scene container
             let list = $(document.createElement('ul'));
             list.appendTo(container);
             actions.forEach((action, index) => {
@@ -81,6 +81,7 @@
             let completed = State.getVar('$completedScenes');
             completed.push(currentScene.name);
             State.setVar('$currentScene', null);
+            if (!!State.getVar('$currentNav')) setup.renderCurrentNav();
         }
     };
 

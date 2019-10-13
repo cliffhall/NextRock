@@ -99,6 +99,7 @@ body {
     align-items: center;
     line-height: 2em;
 }
+
 .passage .nav .section {
     color: #ccc;
     font-size: 1.2em;
@@ -110,6 +111,10 @@ body {
     line-height: 1.5em;
 }
 
+.passage .nav span {
+    margin: 2px;
+}
+
 .passage .nav a {
     border: 1px solid;
     font-size: 1em;
@@ -118,7 +123,6 @@ body {
     color: #394565;
     white-space: nowrap;
     line-height: 1.5em;
-
 }
 
 .passage .nav a:hover {

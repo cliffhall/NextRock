@@ -13,10 +13,10 @@
     <<branch second>>
         Text of the SECOND branch.
         <<action first>>Return to first branch
-        <<action second "true === false">>Filter this link out
-        <<action third>>Go to end
+        <<action nowhere "true === false">>Filter this link out
+        <<action 'third branch'>>Go to end
     <</branch>>\
-    <<branch third>>
+    <<branch 'third branch'>>
         Final branch. No actions, so scene will be marked complete and cannot be revisited.
     <</branch>>\
 <</scene>>

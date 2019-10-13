@@ -1,5 +1,10 @@
 :: Airlock [location pod]
-<<include 'Example Scene 2'>>
+<<include 'Example Scene'>>
 
-<div class="nav"><div class="section">Exits</div>
-<div>[[Central Hub]] [[Rover Bay]] [[Surface on Foot]]</div></div>
+<<nav>>
+    <<section Exits>>
+        <<action "Central Hub">>
+        <<action "Rover Bay">>
+        <<action "Surface on Foot">>
+    <</section>>
+<</nav>>

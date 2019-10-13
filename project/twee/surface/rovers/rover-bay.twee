@@ -1,5 +1,13 @@
 :: Rover Bay [location pod]
-<<include 'Example Scene'>>
 
-<div class="nav"><div class="section">Rovers</div><div>[[Rover 1]] [[Rover 2]] [[Rover 3]]</div>
-<div class="section">Exits</div><div>[[Airlock]] [[Surface on Foot]]</div></div>
+<<nav>>
+    <<section Rovers>>
+        <<action "Rover 1">>
+        <<action "Rover 2">>
+        <<action "Rover 3">>
+    <</section>>
+    <<section Exits>>
+        <<action "Airlock">>
+        <<action "Surface on Foot">>
+    <</section>>
+<</nav>>

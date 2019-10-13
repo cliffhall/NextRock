@@ -1,5 +1,11 @@
 :: Science Hub [location hub]
 
-
-<div class="nav"><div class="section">Exits</div>
-<div>[[Central Hub]] [[Life Support->Life Support Pod]] [[Laboratory->Laboratory Pod]] [[Greenhouse->Greenhouse Pod]] [[Recycling->Waste Recycling Pod]]</div></div>
+<<nav>>
+    <<section Exits>>
+        <<action "Central Hub">>
+        <<action "Life Support Pod">>Life Support
+        <<action "Laboratory Pod">>Laboratory
+        <<action "Greenhouse Pod">>Greenhouse
+        <<action "Waste Recycling Pod">>Recycling
+    <</section>>
+<</nav>>
