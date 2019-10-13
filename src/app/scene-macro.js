@@ -5,10 +5,13 @@
     <<scene 'name'>>
         <<branch name [start]>>
             Text of branch.
-            <<action targetBranch | '<<macroToExecute>>' ['filterCondition']>>
-            Text of first action.
-            <<action targetBranch | '<<macroToExecute>>' ['filterCondition']>>
-            Text of second action.
+            .
+            .
+            .
+            <<action targetBranch | '<<macroToExecute>>' ['filterCondition']>>Text of first action link.
+            <<action targetBranch | '<<macroToExecute>>' ['filterCondition']>>Text of second action link.
+            <<cut targetPassage ['filterCondition']>>Text of first cut link.
+            <<cut targetPassage ['filterCondition']>>Text of second cut link.
             .
             .
             .
@@ -26,19 +29,23 @@
      * Don't render scenes that have been previously completed if they are revisited.
 
     USAGE
-     * Each scene needs a unique name (in quotes if more than one word).
-     * Unnamed scenes will throw an error when processed.
-     * Scene tags should contain only branch tags as direct children.
-     * Scenes can contain any number of branches.
-     * Each branch needs a unique name (in quotes if more than one word).
-     * One and only one branch must have start as its second argument (no quotes).
-     * Branches contain text (which can include SugarCube macros and HTML markup) followed by an optional number of actions.
-     * Actions are rendered as bulleted list after the text of the branch they belong to.
+     * Each Scene needs a unique name (in quotes if more than one word).
+     * Unnamed Scenes will throw an error when processed.
+     * Scene tags should contain only Branch tags as direct children.
+     * Scenes can contain any number of Branches.
+     * Each Branch needs a unique name (in quotes if more than one word).
+     * One and only one Branch must have start as its second argument (no quotes).
+     * Branches contain text (which can include SugarCube macros and HTML markup) followed by an optional number of Actions.
+     * Actions are links rendered as a bulleted list after the text of the Branch they belong to.
      * Actions only include an opening tag; no closing <</action>> is required and will throw an error if present.
-     * Actions MUST have EITHER a target branch name (in quotes if more than one word) OR a macro to be executed (in quotes).
+     * Actions MUST have EITHER a target Branch name (in quotes if more than one word) OR a macro to be executed (in quotes).
      * Actions MAY optionally have a filter condition (using SugarCube expressions) as a second argument (in quotes).
-     * Filter conditions are evaluated when the link is rendered; if false the link will not be displayed.
-     * When a branch is reached which has no actions, the scene is marked as completed and will not render if visited again.
+     * Filter conditions are evaluated when the link is rendered. If false, the link will not be displayed.
+     * When a Branch is reached which has no Actions, the Scene is marked as completed and will not render if visited again.
+     * Cuts are like Actions except they target another Passage instead of a Branch of the current Scene.
+     * Unlike Actions, Cuts do not support macros in the first argument, but they do support filter conditions in the second arg.
+     * When the user clicks on the link for a Cut, the Scene is marked as completed and will not render if visited again.
+     * Cuts and Actions can be defined in any order.
      * Use the SugarCube idiom of a backslash at the end of each branch to remove unwanted blank lines: <</branch>>\
      * It is also a good idea to add the following to your StoryInit passage: <<run Config.cleanupWikifierOutput = true>>
 
@@ -77,12 +84,19 @@
                 if ($(bullet).text().trim().length ===0) $(bullet).remove();
             });
         } else {
-            // Mark scene complete and clear the current scene
-            let completed = State.getVar('$completedScenes');
-            completed.push(currentScene.name);
-            State.setVar('$currentScene', null);
-            if (!!State.getVar('$currentNav')) setup.renderCurrentNav();
+            setup.markCurrentSceneComplete();
         }
+
+    };
+
+    // Mark scene complete and clear the current scene
+    setup.markCurrentSceneComplete = () => {
+        let currentScene = State.getVar('$currentScene');
+        if (!currentScene) return;
+        let completed = State.getVar('$completedScenes');
+        completed.push(currentScene.name);
+        State.setVar('$currentScene', null);
+        if (!!State.getVar('$currentNav')) setup.renderCurrentNav();
     };
 
     // Function to check if a given scene has been completed
@@ -133,7 +147,7 @@
 
     // Process a branch and its actions
     Macro.add('branch', {
-        tags: ['action'],
+        tags: ['action', 'cut'],
         handler : function () {
 
             let branchName, isCurrent = false;
@@ -159,6 +173,24 @@
                     case 'branch':
                         retVal = String(part.contents).trim();
                         break;
+                    case 'cut':
+                        // Get the first arg to the cut
+                        arg1 = String(part.args[0]).trim();
+                        contents = String(part.contents).trim();
+
+                        // Create the link
+                        link = `<<link "${contents}" "${arg1}">><<run setup.markCurrentSceneComplete()>><</link>>`;
+
+                        // If there's a filter condition, wrap the link with it
+                        arg2 = part.args[1];
+
+                        // Return the link
+                        if (arg2) {
+                            retVal = filterWrap(link, arg2, index-1)
+                        } else {
+                            retVal = link
+                        }
+                        break;
                     case 'action':
                         // Get the first arg to the action
                         arg1 = String(part.args[0]).trim();
@@ -180,7 +212,6 @@
                         } else {
                             retVal = link
                         }
-
                         break;
                 }
                 return retVal;

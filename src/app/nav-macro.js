@@ -21,7 +21,7 @@
      * Write passage-to-passage navigation to be displayed at bottom of passage content.
      * Allow each passage to lead to other passages (or execute macros) by definable actions.
      * Let the actions of a nav section be displayed conditionally (e.g., only show 'Locked Door' you have the key).
-     * Suppress display of navigation if there is a current scene.
+     * Suppress display of navigation if there is a scene in progress (see scene macro).
 
     USAGE
      * Each section needs a unique name (in quotes if more than one word).

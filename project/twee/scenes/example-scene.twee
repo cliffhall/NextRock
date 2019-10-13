@@ -15,6 +15,7 @@
         <<action first>>Return to first branch
         <<action nowhere "true === false">>Filter this link out
         <<action 'third branch'>>Go to end
+        <<cut "Central Hub">>Go to the Central Hub
     <</branch>>\
     <<branch 'third branch'>>
         Final branch. No actions, so scene will be marked complete and cannot be revisited.
