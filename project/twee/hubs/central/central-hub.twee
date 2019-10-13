@@ -16,5 +16,14 @@
     You come here a lot. Too bad there's not more to see.
 <</switch>>\
 
-<div class="nav"><div class="section">Exits</div>
-<div>[[Living->Living Hub]] [[Facilities->Facilities Hub]] [[Engineering->Engineering Hub]] [[Science->Science Hub]] [[Medical->Medical Hub]] [[Stockade->Stockade Pod]] [[Airlock]]</div></div>
+<<nav>>
+    <<section Exits>>
+        <<action "Living Hub">>Living
+        <<action "Facilities Hub">>Facilities
+        <<action "Engineering Hub">>Engineering
+        <<action "Science Hub">>Science
+        <<action "Medical Hub">>Medical
+        <<action "Stockade Pod">>Stockade
+        <<action "Airlock">>
+    <</section>>
+<</nav>>

@@ -1,5 +1,7 @@
 :: Laboratory Pod [location pod]
 
-
-<div class="nav"><div class="section">Exits</div>
-<div>[[Science Hub]]</div></div>
+<<nav>>
+    <<section Exits>>
+        <<action "Science Hub">>
+    <</section>>
+<</nav>>

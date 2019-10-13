@@ -1,5 +1,7 @@
 :: Infirmary Pod [location pod]
-Woops, now you've done it.
 
-<div class="nav"><div class="section">Exits</div>
-<div>[[Medical Hub]]</div></div>
+<<nav>>
+    <<section Exits>>
+        <<action "Medical Hub">>
+    <</section>>
+<</nav>>

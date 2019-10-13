@@ -1,5 +1,11 @@
 :: Engineering Hub [location hub]
 
-
-<div class="nav"><div class="section">Exits</div>
-<div>[[Central Hub]] [[Fabrication->Fabrication Pod]] [[Electrical->Electrical Engineering Pod]] [[Mechanical->Mechanical Engineering Pod]] [[Network->Network Operations Pod]]</div></div>
+<<nav>>
+    <<section Exits>>
+        <<action "Central Hub">>
+        <<action "Fabrication Pod">>Fabrication
+        <<action "Electrical Engineering Pod">>Electrical
+        <<action "Mechanical Engineering Pod">>Mechanical
+        <<action "Network Operations Pod">>Network
+    <</section>>
+<</nav>>

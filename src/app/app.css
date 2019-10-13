@@ -109,6 +109,16 @@ body {
     background-color: #394565;
     border-radius: 5px;
     line-height: 1.5em;
+    margin: 5px;
+}
+
+.passage .navlinks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    padding: 0px;
+    margin: 2px;
 }
 
 .passage .nav span {

@@ -1,5 +1,7 @@
 :: Stockade Pod [location pod]
-Good Glorb, What have you done now?
 
-<div class="nav"><div class="section">Exits</div>
-<div>[[Central Hub]]</div></div>
+<<nav>>
+    <<section Exits>>
+        <<action "Central Hub">>
+    <</section>>
+<</nav>>

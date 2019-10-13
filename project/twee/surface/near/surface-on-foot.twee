@@ -1,5 +1,12 @@
 :: Surface on Foot [location surface]
 
-
-<div class="nav"><div class="section">Destinations</div>
-<div>[[Airlock]] [[Rover Bay]] [[Power Station]] [[Comms Station]] [[Supply Depot]] [[Water Pumping Station]]</div></div>
+<<nav>>
+    <<section Destinations>>
+        <<action "Airlock">>
+        <<action "Rover Bay">>
+        <<action "Power Station">>
+        <<action "Comms Station">>
+        <<action "Supply Depot">>
+        <<action "Water Pumping Station">>Pumping Station
+    <</section>>
+<</nav>>

@@ -1,5 +1,14 @@
 :: Living Hub [location hub]
 Where you and all your noisy, smelly neighbors sleep.
 
-<div class="nav"><div class="section">Exits</div>
-<div>[[Central Hub]] [[Pod 1->Living Pod 1]] [[Pod 2->Living Pod 2]] [[Pod 3->Living Pod 3]] [[Pod 4->Living Pod 4]] [[Pod 5->Living Pod 5]] [[Pod 6->Living Pod 6]]</div></div>
+<<nav>>
+    <<section Exits>>
+        <<action "Central Hub">>
+        <<action "Living Pod 1">>Pod 1
+        <<action "Living Pod 2">>Pod 2
+        <<action "Living Pod 3">>Pod 3
+        <<action "Living Pod 4">>Pod 4
+        <<action "Living Pod 5">>Pod 5
+        <<action "Living Pod 6">>Pod 6
+    <</section>>
+<</nav>>

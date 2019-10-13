@@ -1,5 +1,9 @@
 :: Toilet Pod [location pod]
 It really stinks in here. Get done quickly and get out is your best advice.
 
-<div class="nav"><div class="section">Exits</div>
-<div>[[Facilities Hub]] [[Shower->Shower Pod]]</div></div>
+<<nav>>
+    <<section Exits>>
+        <<action "Facilities Hub">>
+        <<action "Shower Pod">>Shower
+    <</section>>
+<</nav>>

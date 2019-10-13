@@ -1,5 +1,7 @@
 :: Psychiatry Pod [location pod]
 
-
-<div class="nav"><div class="section">Exits</div>
-<div>[[Medical Hub]]</div></div>
+<<nav>>
+    <<section Exits>>
+        <<action "Medical Hub">>
+    <</section>>
+<</nav>>

@@ -59,8 +59,10 @@
             sectionContainer.append(section.name);
             sectionContainer.appendTo(navContainer);
 
+
             // Link Container
             let linkContainer = $(document.createElement('div'));
+            linkContainer.addClass('navlinks');
             linkContainer.appendTo(navContainer);
 
             // Action Links

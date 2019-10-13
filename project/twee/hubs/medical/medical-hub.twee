@@ -1,5 +1,10 @@
 :: Medical Hub [location hub]
 
-
-<div class="nav"><div class="section">Exits</div>
-<div>[[Central Hub]] [[Infirmary->Infirmary Pod]] [[Surgery->Surgery Pod]] [[Psychiatry->Psychiatry Pod]]</div></div>
+<<nav>>
+    <<section Exits>>
+        <<action "Central Hub">>
+        <<action "Infirmary Pod">>Infirmary
+        <<action "Surgery Pod">>Surgery
+        <<action "Psychiatry Pod">>Psychiatry
+    <</section>>
+<</nav>>

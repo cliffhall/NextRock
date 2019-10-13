@@ -1,5 +1,11 @@
 :: Supply Depot [location surface]
 
-
-<div class="nav"><div class="section">Destinations</div>
-<div>[[Airlock]] [[Rover Bay]] [[Power Station]] [[Comms Station]] [[Water Pumping Station]]</div></div>
+<<nav>>
+    <<section Destinations>>
+        <<action "Airlock">>
+        <<action "Rover Bay">>
+        <<action "Power Station">>
+        <<action "Comms Station">>
+        <<action "Water Pumping Station">>Pumping Station
+    <</section>>
+<</nav>>

@@ -1,5 +1,7 @@
 :: Living Pod 1 [location pod]
 
-
-<div class="nav"><div class="section">Exits</div>
-<div>[[Living Hub]]</div></div>
+<<nav>>
+    <<section Exits>>
+        <<action "Living Hub">>
+    <</section>>
+<</nav>>

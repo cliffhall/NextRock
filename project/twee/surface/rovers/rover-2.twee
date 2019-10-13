@@ -1,5 +1,13 @@
 :: Rover 2 [location rover]
 
-
-<div class="nav"><div class="section">Destinations</div>
-<div>[[Rover Bay]] [[Equipment Depot]] [[Solar Array]] [[Water Ice Mine]] [[Landing Pad]] [[Launch Pad]] [[Reactor]]</div></div>
+<<nav>>
+    <<section Destinations>>
+        <<action "Rover Bay">>
+        <<action "Equipment Depot">>
+        <<action "Solar Array">>
+        <<action "Water Ice Mine">>Ice Mine
+        <<action "Landing Pad">>
+        <<action "Launch Pad">>
+        <<action "Reactor">>
+    <</section>>
+<</nav>>
