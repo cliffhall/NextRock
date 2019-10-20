@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ScrivenerProject Identifier="A7D1C1AF-AAC9-4F7A-B5D0-7885832C3E4F" Version="2.0" Creator="SCRMAC-3.1.4-12105" Device="Destiny" Author="Cliff Hall" Modified="2019-10-19 19:25:19 -0400" ModID="DD71BB79-781D-4464-B3FC-A4DBEB7FA1F0">
+<ScrivenerProject Identifier="A7D1C1AF-AAC9-4F7A-B5D0-7885832C3E4F" Version="2.0" Creator="SCRMAC-3.1.4-12105" Device="Destiny" Author="Cliff Hall" Modified="2019-10-19 19:28:01 -0400" ModID="B74B5839-2D65-4145-8CCA-5DD32BA9BD71">
     <Binder>
         <BinderItem UUID="F8F9FDEF-FD9F-4A8C-B33D-3434A1220ADC" Type="Text" Created="2019-09-15 18:46:12 -0400" Modified="2019-09-15 18:46:12 -0400">
             <Title>Short Story Format</Title>
@@ -1159,7 +1159,7 @@
     <ProjectTargets Notify="No">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="Yes" Deadline="2011-04-12 08:24:39 -0400" IgnoreDeadline="Yes">0</DraftTarget>
         <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="No" NextResetDate="2019-10-20 01:00:00 -0400" ResetType="Time" ResetTime="00:00" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
-        <PreviousSession Words="353" Characters="2011" Date="2019-10-19 19:25:08 -0400"/>
+        <PreviousSession Words="353" Characters="2011" Date="2019-10-19 19:27:53 -0400"/>
     </ProjectTargets>
     <RecentWritingHistory Date="2019-10-19 00:00:00 -0400">
         <DraftWordCount>326</DraftWordCount>
