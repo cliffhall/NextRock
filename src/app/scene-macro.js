@@ -186,9 +186,9 @@
 
                         // Return the link
                         if (arg2) {
-                            retVal = filterWrap(link, arg2, index-1)
+                            retVal = filterWrap(link, arg2, index-1);
                         } else {
-                            retVal = link
+                            retVal = link;
                         }
                         break;
                     case 'action':
@@ -197,7 +197,7 @@
                         contents = String(part.contents).trim();
                         // If it isn't a macro, treat it as a branch name
                         if (!(arg1.includes('<<') && arg1.includes('>>'))) {
-                            arg1 = `<<set $currentScene.branch to "${arg1}">><<run setup.renderCurrentBranch()>>`
+                            arg1 = `<<set $currentScene.branch to "${arg1}">><<run setup.renderCurrentBranch()>>`;
                         }
 
                         // Create the link
@@ -208,9 +208,9 @@
 
                         // Return the link
                         if (arg2) {
-                            retVal = filterWrap(link, arg2, index-1)
+                            retVal = filterWrap(link, arg2);
                         } else {
-                            retVal = link
+                            retVal = link;
                         }
                         break;
                 }
@@ -222,7 +222,7 @@
                 setup.renderCurrentBranch();
             }
 
-            function filterWrap(link, condition, index){
+            function filterWrap(link, condition){
 
                 return`<<capture _filter>>\
                             <<run jQuery.wiki("<<set _filter = !!( ${condition} )>>")>>\

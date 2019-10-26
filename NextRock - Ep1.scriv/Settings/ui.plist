@@ -11,10 +11,12 @@
 	</dict>
 	<key>NotesScaleFactor</key>
 	<real>1</real>
+	<key>SuppressBookmarksFolderCheck</key>
+	<false/>
 	<key>binderSplitFrames</key>
 	<array>
-		<string>{{0, 0}, {213, 687}}</string>
-		<string>{{214, 0}, {928, 687}}</string>
+		<string>{{0, 0}, {270, 728}}</string>
+		<string>{{271, 0}, {1095, 728}}</string>
 	</array>
 	<key>bookmarksPreviewTextSettings</key>
 	<dict>
@@ -245,6 +247,11 @@
 			<key>Row</key>
 			<integer>-1</integer>
 		</dict>
+		<key>8CD53828-0985-4224-8FEB-D33B3FBA9865</key>
+		<dict>
+			<key>Row</key>
+			<integer>-1</integer>
+		</dict>
 		<key>8D72034E-58DB-4EFF-89D7-DB988ECC0E19</key>
 		<dict>
 			<key>Row</key>
@@ -371,8 +378,8 @@
 	<integer>2</integer>
 	<key>inspectorSplitFrames</key>
 	<array>
-		<string>{{0, 0}, {578, 657}}</string>
-		<string>{{579, 0}, {349, 657}}</string>
+		<string>{{0, 0}, {698, 698}}</string>
+		<string>{{699, 0}, {396, 698}}</string>
 	</array>
 	<key>inspectorWidth</key>
 	<real>245</real>

@@ -59,7 +59,6 @@
             sectionContainer.append(section.name);
             sectionContainer.appendTo(navContainer);
 
-
             // Link Container
             let linkContainer = $(document.createElement('div'));
             linkContainer.addClass('navlinks');
@@ -128,7 +127,6 @@
 
             // Parse section contents
             section.actions = this.payload.splice(1).map((part,index) => {
-                console.log(part.name)
                 let retVal, link, arg1, arg2, contents, macro;
                 if (part.name === 'action') {
                     // Get the first arg to the action
@@ -137,8 +135,7 @@
 
                     // Create the link
                     if ((arg1.includes('<<') && arg1.includes('>>'))) {
-                        macro = `<<set $currentScene.branch to "${arg1}">><<run setup.renderCurrentBranch()>>`
-                        link = `<<link "${contents}">>${macro}<</link>>`;
+                        link = `<<link "${contents}">>${arg1}<</link>>`;
                     } else {
                         link = `<<link "${contents}" "${arg1}">><<run State.setVar('$currentNav', undefined);>><</link>>`;
                     }
@@ -153,7 +150,6 @@
                         retVal = link;
                     }
                 }
-                console.log(retVal);
                 return retVal;
             });
 

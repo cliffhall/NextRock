@@ -1,5 +1,4 @@
 :: Airlock [location pod]
-<<include 'Example Scene'>>
 
 <<nav>>
     <<section Exits>>

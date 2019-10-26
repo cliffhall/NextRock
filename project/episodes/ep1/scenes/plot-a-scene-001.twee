@@ -1,0 +1,33 @@
+:: Plot A Scene 001 [scene]
+<<scene 'Bill (Airlock)'>>
+    <<branch "Opening" start>>
+        Although modern spacesuits aren’t nearly as bulky as those worn by astronauts of the bygone Apollo and Shuttle eras, they’re still no joy to don. Particularly the kind you’ve jammed your lanky, six-foot frame into. There are much better ones out there, everybody knows it. But in the interest of savings, this is basically the sort you’d find in a Dollar Store bargain bin. If Dollar Store sold spacesuits, that is.
+
+        It occurs to you that if the mega-rich CEO of NextRock Incorporated had ever actually intended to live in his own colony, this process would be much easier. A lot of things would.
+
+        After half an hour of seal checks, air scrubber tests, and glitchy comms troubleshooting, you, Bill Brewster are ready to visit the surface of Mars. Or at least wait in the Rover Bay until Lonnie’s nutty ass finds his way back. When he does, you are going to shut down his little operation, and maybe let him sit in the stockade for awhile and think about it.
+
+        And of course, now you need to go pee. Ain’t it always the way?
+        <<action "Un-suit and go pee">>Un-suit, go pee, then come back and go through all this hassle again.
+        <<action "Bill & Lonnie (Rover Bay)">>Ignore your bladder and exit to the Rover Bay.
+    <</branch>>\
+    <<branch "Un-suit and go pee">>
+        Jesus please us, Bill. Man up!
+
+        This colony may seem to slip further from your control with every passing day, but surely you can still control your own bladder.
+        <<action "Bill & Lonnie (Rover Bay)">>Ignore your bladder and exit to the Rover Bay.
+        <<cut "Toilet Pod">>Grown man or not, you have a weak bladder, and you get testy when it’s full. Go pee.
+    <</branch>>\
+    <<branch 'Bill & Lonnie (Rover Bay)'>>
+        Just as you enter the bay, Rover 3 rolls in from the surface. It comes to a perfect, auto-piloted stop at its charging station. The bay door clangs shut, sending a cloud of regolith into the relative vacuum of the bay.
+
+        Lonnie Iverson, the colony’s life sciences officer, hops down from the cab, struggling with his ill-fitting suit. You are reminded of that old saw about packing 50 pounds of manure into a 10 pound bag.
+
+        “They’re real,” Iverson shouts over his suit-to-suit radio. His eyes are wild. Light from his helmet’s HUD glint off the beads of sweat dotting his forehead. “Aliens! Honest to god aliens, Bill. They… exist!”
+
+        > Try and talk some sense to him.
+        > Ask him to tell you about the aliens.
+        > Tell him to show you.
+    <</branch>>\
+
+<</scene>>

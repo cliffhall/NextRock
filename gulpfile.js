@@ -59,7 +59,7 @@ const CFG = {
     },
 
     OUT: {
-        MODULES: "./project/modules",
+        MODULES: "./project/common/modules",
         VENDOR_MIN_JS: "vendor.min.js",
         VENDOR_MIN_CSS: "vendor.min.css",
         APP_MIN_JS: "app.min.js",

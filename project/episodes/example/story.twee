@@ -1,0 +1,34 @@
+:: StoryData
+{
+    "ifid": "59A70EE1-9CAF-4FE1-A934-1DA5606001B7",
+    "format": "SugarCube",
+    "format-version": "2.29",
+    "start": "Airlock"
+}
+
+:: StoryTitle
+NextRock
+
+:: StorySubtitle
+Episode 0
+Example
+
+:: StoryInit
+<<run Config.cleanupWikifierOutput = true>>
+<<newcycle 'time' 4>>
+    <<phase 'early morning'
+            'morning'
+            'late morning'
+            'midday'
+            'early afternoon'
+            'late afternoon'
+            'early evening'
+            'late evening'
+            'night'>>
+<</newcycle>>
+
+:: StoryCaption
+@@#time-cycle;@@
+<<timed 0s>>
+<<replace '#time-cycle'>><<showcycle 'time' upperfirst>><</replace>>
+<</timed>>

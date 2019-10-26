@@ -1,3 +1,4 @@
 :: PassageHeader
 <<if tags().includes("location")>><<set $location to passage()>><</if>>\
 !!<<print $location>>
+<<plot-evaluator>><</plot-evaluator>>

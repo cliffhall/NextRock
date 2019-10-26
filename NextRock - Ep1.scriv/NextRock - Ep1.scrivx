@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ScrivenerProject Identifier="A7D1C1AF-AAC9-4F7A-B5D0-7885832C3E4F" Version="2.0" Creator="SCRMAC-3.1.4-12105" Device="Destiny" Author="Cliff Hall" Modified="2019-10-19 19:28:01 -0400" ModID="B74B5839-2D65-4145-8CCA-5DD32BA9BD71">
+<ScrivenerProject Identifier="A7D1C1AF-AAC9-4F7A-B5D0-7885832C3E4F" Version="2.0" Creator="SCRMAC-3.1.4-12105" Device="Destiny" Author="Cliff Hall" Modified="2019-10-26 13:14:58 -0400" ModID="6702E32F-CCBA-41AD-8552-7A7BD25792C0">
     <Binder>
         <BinderItem UUID="F8F9FDEF-FD9F-4A8C-B33D-3434A1220ADC" Type="Text" Created="2019-09-15 18:46:12 -0400" Modified="2019-09-15 18:46:12 -0400">
             <Title>Short Story Format</Title>
@@ -30,37 +30,49 @@
                     <TextSettings>
                         <TextSelection>0,0</TextSelection>
                     </TextSettings>
+                    <CorkboardAndOutliner>
+                        <SelectedSubdocumentUUIDs>145E7BB1-F0E1-4730-8E6A-1F007EE78C24</SelectedSubdocumentUUIDs>
+                        <OutlinerExpandedState>
+                            <ItemID>4E8308B8-5D70-45EC-B4FE-9E146FAF95B1</ItemID>
+                            <ItemID>4A61588C-66DD-4BD1-9BB4-6F2CEB4E58E4</ItemID>
+                            <ItemID>862863EC-0715-4588-AD17-6824940CBD71</ItemID>
+                        </OutlinerExpandedState>
+                    </CorkboardAndOutliner>
                     <Children>
-                        <BinderItem UUID="4E8308B8-5D70-45EC-B4FE-9E146FAF95B1" Type="Text" Created="2019-09-28 14:41:43 -0400" Modified="2019-10-19 15:46:01 -0400">
+                        <BinderItem UUID="4E8308B8-5D70-45EC-B4FE-9E146FAF95B1" Type="Text" Created="2019-09-28 14:41:43 -0400" Modified="2019-10-26 12:23:36 -0400">
                             <Title>Bill (Airlock)</Title>
                             <MetaData>
+                                <StatusID>2</StatusID>
                                 <IncludeInCompile>Yes</IncludeInCompile>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>1051,0</TextSelection>
+                                <TextSelection>1024,120</TextSelection>
                             </TextSettings>
                             <Children>
-                                <BinderItem UUID="1595A0B2-8FA5-43B0-9062-5475B0302AFC" Type="Text" Created="2019-09-28 17:01:51 -0400" Modified="2019-10-19 16:50:39 -0400">
+                                <BinderItem UUID="1595A0B2-8FA5-43B0-9062-5475B0302AFC" Type="Text" Created="2019-09-28 17:01:51 -0400" Modified="2019-10-26 12:23:39 -0400">
                                     <Title>Un-suit and go pee</Title>
                                     <MetaData>
+                                        <StatusID>2</StatusID>
                                         <IncludeInCompile>Yes</IncludeInCompile>
                                     </MetaData>
                                     <TextSettings>
-                                        <TextSelection>256,0</TextSelection>
+                                        <TextSelection>222,0</TextSelection>
                                     </TextSettings>
                                     <Bookmarks>
                                         <Bookmark BinderUUID="4E8308B8-5D70-45EC-B4FE-9E146FAF95B1"/>
+                                        <Bookmark BinderUUID="145E7BB1-F0E1-4730-8E6A-1F007EE78C24"/>
                                     </Bookmarks>
                                 </BinderItem>
                             </Children>
                         </BinderItem>
-                        <BinderItem UUID="4A61588C-66DD-4BD1-9BB4-6F2CEB4E58E4" Type="Text" Created="2019-09-15 18:46:12 -0400" Modified="2019-10-19 16:51:16 -0400">
+                        <BinderItem UUID="4A61588C-66DD-4BD1-9BB4-6F2CEB4E58E4" Type="Text" Created="2019-09-15 18:46:12 -0400" Modified="2019-10-26 12:23:44 -0400">
                             <Title>Bill &amp; Lonnie (Rover Bay)</Title>
                             <MetaData>
+                                <StatusID>2</StatusID>
                                 <IncludeInCompile>Yes</IncludeInCompile>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>726,0</TextSelection>
+                                <TextSelection>0,730</TextSelection>
                             </TextSettings>
                             <CorkboardAndOutliner>
                                 <SelectedSubdocumentUUIDs></SelectedSubdocumentUUIDs>
@@ -73,9 +85,10 @@
                                 <Bookmark BinderUUID="1595A0B2-8FA5-43B0-9062-5475B0302AFC"/>
                             </Bookmarks>
                             <Children>
-                                <BinderItem UUID="791AAA1B-FC89-47B4-8824-0DD2F0D66620" Type="Text" Created="2019-09-28 14:26:15 -0400" Modified="2019-10-19 16:58:02 -0400">
+                                <BinderItem UUID="791AAA1B-FC89-47B4-8824-0DD2F0D66620" Type="Text" Created="2019-09-28 14:26:15 -0400" Modified="2019-10-26 12:23:48 -0400">
                                     <Title>Talk sense</Title>
                                     <MetaData>
+                                        <StatusID>2</StatusID>
                                         <IncludeInCompile>Yes</IncludeInCompile>
                                     </MetaData>
                                     <TextSettings>
@@ -86,9 +99,10 @@
                                         <Bookmark BinderUUID="15A95207-E0DD-4D74-BFA3-3ACF9ECDBA3E"/>
                                     </Bookmarks>
                                 </BinderItem>
-                                <BinderItem UUID="15A95207-E0DD-4D74-BFA3-3ACF9ECDBA3E" Type="Text" Created="2019-09-28 14:25:15 -0400" Modified="2019-10-19 16:53:46 -0400">
+                                <BinderItem UUID="15A95207-E0DD-4D74-BFA3-3ACF9ECDBA3E" Type="Text" Created="2019-09-28 14:25:15 -0400" Modified="2019-10-26 12:23:51 -0400">
                                     <Title>Tell me</Title>
                                     <MetaData>
+                                        <StatusID>2</StatusID>
                                         <IncludeInCompile>Yes</IncludeInCompile>
                                     </MetaData>
                                     <TextSettings>
@@ -98,9 +112,10 @@
                                         <Bookmark BinderUUID="4A61588C-66DD-4BD1-9BB4-6F2CEB4E58E4"/>
                                     </Bookmarks>
                                 </BinderItem>
-                                <BinderItem UUID="862863EC-0715-4588-AD17-6824940CBD71" Type="Text" Created="2019-09-28 14:27:03 -0400" Modified="2019-10-19 17:01:09 -0400">
+                                <BinderItem UUID="862863EC-0715-4588-AD17-6824940CBD71" Type="Text" Created="2019-09-28 14:27:03 -0400" Modified="2019-10-26 12:23:53 -0400">
                                     <Title>Show me</Title>
                                     <MetaData>
+                                        <StatusID>2</StatusID>
                                         <IncludeInCompile>Yes</IncludeInCompile>
                                     </MetaData>
                                     <TextSettings>
@@ -111,13 +126,14 @@
                                         <Bookmark BinderUUID="15A95207-E0DD-4D74-BFA3-3ACF9ECDBA3E"/>
                                     </Bookmarks>
                                     <Children>
-                                        <BinderItem UUID="14FECC50-DC64-40C3-B123-C188931B1BC5" Type="Text" Created="2019-09-28 18:32:33 -0400" Modified="2019-10-19 17:05:02 -0400">
+                                        <BinderItem UUID="14FECC50-DC64-40C3-B123-C188931B1BC5" Type="Text" Created="2019-09-28 18:32:33 -0400" Modified="2019-10-26 13:14:57 -0400">
                                             <Title>Ramrod Lonnie into rover</Title>
                                             <MetaData>
+                                                <StatusID>2</StatusID>
                                                 <IncludeInCompile>Yes</IncludeInCompile>
                                             </MetaData>
                                             <TextSettings>
-                                                <TextSelection>556,0</TextSelection>
+                                                <TextSelection>358,0</TextSelection>
                                             </TextSettings>
                                             <Bookmarks>
                                                 <Bookmark BinderUUID="862863EC-0715-4588-AD17-6824940CBD71"/>
@@ -127,34 +143,38 @@
                                 </BinderItem>
                             </Children>
                         </BinderItem>
-                        <BinderItem UUID="02269AB4-034F-41B5-82BD-6F9061D88A45" Type="Text" Created="2019-09-30 19:01:44 -0400" Modified="2019-10-19 18:15:35 -0400">
-                            <Title>Bill &amp; Lonnie (Airlock 1)</Title>
+                        <BinderItem UUID="02269AB4-034F-41B5-82BD-6F9061D88A45" Type="Text" Created="2019-09-30 19:01:44 -0400" Modified="2019-10-26 13:00:17 -0400">
+                            <Title>Bill &amp; Lonnie (Airlock)</Title>
                             <MetaData>
+                                <StatusID>2</StatusID>
                                 <IncludeInCompile>Yes</IncludeInCompile>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>1262,0</TextSelection>
+                                <TextSelection>1289,0</TextSelection>
                             </TextSettings>
                             <Bookmarks>
                                 <Bookmark BinderUUID="791AAA1B-FC89-47B4-8824-0DD2F0D66620"/>
                             </Bookmarks>
+                            <Children>
+                                <BinderItem UUID="145E7BB1-F0E1-4730-8E6A-1F007EE78C24" Type="Text" Created="2019-09-30 19:01:44 -0400" Modified="2019-10-26 13:08:59 -0400">
+                                    <Title>Call for assistance</Title>
+                                    <MetaData>
+                                        <IncludeInCompile>Yes</IncludeInCompile>
+                                    </MetaData>
+                                    <TextSettings>
+                                        <TextSelection>943,0</TextSelection>
+                                    </TextSettings>
+                                    <Bookmarks>
+                                        <Bookmark BinderUUID="791AAA1B-FC89-47B4-8824-0DD2F0D66620"/>
+                                        <Bookmark BinderUUID="02269AB4-034F-41B5-82BD-6F9061D88A45"/>
+                                    </Bookmarks>
+                                </BinderItem>
+                            </Children>
                         </BinderItem>
-                        <BinderItem UUID="145E7BB1-F0E1-4730-8E6A-1F007EE78C24" Type="Text" Created="2019-09-30 19:01:44 -0400" Modified="2019-10-19 18:51:54 -0400">
-                            <Title>Bill &amp; Lonnie (Airlock 2)</Title>
-                            <MetaData>
-                                <IncludeInCompile>Yes</IncludeInCompile>
-                            </MetaData>
-                            <TextSettings>
-                                <TextSelection>565,0</TextSelection>
-                            </TextSettings>
-                            <Bookmarks>
-                                <Bookmark BinderUUID="791AAA1B-FC89-47B4-8824-0DD2F0D66620"/>
-                                <Bookmark BinderUUID="02269AB4-034F-41B5-82BD-6F9061D88A45"/>
-                            </Bookmarks>
-                        </BinderItem>
-                        <BinderItem UUID="D18B7638-DCC7-48F2-AB75-0688A47FC453" Type="Text" Created="2019-09-28 18:56:47 -0400" Modified="2019-10-19 14:08:59 -0400">
+                        <BinderItem UUID="D18B7638-DCC7-48F2-AB75-0688A47FC453" Type="Text" Created="2019-09-28 18:56:47 -0400" Modified="2019-10-26 12:58:54 -0400">
                             <Title>Bill &amp; Lonnie (Stockade)</Title>
                             <MetaData>
+                                <StatusID>1</StatusID>
                                 <IncludeInCompile>Yes</IncludeInCompile>
                             </MetaData>
                             <TextSettings>
@@ -164,9 +184,10 @@
                                 <Bookmark BinderUUID="862863EC-0715-4588-AD17-6824940CBD71"/>
                             </Bookmarks>
                         </BinderItem>
-                        <BinderItem UUID="06BA67D0-F2E8-4D11-AA6C-6A3A2548E2D4" Type="Text" Created="2019-09-28 20:03:08 -0400" Modified="2019-10-19 14:09:06 -0400">
+                        <BinderItem UUID="06BA67D0-F2E8-4D11-AA6C-6A3A2548E2D4" Type="Text" Created="2019-09-28 20:03:08 -0400" Modified="2019-10-26 12:58:48 -0400">
                             <Title>Bill &amp; Lonnie (Rover 3)</Title>
                             <MetaData>
+                                <StatusID>1</StatusID>
                                 <IncludeInCompile>Yes</IncludeInCompile>
                             </MetaData>
                             <TextSettings>
@@ -177,13 +198,13 @@
                                 <Bookmark BinderUUID="791AAA1B-FC89-47B4-8824-0DD2F0D66620"/>
                             </Bookmarks>
                         </BinderItem>
-                        <BinderItem UUID="D5F0C932-9F7D-4D73-AD3A-392B580C5773" Type="Text" Created="2019-10-19 15:44:47 -0400" Modified="2019-10-19 18:11:59 -0400">
+                        <BinderItem UUID="D5F0C932-9F7D-4D73-AD3A-392B580C5773" Type="Text" Created="2019-10-19 15:44:47 -0400" Modified="2019-10-26 12:58:14 -0400">
                             <Title>Bill (Toilet)</Title>
                             <MetaData>
                                 <IncludeInCompile>Yes</IncludeInCompile>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>513,0</TextSelection>
+                                <TextSelection>463,0</TextSelection>
                             </TextSettings>
                             <Bookmarks>
                                 <Bookmark BinderUUID="1595A0B2-8FA5-43B0-9062-5475B0302AFC"/>
@@ -191,6 +212,19 @@
                             </Bookmarks>
                         </BinderItem>
                     </Children>
+                </BinderItem>
+                <BinderItem UUID="8CD53828-0985-4224-8FEB-D33B3FBA9865" Type="Text" Created="2019-10-26 13:01:02 -0400" Modified="2019-10-26 13:01:21 -0400">
+                    <Title>Bill (Rover 3)</Title>
+                    <MetaData>
+                        <StatusID>1</StatusID>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,0</TextSelection>
+                    </TextSettings>
+                    <Bookmarks>
+                        <Bookmark BinderUUID="145E7BB1-F0E1-4730-8E6A-1F007EE78C24"/>
+                    </Bookmarks>
                 </BinderItem>
                 <BinderItem UUID="8D72034E-58DB-4EFF-89D7-DB988ECC0E19" Type="Text" Created="2019-10-19 14:03:19 -0400" Modified="2019-10-19 14:03:22 -0400">
                     <Title>Plot B</Title>
@@ -1158,14 +1192,14 @@
     </ProjectBookmarks>
     <ProjectTargets Notify="No">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="Yes" Deadline="2011-04-12 08:24:39 -0400" IgnoreDeadline="Yes">0</DraftTarget>
-        <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="No" NextResetDate="2019-10-20 01:00:00 -0400" ResetType="Time" ResetTime="00:00" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
-        <PreviousSession Words="353" Characters="2011" Date="2019-10-19 19:27:53 -0400"/>
+        <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="No" NextResetDate="2019-10-27 01:00:00 -0400" ResetType="Time" ResetTime="00:00" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
+        <PreviousSession Words="110" Characters="663" Date="2019-10-26 12:17:28 -0400"/>
     </ProjectTargets>
-    <RecentWritingHistory Date="2019-10-19 00:00:00 -0400">
-        <DraftWordCount>326</DraftWordCount>
-        <DraftCharCount>1854</DraftCharCount>
-        <OtherWordCount>64</OtherWordCount>
-        <OtherCharCount>465</OtherCharCount>
+    <RecentWritingHistory Date="2019-10-26 00:00:00 -0400">
+        <DraftWordCount>110</DraftWordCount>
+        <DraftCharCount>660</DraftCharCount>
+        <OtherWordCount>0</OtherWordCount>
+        <OtherCharCount>0</OtherCharCount>
     </RecentWritingHistory>
     <TemplateFolderUUID>5C03DE09-C285-48ED-827F-78E62B7D0F72</TemplateFolderUUID>
     <BookmarksFolderUUID>69822417-D015-4BDD-90BD-18AAA6198D15</BookmarksFolderUUID>

@@ -1,0 +1,40 @@
+:: StoryData
+{
+    "ifid": "EECB013A-0FC6-41CB-9CF1-07D791258C06",
+    "format": "SugarCube",
+    "format-version": "2.29",
+    "start": "Airlock"
+}
+
+:: StoryTitle
+NextRock
+
+:: StorySubtitle
+Episode 1
+Mutiny or a Bounty
+
+:: StoryInit
+<<run Config.cleanupWikifierOutput = true>>
+<<newcycle 'time' 4>>
+    <<phase 'early morning'
+            'morning'
+            'late morning'
+            'midday'
+            'early afternoon'
+            'late afternoon'
+            'early evening'
+            'late evening'
+            'night'>>
+<</newcycle>>
+<<plot>>
+    <<point "Plot A Scene 001">>
+<</plot>>
+<<plot>>
+    <<point "Plot B Scene 001" "$location is 'Toilet Pod'">>
+<</plot>>
+
+:: StoryCaption
+@@#time-cycle;@@
+<<timed 0s>>
+<<replace '#time-cycle'>><<showcycle 'time' upperfirst>><</replace>>
+<</timed>>

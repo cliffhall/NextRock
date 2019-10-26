@@ -64,10 +64,6 @@ body {
     box-shadow: 0 1px 3px #000000;
 }
 
-#text {
-    color: #394565 !important;
-}
-
 .passage {
     color: #394565;
 }
@@ -117,7 +113,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     border-radius: 5px;
-    padding: 0px;
+    padding: 0;
     margin: 2px;
 }
 
