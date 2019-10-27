@@ -1,6 +1,7 @@
 :: Gymnasium [location pod]
+<<location>>
 Get in a good workout and keep yourself fit. The company expects it.
-
+<</location>>
 <<nav>>
     <<section Exits>>
         <<action "Facilities Hub">>

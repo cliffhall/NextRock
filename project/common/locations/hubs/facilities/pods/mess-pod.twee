@@ -1,6 +1,7 @@
 :: Mess Pod [location pod]
+<<location>>
 Grub down. And remember, if you don't like the food here, the nearest Taco Bell is only 140 million miles away.
-
+<</location>>
 <<nav>>
     <<section Exits>>
         <<action "Facilities Hub">>

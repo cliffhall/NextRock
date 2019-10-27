@@ -1,6 +1,7 @@
 :: Living Hub [location hub]
+<<location>>
 Where you and all your noisy, smelly neighbors sleep.
-
+<</location>>
 <<nav>>
     <<section Exits>>
         <<action "Central Hub">>

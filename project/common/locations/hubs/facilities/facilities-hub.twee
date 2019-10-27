@@ -1,6 +1,7 @@
 :: Facilities Hub [location hub]
+<<location>>
 From exercise to elimination and cleaning to chow, the facilities hub has you covered.
-
+<</location>>
 <<nav>>
     <<section Exits>>
         <<action "Central Hub">>

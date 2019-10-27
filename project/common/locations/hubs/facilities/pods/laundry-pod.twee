@@ -1,6 +1,7 @@
 :: Laundry Pod [location pod]
+<<location>>
 You sweat a lot. Clean your uniform.
-
+<</location>>
 <<nav>>
     <<section Exits>>
         <<action "Facilities Hub">>

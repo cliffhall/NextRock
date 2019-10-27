@@ -1,4 +1,5 @@
 :: Central Hub [location hub]
+<<location>>
 <<switch visited()>>\
 <<case 1>>\
     This is the heart of the colony. More foot traffic passes through here than any other pod or hub. \
@@ -15,7 +16,7 @@
 <<default>>\
     You come here a lot. Too bad there's not more to see.
 <</switch>>\
-
+<</location>>
 <<nav>>
     <<section Exits>>
         <<action "Living Hub">>Living
