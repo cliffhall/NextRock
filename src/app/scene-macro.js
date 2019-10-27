@@ -1,7 +1,9 @@
 /*
-    TWINE/SUGARCUBE SCENE MACRO
+    NARRATIVE MACRO SET FOR TWINE/SUGARCUBE
+    > SCENE & BRANCH MACROS
     Copyright © 2019 Cliff Hall
 
+    In a 'scene' tagged passage:
     <<scene 'name'>>
         <<branch name [start]>>
             Text of branch.
@@ -31,10 +33,13 @@
     USAGE
      * Each Scene needs a unique name (in quotes if more than one word).
      * Unnamed Scenes will throw an error when processed.
-     * Scene tags should contain only Branch tags as direct children.
+     * Scenes should be defined one per 'scene' tagged passage.
+     * Scene macros should contain only Branch tags as direct children.
      * Scenes can contain any number of Branches.
      * Each Branch needs a unique name (in quotes if more than one word).
-     * One and only one Branch must have start as its second argument (no quotes).
+     * One and only one Branch may have start as its second argument (no quotes).
+     * The first branch of a scene will be rendered first unless another has the start argument.
+     * The optional start argument is intended for testing purposes, so you can skip branches of a scene during development.
      * Branches contain text (which can include SugarCube macros and HTML markup) followed by an optional number of Actions.
      * Actions are links rendered as a bulleted list after the text of the Branch they belong to.
      * Actions only include an opening tag; no closing <</action>> is required and will throw an error if present.
@@ -84,6 +89,7 @@
                 if ($(bullet).text().trim().length ===0) $(bullet).remove();
             });
         } else {
+            State.setVar('$endingBranchShown', true);
             setup.markCurrentSceneComplete();
         }
 
@@ -161,7 +167,7 @@
             }
 
             // Set the current branch to this one if no branch is set
-            if (!currentScene.branch && this.args[1] === 'start') {
+            if (!currentScene.branch || this.args[1] === 'start') {
                 currentScene.branch = branchName;
                 isCurrent = true;
             }
@@ -173,6 +179,7 @@
                     case 'branch':
                         retVal = String(part.contents).trim();
                         break;
+
                     case 'cut':
                         // Get the first arg to the cut
                         arg1 = String(part.args[0]).trim();
@@ -191,6 +198,7 @@
                             retVal = link;
                         }
                         break;
+
                     case 'action':
                         // Get the first arg to the action
                         arg1 = String(part.args[0]).trim();

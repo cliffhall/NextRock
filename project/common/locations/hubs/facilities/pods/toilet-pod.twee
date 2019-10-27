@@ -1,6 +1,7 @@
 :: Toilet Pod [location pod]
+<<location>>
 It really stinks in here. Get done quickly and get out is your best advice.
-
+<</location>>
 <<nav>>
     <<section Exits>>
         <<action "Facilities Hub">>

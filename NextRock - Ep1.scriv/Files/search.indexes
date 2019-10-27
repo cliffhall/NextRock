@@ -56,13 +56,13 @@ Plumbing and Electrical</Text>
         </Document>
         <Document ID="D5F0C932-9F7D-4D73-AD3A-392B580C5773">
             <Title>Bill (Toilet)</Title>
-            <Text>After doffing your spacesuit, you make your way from the airlock through the Central Hub to the Facilities Hub. On the far side of the expansive chamber, several off-duty folks are laughing and dancing to an old disco song. They wave and invite you over, but you’ve got your own boogie shoes on, and right now they’re shuffling like mad for the toilet. 
+            <Text>After doffing your spacesuit in the Airlock, you make your way through the Central Hub to the Facilities Hub. On the far side of the expansive chamber, several off-duty folks are laughing and dancing to an old disco song. They wave and invite you over, but you’ve got your own boogie shoes on, and right now they’re shuffling like mad for the toilet. 
 
 The second you step into the room, you’re hit by a strong odor, and not the sort usually found lingering here.
 
 Are there skunks on Mars? You don’t think so. 
 
-That smell is marijuana, the legality of which on this planet is perhaps not 100% clear, but the NextRock Colony Handbook specifically forbids intoxicants of any kind. You may not know who’s vaping it, but you sure as hell know who’s growing it. Lonnie Iverson.
+That smell is marijuana, the legality of which on this planet is perhaps not 100% clear, but the NextRock Colony Handbook specifically forbids intoxicants of any kind except for medical use. You may not know who’s vaping it, but you sure as hell know who’s growing it. Lonnie Iverson.
 
 You relieve yourself, and the yellow tint drains from the world. You start to think straight again.</Text>
         </Document>
@@ -245,10 +245,10 @@ This colony may seem to slip further from your control with every passing day, b
 
 “But Bill,” he pleads. “I need to do some maintenance before I take her out again.” 
 
-You know better. Aside from the grime, the rover looks fine. Iverson just doesn’t want you shutting down his weed growing operation. And it’s high time you did just that.
+Aside from the grime, the rover looks fine. You suspect Iverson knows you’re onto his weed-growing operation and want him to take you to it. Nevertheless, Mars is a harsh mistress. Maintenance isn’t something to be taken lightly.
 
 &gt; Get into the rover with him.
-&gt; Go pee and let him do his supposed “maintenance”.</Text>
+&gt; Go pee and let Lonnie do his maintenance.</Text>
         </Document>
         <Document ID="92B5EA3C-3E90-43F9-BA12-E18DF7DE2ED3">
             <Title>Landing Pad</Title>
@@ -389,20 +389,23 @@ As he huffs and puffs your keen eye takes in the sad state of Rover 3. All the r
 &gt; Dump him into the stockade until you can go pee and figure out what to do with him.</Text>
         </Document>
         <Document ID="145E7BB1-F0E1-4730-8E6A-1F007EE78C24">
-            <Title>Bill &amp; Lonnie (Airlock 2)</Title>
-            <Text>You chin your open-channel suit mic and call for a stretcher.
+            <Title>Call for assistance</Title>
+            <Text>You chin your open-channel suit mic and call for a stretcher and someone with a strong back. After grabbing a patch from the repair shelf, you kneel by Iverson and cover the hole in his suit.
 
-Switching over to suit-to-suit, you kneel by Iverson’s crumpled form. “Help’s on the way, Lonnie.” 
+“Help’s on the way, Lonnie,” you tell him over suit-to-suit, hoping you’re right. 
 
-And you hope it’s true. Lately people haven’t always been at their posts when they should be. This place has got to be back on track before that transport full of new recruits arrives next month. 
+Lately people haven’t always been at their posts when they should be. Aside from making sure your Life Sciences Officer doesn’t die, getting this place back on track before that crew transport arrives next month is your top priority at the moment. Note to self: how are the new living pods coming along? Pete Daley, Chief of Engineering keeps saying all’s well, but maybe you should perform an on-site inspection.
 
-That reminds you: how are the new living pods coming along? Pete Daley, Chief of Engineering says all’s well, but maybe you should perform an on-site inspection.
+Struggling out of your low-rent spacegarb as quickly as you can, you rack the helmet and hang the suit back on its peg without inspection, since you didn’t actually leave the rover bay.
 
-&gt; Go back out and investigate the rover.
-&gt; Un-suit, and go pee for god’s sake!</Text>
+The inner hatch opens and Chet Kahill and Chelsea Weaver — your Security and Medical chiefs respectively —  appear, both looking worried.
+
+&gt; Explain what happened.
+&gt; Tell them to handle Lonnie, then go back out and check the rover.
+&gt; Your world is turning yellow, delegate and go pee, for god’s sake!</Text>
         </Document>
         <Document ID="02269AB4-034F-41B5-82BD-6F9061D88A45">
-            <Title>Bill &amp; Lonnie (Airlock 1)</Title>
+            <Title>Bill &amp; Lonnie (Airlock)</Title>
             <Text>Even with Mars tugging at a mere third of Earth’s pull, moving Lonnie Iverson is as about as easy as wrestling a dead moose onto the hood of a Land Rover. As you attempt to drag him into the airlock, you in inadvertently cut open his suit on some loose regolith. The flakes are fine, but can slice like a razor. You hear nothing, but see a dusty plume rise from beneath his right knee.
 
 You manage to get his lifeless bulk into the airlock with you and close the hatch. A powerful ceiling fan blows downward while an equally strong vacuum under the floor grate sucks the dust from the chamber. With no air in the room to create vortexes and whorls, the dust flows off Iverson’s suit like water, straight down the drain.
@@ -415,7 +418,7 @@ Finally, the panel by the hub door indicates that the particulate matter concent
 
 The light above the hub door turns green.
 
-&gt; Call for medical assistance.</Text>
+&gt; Call for medical assistance and un-suit.</Text>
         </Document>
     </Documents>
 </SearchIndexes>

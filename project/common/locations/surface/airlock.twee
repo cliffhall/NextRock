@@ -1,5 +1,7 @@
 :: Airlock [location pod]
-
+<<location>>
+This is the airlock
+<</location>>
 <<nav>>
     <<section Exits>>
         <<action "Central Hub">>

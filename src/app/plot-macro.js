@@ -1,21 +1,27 @@
 /*
-    TWINE/SUGARCUBE PLOT MACRO
+    NARRATIVE MACRO SET FOR TWINE/SUGARCUBE
+    > PLOT & NARRATOR MACROS
     Copyright © 2019 Cliff Hall
 
+    In the StoryInit special passage:
     <<plot>>
-        <<point scenePassage ['filterCondition']>>
+        <<point scenePassage ['selectCondition']>>
         .
         .
         .
     <</plot>>
 
+    At the bottom of the PassageHeader special passage:
+    <<narrator>><</narrator>>
+
     RATIONALE
      * A story may consist of several plots, each with it's own plot points.
      * Create one or more lists of plot points to step through as the player navigates.
-     * Each time a location tagged passage is navigated to, the next point in each plot is evaluated.
-     * If the filterCondition for a plot point evaluates to true, it is selected.
-     * If the plot point contains no filterCondition,  it is selected.
-     * When a plot point is selected, its associated scenePassage is included.
+     * A narrator decides which plot point's scene (if any) to select before each passage is rendered.
+     * Each time a 'location' tagged passage is navigated to, the next point in each plot is evaluated.
+     * If the selectCondition for a plot point evaluates to true, it is selected.
+     * If the plot point being evaluated contains no selectCondition, it is selected and evaluation halts.
+     * When a plot point is selected, its associated scenePassage is included at the spot where the narrator macro is placed.
      * Once a plot point has been selected, it will not be selected again.
      * If there are multiple plots, the next point in each is evaluated in the order the plots were created.
      * When a plot point is selected, remaining plots will not be evaluated until the next location tagged passage is visited.
@@ -23,8 +29,8 @@
     USAGE
      * Plots should be defined in the special StoryInit passage, in the order you wish them evaluated.
      * Point tags must contain a scenePassage argument (in quotes if more than one word) which exists.
-     * A plot point's scenePassage is usually a scene tagged passage containing a scene macro, though it is not a requirement.
-     * If the first plot's first point has no filter condition, it will automatically be selected at the first location.
+     * A plot point's scenePassage is usually a 'scene' tagged passage containing a scene macro, though it is not a requirement.
+
  */
 (function () {
     'use strict';
@@ -44,7 +50,7 @@
 
             // Process the plot points
             plot.points = this.payload.splice(1).map((part) => {
-                let retVal, include, scenePassage, filterCondition, point = {};
+                let include, scenePassage, selectCondition, point = {};
                 if (part.name === 'point') {
 
                     // Get the scene passage
@@ -53,12 +59,12 @@
                     // Create the include
                     include = `<<include "${scenePassage}">>`;
 
-                    // If there's a filter condition, wrap the include with it
-                    filterCondition = part.args[1];
+                    // If there's a select condition, wrap the include with it
+                    selectCondition = part.args[1];
 
                     // Build the point object
                     point.include = include;
-                    if (filterCondition) point.condition = `<<if ${filterCondition}>><<set $selectPoint to true>><</if>>`
+                    if (selectCondition) point.condition = `<<if ${selectCondition}>><<set $selectPoint to true>><</if>>`
 
                 }
                 return point;
@@ -71,7 +77,7 @@
     });
 
     // Evaluate next plot points for potential selection
-    Macro.add('plot-evaluator',{
+    Macro.add('narrator',{
         tags: null,
         handler : function () {
             // Bail if there is a current scene

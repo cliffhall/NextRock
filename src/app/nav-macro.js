@@ -1,7 +1,12 @@
 /*
-    TWINE/SUGARCUBE NAVIGATION MACRO
+    NARRATIVE MACRO SET FOR TWINE/SUGARCUBE
+    > NAV & SECTION MACROS
     Copyright © 2019 Cliff Hall
 
+    In the PassageHeader special passage:
+    <<if tags().includes("location")>><<set $location to passage()>><</if>>\
+
+    In any 'location' tagged passage:
     <<nav>>
         <<section name>>
             <<action targetPassage | '<<macroToExecute>>' ['filterCondition']>>
@@ -74,6 +79,12 @@
         });
     };
 
+    // Called when a navigation link with a target passage is clicked
+    setup.navigate = () => {
+        State.setVar('$currentNav', undefined);
+        State.setVar('$endingBranchShown', false);
+    };
+
     // Process a navigation bar
     Macro.add('nav', {
         tags: null,
@@ -126,8 +137,8 @@
             currentNav.sections.push(section);
 
             // Parse section contents
-            section.actions = this.payload.splice(1).map((part,index) => {
-                let retVal, link, arg1, arg2, contents, macro;
+            section.actions = this.payload.splice(1).map((part) => {
+                let retVal, link, arg1, arg2, contents;
                 if (part.name === 'action') {
                     // Get the first arg to the action
                     arg1 = String(part.args[0]).trim();
@@ -135,9 +146,9 @@
 
                     // Create the link
                     if ((arg1.includes('<<') && arg1.includes('>>'))) {
-                        link = `<<link "${contents}">>${arg1}<</link>>`;
+                        link = `<<link "${contents}">>${arg1}<</link>>`; // Macro
                     } else {
-                        link = `<<link "${contents}" "${arg1}">><<run State.setVar('$currentNav', undefined);>><</link>>`;
+                        link = `<<link "${contents}" "${arg1}">><<run setup.navigate()>><</link>>`; // Nav link
                     }
 
                     // If there's a filter condition, wrap the link with it
@@ -145,7 +156,7 @@
 
                     // Return the link
                     if (arg2) {
-                        retVal = filterWrap(link, arg2, index-1);
+                        retVal = filterWrap(link, arg2);
                     } else {
                         retVal = link;
                     }
