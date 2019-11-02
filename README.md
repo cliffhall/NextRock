@@ -1,12 +1,18 @@
 # NextRock
-Run a colony on the Red Planet. A Twine game.
+Run a colony on the Red Planet. An episodic series of Twine games.
 
 ![Colony Map](map.png)
 ![Screenshot](screenshot.png)
 
 ## STATUS
-**Work in Progress** - All locations on map exist and you can navigate between them via links. There are no descriptions or logic yet.
-
+**Work in Progress** 
+ * UI is styled and works on mobile, tablet, and desktop.
+ * All locations on map exist and you can navigate between them via links. 
+ * Plot, Scene, Branch, Action, Location macros written to support multiple plots with branching scenes.
+ * A few initial scenes are set up for testing the macros.
+ * Twee structure set up to support common elements and episode specific elements for compilation.
+ * More scenes, character, and location sketches are being written in Scrivener (NextRock - Ep1.scriv)
+ 
 ## DEVELOPER SETUP
 ### Prerequisites
 * [Node](https://nodejs.org/en/download/) v12.6.0 or above (also installs npm)
