@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ScrivenerProject Identifier="A7D1C1AF-AAC9-4F7A-B5D0-7885832C3E4F" Version="2.0" Creator="SCRMAC-3.1.4-12105" Device="Destiny" Author="Cliff Hall" Modified="2019-10-27 15:46:34 -0400" ModID="797C8BF7-FE0D-4FB4-B1A7-5D215DEEB060">
+<ScrivenerProject Identifier="A7D1C1AF-AAC9-4F7A-B5D0-7885832C3E4F" Version="2.0" Creator="SCRMAC-3.1.4-12105" Device="Destiny" Author="Cliff Hall" Modified="2019-11-02 19:00:37 -0400" ModID="E4C6CA68-F0F2-4ED3-8DD4-02BA69764922">
     <Binder>
         <BinderItem UUID="F8F9FDEF-FD9F-4A8C-B33D-3434A1220ADC" Type="Text" Created="2019-09-15 18:46:12 -0400" Modified="2019-09-15 18:46:12 -0400">
             <Title>Short Story Format</Title>
@@ -39,14 +39,14 @@
                         </OutlinerExpandedState>
                     </CorkboardAndOutliner>
                     <Children>
-                        <BinderItem UUID="4E8308B8-5D70-45EC-B4FE-9E146FAF95B1" Type="Text" Created="2019-09-28 14:41:43 -0400" Modified="2019-10-26 12:23:36 -0400">
+                        <BinderItem UUID="4E8308B8-5D70-45EC-B4FE-9E146FAF95B1" Type="Text" Created="2019-09-28 14:41:43 -0400" Modified="2019-11-02 18:55:02 -0400">
                             <Title>Bill (Airlock)</Title>
                             <MetaData>
                                 <StatusID>2</StatusID>
                                 <IncludeInCompile>Yes</IncludeInCompile>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>1024,120</TextSelection>
+                                <TextSelection>0,121</TextSelection>
                             </TextSettings>
                             <Children>
                                 <BinderItem UUID="1595A0B2-8FA5-43B0-9062-5475B0302AFC" Type="Text" Created="2019-09-28 17:01:51 -0400" Modified="2019-10-26 12:23:39 -0400">
@@ -65,14 +65,14 @@
                                 </BinderItem>
                             </Children>
                         </BinderItem>
-                        <BinderItem UUID="4A61588C-66DD-4BD1-9BB4-6F2CEB4E58E4" Type="Text" Created="2019-09-15 18:46:12 -0400" Modified="2019-10-26 12:23:44 -0400">
+                        <BinderItem UUID="4A61588C-66DD-4BD1-9BB4-6F2CEB4E58E4" Type="Text" Created="2019-09-15 18:46:12 -0400" Modified="2019-11-02 18:47:13 -0400">
                             <Title>Bill &amp; Lonnie (Rover Bay)</Title>
                             <MetaData>
                                 <StatusID>2</StatusID>
                                 <IncludeInCompile>Yes</IncludeInCompile>
                             </MetaData>
                             <TextSettings>
-                                <TextSelection>422,0</TextSelection>
+                                <TextSelection>421,0</TextSelection>
                             </TextSettings>
                             <CorkboardAndOutliner>
                                 <SelectedSubdocumentUUIDs></SelectedSubdocumentUUIDs>
@@ -85,14 +85,14 @@
                                 <Bookmark BinderUUID="1595A0B2-8FA5-43B0-9062-5475B0302AFC"/>
                             </Bookmarks>
                             <Children>
-                                <BinderItem UUID="791AAA1B-FC89-47B4-8824-0DD2F0D66620" Type="Text" Created="2019-09-28 14:26:15 -0400" Modified="2019-10-26 12:23:48 -0400">
+                                <BinderItem UUID="791AAA1B-FC89-47B4-8824-0DD2F0D66620" Type="Text" Created="2019-09-28 14:26:15 -0400" Modified="2019-11-02 19:00:37 -0400">
                                     <Title>Talk sense</Title>
                                     <MetaData>
                                         <StatusID>2</StatusID>
                                         <IncludeInCompile>Yes</IncludeInCompile>
                                     </MetaData>
                                     <TextSettings>
-                                        <TextSelection>400,0</TextSelection>
+                                        <TextSelection>1012,0</TextSelection>
                                     </TextSettings>
                                     <Bookmarks>
                                         <Bookmark BinderUUID="4A61588C-66DD-4BD1-9BB4-6F2CEB4E58E4"/>
@@ -106,7 +106,7 @@
                                         <IncludeInCompile>Yes</IncludeInCompile>
                                     </MetaData>
                                     <TextSettings>
-                                        <TextSelection>409,0</TextSelection>
+                                        <TextSelection>446,0</TextSelection>
                                     </TextSettings>
                                     <Bookmarks>
                                         <Bookmark BinderUUID="4A61588C-66DD-4BD1-9BB4-6F2CEB4E58E4"/>
@@ -119,7 +119,7 @@
                                         <IncludeInCompile>Yes</IncludeInCompile>
                                     </MetaData>
                                     <TextSettings>
-                                        <TextSelection>802,0</TextSelection>
+                                        <TextSelection>0,1396</TextSelection>
                                     </TextSettings>
                                     <Bookmarks>
                                         <Bookmark BinderUUID="4A61588C-66DD-4BD1-9BB4-6F2CEB4E58E4"/>
@@ -1192,12 +1192,12 @@
     </ProjectBookmarks>
     <ProjectTargets Notify="No">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="Yes" Deadline="2011-04-12 08:24:39 -0400" IgnoreDeadline="Yes">0</DraftTarget>
-        <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="No" NextResetDate="2019-10-28 01:00:00 -0400" ResetType="Time" ResetTime="00:00" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
-        <PreviousSession Words="0" Characters="0" Date="2019-10-27 15:46:31 -0400"/>
+        <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="No" NextResetDate="2019-11-03 01:00:00 -0400" ResetType="Time" ResetTime="00:00" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
+        <PreviousSession Words="0" Characters="0" Date="2019-11-02 18:38:54 -0400"/>
     </ProjectTargets>
-    <RecentWritingHistory Date="2019-10-27 00:00:00 -0400">
-        <DraftWordCount>0</DraftWordCount>
-        <DraftCharCount>0</DraftCharCount>
+    <RecentWritingHistory Date="2019-11-02 00:00:00 -0400">
+        <DraftWordCount>-18</DraftWordCount>
+        <DraftCharCount>-114</DraftCharCount>
         <OtherWordCount>0</OtherWordCount>
         <OtherCharCount>0</OtherCharCount>
     </RecentWritingHistory>
