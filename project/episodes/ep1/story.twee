@@ -15,6 +15,7 @@ Mutiny or a Bounty
 
 :: StoryInit
 <<run Config.cleanupWikifierOutput = true>>
+<<run $(document).on(':scene-branch-taken', ev => {Cycle.get('time').update(1);})>>
 <<newcycle 'time' 4>>
     <<phase 'early morning'
             'morning'
@@ -27,10 +28,12 @@ Mutiny or a Bounty
             'night'>>
 <</newcycle>>
 <<plot>>
-    <<point "Plot A Scene 001">>
+    <<point "Plot A Scene 1">>
+    <<point "Plot A Scene 2" "$location is 'Rover Bay'">>
+    <<point "Plot A Scene 3" "$location is 'Airlock'">>
 <</plot>>
 <<plot>>
-    <<point "Plot B Scene 001" "$location is 'Toilet Pod'">>
+    <<point "Plot B Scene 1" "$location is 'Toilet Pod'">>
 <</plot>>
 
 :: StoryCaption

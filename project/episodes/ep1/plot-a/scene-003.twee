@@ -1,0 +1,44 @@
+:: Plot A Scene 3 [scene]
+<<scene 'Bill & Lonnie (Airlock)'>>
+    <<branch 'Opening'>>
+        Even with Mars tugging at a mere third of Earth’s pull, moving Lonnie Iverson is as about as easy as wrestling\
+        a dead moose onto the hood of a Land Rover. As you attempt to drag him into the airlock, you in inadvertently\
+        cut open his suit on some loose regolith. The flakes are fine, but can slice like a razor. You hear nothing,\
+        but see a dusty plume rise from beneath his right knee.
+
+        You manage to get his lifeless bulk into the airlock with you and close the hatch. Seconds tick away slowly as\
+        the chamber pressurizes.
+
+        Iverson’s eyes are shut, his face slack. You can see the reflection of his suit’s heart rate sensor flashing on\
+        his pallid, stubbled cheek. “Hang in there, Lonnie,” you say. He might be a thorn in your side, but the colony\
+        can’t get by without him. At least not until the new recruits arrive.
+
+        Finally, the panel by the hub door indicates that the particulate matter concentration has dropped to\
+        acceptable levels. The chamber begins filling with air.
+
+        The light above the hub door turns green.
+
+        <<action 'Call for assistance'>> Call for medical assistance and un-suit.
+    <</branch>>\
+    <<branch 'Call for assistance'>>
+        You chin your open-channel suit mic and call for a stretcher and someone with a strong back. After grabbing a\
+        patch from the repair shelf, you kneel by Iverson and cover the hole in his suit.
+
+        “Help’s on the way, Lonnie,” you tell him over suit-to-suit, hoping you’re right.
+
+        Lately people haven’t always been at their posts when they should be. Aside from making sure your Life Sciences\
+        Officer doesn’t die, getting this place back on track before that crew transport arrives next month is your top\
+        priority at the moment. Note to self: how are the new living pods coming along? Pete Daley, Chief of\
+        Engineering keeps saying all’s well, but maybe you should perform an on-site inspection.
+
+        Struggling out of your low-rent spacegarb as quickly as you can, you rack the helmet and hang the suit back on\
+        its peg without inspection, since you didn’t actually leave the rover bay.
+
+        The inner hatch opens and Chet Kahill and Chelsea Weaver — your Security and Medical chiefs respectively —\
+        appear, both looking worried.
+
+        > Explain what happened.
+        > Tell them to handle Lonnie, then go back out and check the rover.
+        <<cut 'Toilet Pod'>>Your world is turning yellow, delegate and go pee, for god’s sake!
+    <</branch>>\
+<</scene>>

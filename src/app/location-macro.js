@@ -25,7 +25,6 @@
     Macro.add('location', {
         tags: null,
         handler : function () {
-            console.log(State.getVar('$currentScene'),State.getVar('$endingBranchShown') );
             if (!State.getVar('$currentScene') && !State.getVar('$endingBranchShown')) $(this.output).wiki(this.payload[0].contents);
         }
     });

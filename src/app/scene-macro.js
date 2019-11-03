@@ -58,6 +58,14 @@
 (function () {
     'use strict';
 
+    setup.sceneBranchTaken = (scene, branch) => {
+        $(document).trigger({
+            type : ':scene-branch-taken',
+            scene : scene,
+            branch: branch
+        });
+    };
+
     // Function to render the current branch of the current scene
     setup.renderCurrentBranch = () => {
 
@@ -203,9 +211,10 @@
                         // Get the first arg to the action
                         arg1 = String(part.args[0]).trim();
                         contents = String(part.contents).trim();
+
                         // If it isn't a macro, treat it as a branch name
                         if (!(arg1.includes('<<') && arg1.includes('>>'))) {
-                            arg1 = `<<set $currentScene.branch to "${arg1}">><<run setup.renderCurrentBranch()>>`;
+                            arg1 = `<<set $currentScene.branch to "${arg1}">><<run setup.sceneBranchTaken("${currentScene.name}","${arg1}")>><<run setup.renderCurrentBranch()>>`;
                         }
 
                         // Create the link
