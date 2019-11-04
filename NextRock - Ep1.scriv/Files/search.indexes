@@ -96,7 +96,7 @@ Chief Executive of NextRock Colony</Text>
         </Document>
         <Document ID="4A61588C-66DD-4BD1-9BB4-6F2CEB4E58E4">
             <Title>Bill &amp; Lonnie (Rover Bay)</Title>
-            <Text>Just as you enter the bay, Rover 3 rolls in from the surface. It comes to a perfect, auto-piloted stop at its charging station. The bay door clangs shut, sending a cloud of regolith into the relative vacuum of the bay.
+            <Text>Just as you enter the bay, Rover 3 rolls in from the surface. It comes to a perfect, auto-piloted stop at its charging station. The hydraulic door clangs shut, sending a small cloud of regolith into the relative vacuum of the bay.
 
 Lonnie Iverson, the colony’s life sciences officer, hops down from the cab, struggling with his ill-fitting suit. You are reminded of that old saw about packing 50 pounds of manure into a 10 pound bag.
 
@@ -405,17 +405,15 @@ The inner hatch opens and Chet Kahill and Chelsea Weaver — your Security and M
         </Document>
         <Document ID="02269AB4-034F-41B5-82BD-6F9061D88A45">
             <Title>Bill &amp; Lonnie (Airlock)</Title>
-            <Text>Even with Mars tugging at a mere third of Earth’s pull, moving Lonnie Iverson is as about as easy as wrestling a dead moose onto the hood of a Land Rover. As you attempt to drag him into the airlock, you in inadvertently cut open his suit on some loose regolith. The flakes are fine, but can slice like a razor. You hear nothing, but see a dusty plume rise from beneath his right knee.
+            <Text>Even with Mars tugging at a mere third of Earth’s pull, moving Lonnie Iverson is as about as easy as wrestling a dead moose onto the hood of a Land Rover. As you attempt to drag him into the airlock, you inadvertently cut open his suit on some loose regolith. The flakes are thin, but can slice like a razor. You hear nothing, but see a dusty plume rise from beneath his right knee.
 
-You manage to get his lifeless bulk into the airlock with you and close the hatch. A powerful ceiling fan blows downward while an equally strong vacuum under the floor grate sucks the dust from the chamber. With no air in the room to create vortexes and whorls, the dust flows off Iverson’s suit like water, straight down the drain.
-
-Seconds tick away, slowly. 
+You manage to get his lifeless bulk into the airlock with you and close the hatch. Seconds tick away slowly as the chamber is flushed. High pressure CO2 — which is available in abundance — enters from above, and is sucked out as quickly through the floor grate. With no air to create whorls, sand flows off Lonnie’s suit like water.
 
 Iverson’s eyes are shut, his face slack. You can see the reflection of his suit’s heart rate sensor flashing on his pallid, stubbled cheek. “Hang in there, Lonnie,” you say. He might be a thorn in your side, but the colony can’t get by without him. At least not until the new recruits arrive. 
 
-Finally, the panel by the hub door indicates that the particulate matter concentration has dropped to acceptable levels. The chamber begins filling with air.
+The panel by the hub door indicates that the particulate matter concentration has dropped to acceptable levels. The chamber begins filling with air.
 
-The light above the hub door turns green.
+Finally, the light above the hub door turns green.
 
 &gt; Call for medical assistance and un-suit.</Text>
         </Document>

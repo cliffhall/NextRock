@@ -2,21 +2,22 @@
 <<scene 'Bill & Lonnie (Airlock)'>>
     <<branch 'Opening'>>
         Even with Mars tugging at a mere third of Earth’s pull, moving Lonnie Iverson is as about as easy as wrestling\
-        a dead moose onto the hood of a Land Rover. As you attempt to drag him into the airlock, you in inadvertently\
-        cut open his suit on some loose regolith. The flakes are fine, but can slice like a razor. You hear nothing,\
+        a dead moose onto the hood of a Land Rover. As you attempt to drag him into the airlock, you inadvertently\
+        cut open his suit on some loose regolith. The flakes are thin, but can slice like a razor. You hear nothing,\
         but see a dusty plume rise from beneath his right knee.
 
         You manage to get his lifeless bulk into the airlock with you and close the hatch. Seconds tick away slowly as\
-        the chamber pressurizes.
+        the chamber is flushed. High pressure CO2 — which is available in abundance — enters from above, and is sucked\
+        out as quickly through the floor grate. With no air to create whorls, sand flows off Lonnie’s suit like water.
 
         Iverson’s eyes are shut, his face slack. You can see the reflection of his suit’s heart rate sensor flashing on\
         his pallid, stubbled cheek. “Hang in there, Lonnie,” you say. He might be a thorn in your side, but the colony\
         can’t get by without him. At least not until the new recruits arrive.
 
-        Finally, the panel by the hub door indicates that the particulate matter concentration has dropped to\
+        The panel by the hub door indicates that the particulate matter concentration has dropped to\
         acceptable levels. The chamber begins filling with air.
 
-        The light above the hub door turns green.
+        Finally, the light above the hub door turns green.
 
         <<action 'Call for assistance'>> Call for medical assistance and un-suit.
     <</branch>>\
