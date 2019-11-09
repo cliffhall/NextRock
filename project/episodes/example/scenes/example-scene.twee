@@ -1,16 +1,17 @@
 :: Example Scene [scene]
 <<scene 'Example Scene'>>
-    <<branch first start>>
+    <<branch first>>
         Text of the "FIRST" branch.
         <i>'Lots of it.'</i>
-        <<set _hatchet_man to 'George Washington'>>\
-        _hatchet_man
+        <<set _rocket_man to 'Elton John'>>\
+        _rocket_man
         Some more...
         <<action second>>Go to second branch
-        <<action "<<goto `passage()`>>">>Re-render this passage
-        <<action "<<run console.log($currentScene)>>">>Log current scene to console
+        <<action "<<set _hatchet_man to 'George Washington'>><<run setup.renderCurrentBranch()>>">>Set a variable and re-render scene
+        <<extra "third branch" "<<run console.log($currentScene)>>" "_hatchet_man is 'George Washington'">>Log current scene to console and go to the third branch
+        <<cut "Facilities Hub">>Cut away to the Facilities Hub
     <</branch>>\
-    <<branch second>>
+    <<branch second start>>
         Text of the SECOND branch.
         <<action first>>Return to first branch
         <<action nowhere "true === false">>Filter this link out
@@ -18,6 +19,6 @@
         <<cut "Central Hub">>Go to the Central Hub
     <</branch>>\
     <<branch 'third branch'>>
-        Final branch. No actions, so scene will be marked complete and cannot be revisited.
+        Final branch. No actions, extras, or cuts, so scene will be marked complete and cannot be revisited.
     <</branch>>\
 <</scene>>

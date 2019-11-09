@@ -10,10 +10,9 @@
             .
             .
             .
-            <<action targetBranch | '<<macroToExecute>>' ['filterCondition']>>Text of first action link.
-            <<action targetBranch | '<<macroToExecute>>' ['filterCondition']>>Text of second action link.
-            <<cut targetPassage ['filterCondition']>>Text of first cut link.
-            <<cut targetPassage ['filterCondition']>>Text of second cut link.
+            <<action targetBranch | '<<macroToExecute>>' ['filterCondition']>>Text of action link.
+            <<extra targetBranch '<<macroToExecute>>' ['filterCondition']>>Text of extra link.
+            <<cut targetPassage ['filterCondition']>>Text of cut link.
             .
             .
             .
@@ -45,6 +44,7 @@
      * Actions only include an opening tag; no closing <</action>> is required and will throw an error if present.
      * Actions MUST have EITHER a target Branch name (in quotes if more than one word) OR a macro to be executed (in quotes).
      * Actions MAY optionally have a filter condition (using SugarCube expressions) as a second argument (in quotes).
+     * Extras are like actions but have BOTH a passage name AND macro to exectute, with an optional filter condition.
      * Filter conditions are evaluated when the link is rendered. If false, the link will not be displayed.
      * When a Branch is reached which has no Actions, the Scene is marked as completed and will not render if visited again.
      * Cuts are like Actions except they target another Passage instead of a Branch of the current Scene.
@@ -161,7 +161,7 @@
 
     // Process a branch and its actions
     Macro.add('branch', {
-        tags: ['action', 'cut'],
+        tags: ['action', 'extra', 'cut'],
         handler : function () {
 
             let branchName, isCurrent = false;
@@ -182,50 +182,80 @@
 
             // Parse branch contents
             currentScene.branches[branchName] = this.payload.map((part,index) => {
-                let retVal, link, arg1, arg2, contents;
+                let retVal, link, arg1, arg2, arg3, contents;
                 switch (part.name) {
                     case 'branch':
+                        // Get the contents of the branch, the text to be rendered
                         retVal = String(part.contents).trim();
                         break;
 
                     case 'cut':
-                        // Get the first arg to the cut
+                        // Get the first arg to the cut, the passage name to cut away to
                         arg1 = String(part.args[0]).trim();
+
+                        // Get the second arg to the cut, the optional filter condition
+                        arg2 = part.args[1];
+
+                        // Get the contents of the cut (link text)
                         contents = String(part.contents).trim();
 
                         // Create the link
                         link = `<<link "${contents}" "${arg1}">><<run setup.markCurrentSceneComplete()>><</link>>`;
 
                         // If there's a filter condition, wrap the link with it
-                        arg2 = part.args[1];
-
-                        // Return the link
                         if (arg2) {
-                            retVal = filterWrap(link, arg2, index-1);
+                            retVal = filterWrap(link, arg2);
                         } else {
                             retVal = link;
                         }
                         break;
 
                     case 'action':
-                        // Get the first arg to the action
+                        // Get the first arg to the action, a branch name OR a macro to execute
                         arg1 = String(part.args[0]).trim();
-                        contents = String(part.contents).trim();
 
-                        // If it isn't a macro, treat it as a branch name
+                        // If the argument isn't a macro, treat it as a branch name
                         if (!(arg1.includes('<<') && arg1.includes('>>'))) {
                             arg1 = `<<set $currentScene.branch to "${arg1}">><<run setup.sceneBranchTaken("${currentScene.name}","${arg1}")>><<run setup.renderCurrentBranch()>>`;
                         }
+
+                        // Get the second arg to the action, the optional filter condition
+                        arg2 = part.args[1];
+
+                        // Get the contents of the action (link text)
+                        contents = String(part.contents).trim();
 
                         // Create the link
                         link = `<<link "${contents}">>${arg1}<</link>>`;
 
                         // If there's a filter condition, wrap the link with it
-                        arg2 = part.args[1];
-
-                        // Return the link
                         if (arg2) {
                             retVal = filterWrap(link, arg2);
+                        } else {
+                            retVal = link;
+                        }
+                        break;
+
+                    case 'extra':
+                        // Get the first arg to the extra, the branch name
+                        arg1 = String(part.args[0]).trim();
+                        arg1 = `<<set $currentScene.branch to "${arg1}">><<run setup.sceneBranchTaken("${currentScene.name}","${arg1}")>><<run setup.renderCurrentBranch()>>`;
+
+                        // Get the second arg to the extra, the macro
+                        arg2 = String(part.args[1]).trim();
+
+                        // Get the third arg to the extra, the filter condition
+                        arg3 = String(part.args[2]).trim();
+
+                        // Get the contents of the action (link text)
+                        contents = String(part.contents).trim();
+
+                        // Create the link
+                        link = `<<link "${contents}">>${arg2}${arg1}<</link>>`;
+
+                        // If there's a filter condition, wrap the link with it
+                        if (arg3) {
+                            retVal = filterWrap(link, arg3);
                         } else {
                             retVal = link;
                         }
@@ -239,6 +269,7 @@
                 setup.renderCurrentBranch();
             }
 
+            // Wrap a link with a filter condition to be executed at render time
             function filterWrap(link, condition){
 
                 return`<<capture _filter>>\

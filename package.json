@@ -10,7 +10,7 @@
   "scripts": {
     "build-once": "gulp build && tweego -f $npm_package_config_format -o dist/index.html --head=src/head-content.html project/common project/episodes/$npm_package_config_episode",
     "watch:gulp": "gulp default",
-    "watch:twee": "tweego -f $npm_package_config_format -w -o dist/index.html --head=src/head-content.html project/common project/episodes/$npm_package_config_episode"
+    "watch:twee": "tweego -f $npm_package_config_format -w -o dist/$npm_package_config_episode.html --head=src/head-content.html project/common project/episodes/$npm_package_config_episode"
   },
   "keywords": [
     "twine",
