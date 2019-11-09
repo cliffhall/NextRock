@@ -9,9 +9,10 @@
         <<action second>>Go to second branch
         <<action "<<set _hatchet_man to 'George Washington'>><<run setup.renderCurrentBranch()>>">>Set a variable and re-render scene
         <<extra "third branch" "<<run console.log($currentScene)>>" "_hatchet_man is 'George Washington'">>Log current scene to console and go to the third branch
-        <<cut "Facilities Hub">>Cut away to the Facilities Hub
+        <<cut "Facilities Hub" "<<set $super to 'Trooper'>><<run console.log($super)>>" "_hatchet_man is 'George Washington'">>Set var, log to console, and cut away to the Facilities Hub
+        <<cut "Central Hub" "_hatchet_man is 'George Washington'">>Just cut away to the Central Hub
     <</branch>>\
-    <<branch second start>>
+    <<branch second>>
         Text of the SECOND branch.
         <<action first>>Return to first branch
         <<action nowhere "true === false">>Filter this link out

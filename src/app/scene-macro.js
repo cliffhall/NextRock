@@ -12,7 +12,7 @@
             .
             <<action targetBranch | '<<macroToExecute>>' ['filterCondition']>>Text of action link.
             <<extra targetBranch '<<macroToExecute>>' ['filterCondition']>>Text of extra link.
-            <<cut targetPassage ['filterCondition']>>Text of cut link.
+            <<cut targetPassage  ['<<macroToExecute>>'] ['filterCondition']>>Text of cut link.
             .
             .
             .
@@ -48,7 +48,7 @@
      * Filter conditions are evaluated when the link is rendered. If false, the link will not be displayed.
      * When a Branch is reached which has no Actions, the Scene is marked as completed and will not render if visited again.
      * Cuts are like Actions except they target another Passage instead of a Branch of the current Scene.
-     * Unlike Actions, Cuts do not support macros in the first argument, but they do support filter conditions in the second arg.
+     * Cuts support macros or filter conditions in the second argument, and filter condition in the third arg if macro is in second.
      * When the user clicks on the link for a Cut, the Scene is marked as completed and will not render if visited again.
      * Cuts and Actions can be defined in any order.
      * Use the SugarCube idiom of a backslash at the end of each branch to remove unwanted blank lines: <</branch>>\
@@ -181,8 +181,8 @@
             }
 
             // Parse branch contents
-            currentScene.branches[branchName] = this.payload.map((part,index) => {
-                let retVal, link, arg1, arg2, arg3, contents;
+            currentScene.branches[branchName] = this.payload.map(part => {
+                let retVal, link, arg1, arg2, arg3, filter, macro, contents;
                 switch (part.name) {
                     case 'branch':
                         // Get the contents of the branch, the text to be rendered
@@ -193,18 +193,27 @@
                         // Get the first arg to the cut, the passage name to cut away to
                         arg1 = String(part.args[0]).trim();
 
-                        // Get the second arg to the cut, the optional filter condition
-                        arg2 = part.args[1];
+                        // Get the second (optional) arg to the cut, a macro OR a filter condition
+                        if (part.args.length > 1) {
+                            arg2 = part.args[1];
+                            if ((arg2.includes('<<') && arg2.includes('>>'))) {
+                                macro = arg2;
+                                // Get the third (optional) arg to the cut, a filter condition
+                                if (part.args.length > 2) filter = part.args[2];
+                            } else {
+                                filter = arg2;
+                            }
+                        }
 
                         // Get the contents of the cut (link text)
                         contents = String(part.contents).trim();
 
                         // Create the link
-                        link = `<<link "${contents}" "${arg1}">><<run setup.markCurrentSceneComplete()>><</link>>`;
+                        link = `<<link "${contents}" "${arg1}">>${macro}<<run setup.markCurrentSceneComplete()>><</link>>`;
 
                         // If there's a filter condition, wrap the link with it
-                        if (arg2) {
-                            retVal = filterWrap(link, arg2);
+                        if (filter) {
+                            retVal = filterWrap(link, filter);
                         } else {
                             retVal = link;
                         }
