@@ -3,7 +3,7 @@
     "ifid": "59A70EE1-9CAF-4FE1-A934-1DA5606001B7",
     "format": "SugarCube",
     "format-version": "2.29",
-    "start": "Airlock"
+    "start": "Rover Bay"
 }
 
 :: StoryTitle
@@ -27,7 +27,7 @@ Example
             'night'>>
 <</newcycle>>
 <<plot>>
-    <<point "Example Scene">>
+    <<point "Scene 001">>
 <</plot>>
 :: StoryCaption
 @@#time-cycle;@@

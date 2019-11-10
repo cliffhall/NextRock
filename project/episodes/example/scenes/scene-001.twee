@@ -1,0 +1,26 @@
+:: Scene 001 [scene]
+<<scene 'Scene 001'>>
+    <<branch first>>
+        The alien eyes you with a mixture of interest and (you hope) fear. Or it might be hunger. Your helmet's HUD is\
+        flashing a warning that you are about to hyperventilate.
+        <<action third>>Look around for something you can defend yourself with.
+        <<extra second "<<set $backstoryRead to true>><<run console.log($backstoryRead)>>" "$backstoryRead isnot true">>What the hell is happening?
+    <</branch>>\
+    <<branch second>>
+        You were outside doing some routine maintenance at the water pumping station when you saw them. Hundreds of them\
+        came swarming  over the ridge, each one ten or twelve feet tall. Real bug-eyed monsters. You managed to get back\
+        into the rover bay just in time, but one of them made it in with you.
+        <<action first>>Quit your woolgathering and do something!
+        <<cut "Airlock">>Dive into the airlock.
+    <</branch>>\
+    <<branch third>>
+        All three rovers are here, but there is no chance you could get into one of them before the monster attacks.\
+        On the repair bench are a bunch of greasy rags, a broken gear, and a long, heavy Space Wrench.
+        <<action "<<set _hasSpaceWrench to true>><<run setup.renderCurrentBranch()>>" "_hasSpaceWrench isnot true">>Pick up the Space Wrench.
+        <<extra "fourth branch" "<<set _hasSpaceWrench to false>>" "_hasSpaceWrench is true">>Throw the Space Wrench at the bug-eyed monster.
+    <</branch>>\
+    <<branch 'fourth branch'>>
+        The bug-eyed monster attacks with surprising ferocity and speed. However your aim is true and the Space Wrench\
+        lands square between its bulging eyes. Its tentacles flail and it falls softly to the floor in the low gravity.
+    <</branch>>\
+<</scene>>
