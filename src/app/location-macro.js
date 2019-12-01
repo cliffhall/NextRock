@@ -25,7 +25,14 @@
     Macro.add('location', {
         tags: null,
         handler : function () {
-            if (!State.getVar('$currentScene') && !State.getVar('$endingBranchShown')) $(this.output).wiki(this.payload[0].contents);
+            if (!State.getVar('$currentScene') && !State.getVar('$endingBranchShown')) {
+                // Create location container and add it to the DOM
+                let container = document.createElement('div');
+                container.setAttribute('id', 'locationContainer');
+                $(this.output).append(container);
+                $(container).empty();
+                $(container).wiki(String(this.payload[0].contents).trim());
+            }
         }
     });
 

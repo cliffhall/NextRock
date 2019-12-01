@@ -68,7 +68,7 @@
         “Come on, Lonnie,” you implore. “Get hold of yourself.”
 
         <<action 'Ramrod Lonnie into rover'>>Ramrod Lonnie into the rover.
-        <<cut 'Stockade Pod'>>Dump him into the stockade until you can go pee and figure out what to do with him.
+        <<cut 'Stockade Pod' '<<set $lonnieInStockade to true>>'>>Dump him into the stockade until you can go pee and figure out what to do with him.
     <</branch>>\
     <<branch 'Ramrod Lonnie into rover'>>
         With both hands, you hoist Lonnie to a standing position and stare straight into his bloodshot eyes.
@@ -83,6 +83,6 @@
         lightly.
 
         <<cut 'Rover 3'>>Get into the rover with him.
-        <<cut 'Toilet Pod'>>Go pee and let Lonnie do his maintenance.
+        <<cut 'Toilet Pod' '<<set $lonnieDoesMaintenance to true>>'>>Go pee and let Lonnie do his maintenance.
     <</branch>>\
 <</scene>>

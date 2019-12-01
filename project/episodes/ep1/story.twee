@@ -30,10 +30,10 @@ Mutiny or a Bounty
 <<plot>>
     <<point "Plot A Scene 1">>
     <<point "Plot A Scene 2" "$location is 'Rover Bay'">>
-    <<point "Plot A Scene 3" "$location is 'Airlock'">>
+    <<point "Plot A Scene 3" "$location is 'Airlock'" "$lonnieDoesMaintenance is true">>
 <</plot>>
 <<plot>>
-    <<point "Plot B Scene 1" "$location is 'Toilet Pod'">>
+    <<point "Plot B Scene 1" "$location is 'Toilet Pod'" "$lonnieInStockade isnot true">>
 <</plot>>
 
 :: StoryCaption

@@ -14,12 +14,12 @@
         his pallid, stubbled cheek. “Hang in there, Lonnie,” you say. He might be a thorn in your side, but the colony\
         can’t get by without him. At least not until the new recruits arrive.
 
-        The panel by the hub door indicates that the particulate matter concentration has dropped to\
-        acceptable levels. The chamber begins filling with air.
+        The panel by the hub door indicates that the particulate matter concentration has dropped to acceptable levels.\
+        The chamber begins filling with air.
 
         Finally, the light above the hub door turns green.
 
-        <<action 'Call for assistance'>> Call for medical assistance and un-suit.
+        <<action 'Call for assistance' '<<set $lonnieIncapacitated to true>>'>> Call for medical assistance and un-suit.
     <</branch>>\
     <<branch 'Call for assistance'>>
         You chin your open-channel suit mic and call for a stretcher and someone with a strong back. After grabbing a\
@@ -38,8 +38,7 @@
         The inner hatch opens and Chet Kahill and Chelsea Weaver — your Security and Medical chiefs respectively —\
         appear, both looking worried.
 
-        > Explain what happened.
-        > Tell them to handle Lonnie, then go back out and check the rover.
+        > Tell them to handle Lonnie, then go back out and check the rover's travel logs.
         <<cut 'Toilet Pod'>>Your world is turning yellow, delegate and go pee, for god’s sake!
     <</branch>>\
 <</scene>>
