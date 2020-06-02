@@ -62,7 +62,3 @@ npm run watch:twee
 
 ## Project structure and build process
 The skeleton for this project is called [slim-tweego](https://github.com/cliffhall/slim-tweego). For more information about how it works or to start your own tweego project, go there.
-
-
-## Credits
-Background image by NASA, is in the public domain: https://upload.wikimedia.org/wikipedia/commons/6/6e/Martian_habitat_with_colonists.jpg
