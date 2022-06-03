@@ -4,8 +4,11 @@ Run a colony on the Red Planet. An episodic series of Twine games.
 ![Colony Map](map.png)
 ![Screenshot](screenshot.png)
 
+## GAME
+* [Play current build](https://nextrock.imajn.com) with full navigation and branching narrative. Very WIP, but solid.
+
 ## STATUS
-**Work in Progress** 
+**Work in Progress**
  * UI is styled and works on mobile, tablet, and desktop.
  * All locations on map exist and you can navigate between them via links. 
  * Plot, Scene, Branch, Action, Location macros written to support multiple plots with branching scenes.
