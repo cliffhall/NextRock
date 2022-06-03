@@ -19,7 +19,7 @@
 
         Finally, the light above the hub door turns green.
 
-        <<action 'Call for assistance' '<<set $lonnieIncapacitated to true>>'>> Call for medical assistance and un-suit.
+        <<action 'Call for assistance <<set $lonnieIncapacitated to true>>'>> Call for medical assistance and un-suit.
     <</branch>>\
     <<branch 'Call for assistance'>>
         You chin your open-channel suit mic and call for a stretcher and someone with a strong back. After grabbing a\

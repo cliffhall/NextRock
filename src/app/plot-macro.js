@@ -69,11 +69,11 @@
                     // Build the point object
                     point.include = include;
                     if (selectCondition && !discardCondition) {
-                        point.condition = `<<if ${selectCondition}>><<set $selectPoint to true>><</if>>`
+                        point.condition = `<<if ${selectCondition}>><<set $selectPoint to true>><</if>>`;
                     } else if (selectCondition && discardCondition) {
-                        point.condition = `<<if ${selectCondition}>><<set $selectPoint to true>><<elseif ${discardCondition}>><<set $discardPoint to true>><<set $selectPoint to false>><</if>>`
+                        point.condition = `<<if ${selectCondition}>><<set $selectPoint to true>><<elseif ${discardCondition}>><<set $discardPoint to true>><<set $selectPoint to false>><</if>>`;
                     } else if (!selectCondition && discardCondition) {
-                        point.condition = `<<if ${discardCondition}>><<set $discardPoint to true>><<set $selectPoint to false>><</if>>`
+                        point.condition = `<<if ${discardCondition}>><<set $discardPoint to true>><<set $selectPoint to false>><</if>>`;
                     }
 
                     console.log(point.condition);

@@ -46,7 +46,7 @@ npm run build-once
 ```
 
 ### Test the output
-Open ```dist/index.html``` in your browser of choice
+Open ```docs/index.html``` in your browser of choice
 
 ## CONTINUOUS DEVELOPMENT
 To work on JS, CSS, and TWEE sources and have them continuously compiled as you make changes, you need to open two dedicated terminal windows and run:

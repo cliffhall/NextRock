@@ -1,5 +1,21 @@
 :: Medical Hub [location hub]
-
+<<location>>
+<<switch visited()>>\
+<<case 1>>\
+    You once had to visit the psych pod shortly after arrival. \
+    Now you know to push those feelings of loneliness way down. \
+    And remember, Pluto is even farther out, and its miserable there. \
+    You could be on Pluto.
+<<case 2 9 15>>\
+	It's comforting that somebody's around in case you get a case of the Martian crabs or something.
+<<case 3 5 8 11 14>>\
+	No one wants to visit this hub. It's depressing and reminds you of your insides.
+<<default>>\
+    Remember those eye doctors they had at Walmart back on Earth? \
+    Tucked into their cramped little cubby holes right by the registers and the returns department? \
+    NextRock has deftly replicated that model here with much the same visual impact. \
+<</switch>>\
+<</location>>
 <<nav>>
     <<section Exits>>
         <<action "Central Hub">>

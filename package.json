@@ -2,15 +2,15 @@
   "name": "NextRock",
   "version": "1.0.0",
   "description": "Run a colony on the red planet. A Twine game",
-  "main": "./dist/index.html",
+  "main": "docs/index.html",
   "config": {
     "format": "sugarcube-2",
     "episode": "ep1"
   },
   "scripts": {
-    "build-once": "gulp build && tweego -f $npm_package_config_format -o dist/index.html --head=src/head-content.html project/common project/episodes/$npm_package_config_episode",
+    "build-once": "gulp build && tweego -f $npm_package_config_format -o docs/index.html --head=src/head-content.html project/common project/episodes/$npm_package_config_episode",
     "watch:gulp": "gulp default",
-    "watch:twee": "tweego -f $npm_package_config_format -w -o dist/$npm_package_config_episode.html --head=src/head-content.html project/common project/episodes/$npm_package_config_episode"
+    "watch:twee": "tweego -f $npm_package_config_format -w -o docs/$npm_package_config_episode.html --head=src/head-content.html project/common project/episodes/$npm_package_config_episode"
   },
   "keywords": [
     "twine",
