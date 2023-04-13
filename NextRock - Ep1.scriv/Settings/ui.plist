@@ -15,8 +15,8 @@
 	<false/>
 	<key>binderSplitFrames</key>
 	<array>
-		<string>{{0, 0}, {208, 969}}</string>
-		<string>{{209, 0}, {1414, 969}}</string>
+		<string>{{0, 0}, {208, 1010}}</string>
+		<string>{{209, 0}, {1471, 1010}}</string>
 	</array>
 	<key>bookmarksPreviewTextSettings</key>
 	<dict>
@@ -183,6 +183,11 @@
 			<key>Row</key>
 			<integer>-1</integer>
 		</dict>
+		<key>57ECC98D-8199-4935-B5F1-D1F7A2D60646</key>
+		<dict>
+			<key>Row</key>
+			<integer>-1</integer>
+		</dict>
 		<key>5B1A2481-19DB-417C-8B73-157D878D8EC8</key>
 		<dict>
 			<key>Row</key>
@@ -209,6 +214,11 @@
 			<integer>-1</integer>
 		</dict>
 		<key>6830B6AC-686B-4370-A979-2FD1D7288BDA</key>
+		<dict>
+			<key>Row</key>
+			<integer>-1</integer>
+		</dict>
+		<key>69822417-D015-4BDD-90BD-18AAA6198D15</key>
 		<dict>
 			<key>Row</key>
 			<integer>-1</integer>
@@ -279,12 +289,22 @@
 			<key>Row</key>
 			<integer>-1</integer>
 		</dict>
+		<key>ABC28AA8-AE60-4781-89E6-2FE947787115</key>
+		<dict>
+			<key>Row</key>
+			<integer>-1</integer>
+		</dict>
 		<key>B0377E49-74E0-4ABE-BFEB-A1780F003CF5</key>
 		<dict>
 			<key>Row</key>
 			<integer>-1</integer>
 		</dict>
 		<key>B23F6C0E-BE2C-4B0B-84E3-99FB45FD72DF</key>
+		<dict>
+			<key>Row</key>
+			<integer>-1</integer>
+		</dict>
+		<key>B2F45879-3807-4149-9872-33B07B3E934B</key>
 		<dict>
 			<key>Row</key>
 			<integer>-1</integer>
@@ -362,8 +382,7 @@
 	</dict>
 	<key>editorSplitFrames</key>
 	<array>
-		<string>{{0, 0}, {562, 939}}</string>
-		<string>{{563, 0}, {550, 939}}</string>
+		<string>{{585, 0}, {585, 980}}</string>
 	</array>
 	<key>fullScreenBackgroundFade</key>
 	<real>1</real>
@@ -381,22 +400,22 @@
 	<integer>2</integer>
 	<key>inspectorSplitFrames</key>
 	<array>
-		<string>{{0, 0}, {1113, 939}}</string>
-		<string>{{1114, 0}, {300, 939}}</string>
+		<string>{{0, 0}, {1170, 980}}</string>
+		<string>{{1171, 0}, {300, 980}}</string>
 	</array>
 	<key>inspectorWidth</key>
 	<real>245</real>
 	<key>lastDocumentSplitType</key>
 	<integer>1</integer>
 	<key>mainDocumentEditor.scrollRect</key>
-	<string>{{0, 0}, {428, 706.39999999999998}}</string>
+	<string>{{0, 0}, {620, 739.20000000000005}}</string>
 	<key>mainDocumentEditor.textEditorState</key>
 	<dict>
 		<key>textScaleFactor</key>
 		<real>1.25</real>
 	</dict>
 	<key>mainWindowFrame</key>
-	<string>0 36 1623 991 0 0 1680 1027 </string>
+	<string>0 35 1623 992 0 0 1680 1050 </string>
 	<key>searchResultsTable</key>
 	<dict>
 		<key>order</key>
@@ -410,7 +429,7 @@
 		</dict>
 	</dict>
 	<key>supportingDocumentEditor.scrollRect</key>
-	<string>{{0, 0}, {437.60000000000002, 680.79999999999995}}</string>
+	<string>{{0, 0}, {456, 713.60000000000002}}</string>
 	<key>supportingDocumentEditor.textEditorState</key>
 	<dict>
 		<key>textScaleFactor</key>

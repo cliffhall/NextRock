@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ScrivenerProject Identifier="A7D1C1AF-AAC9-4F7A-B5D0-7885832C3E4F" Version="2.0" Creator="SCRMAC-3.1.5-12258" Device="Canterbury" Author="Clifford Hall" Modified="2022-06-03 15:59:01 -0400" ModID="C81F2328-CE5D-4495-BB54-EB57818B0858">
+<ScrivenerProject Identifier="A7D1C1AF-AAC9-4F7A-B5D0-7885832C3E4F" Version="2.0" Creator="SCRMAC-3.1.5-12258" Device="Canterbury" Author="Clifford Hall" Modified="2022-06-12 15:58:35 -0400" ModID="56B7C8C6-C1EB-4981-BF72-F401D872F5F4">
     <Binder>
         <BinderItem UUID="F8F9FDEF-FD9F-4A8C-B33D-3434A1220ADC" Type="Text" Created="2019-09-15 18:46:12 -0400" Modified="2019-09-15 18:46:12 -0400">
             <Title>Short Story Format</Title>
@@ -247,9 +247,12 @@
             <TextSettings>
                 <TextSelection>0,0</TextSelection>
             </TextSettings>
+            <CorkboardAndOutliner>
+                <SelectedSubdocumentUUIDs>61E5B75E-0F6D-40A5-AB51-099889879336</SelectedSubdocumentUUIDs>
+            </CorkboardAndOutliner>
             <DefaultChildTemplateUUID>BE948F87-BDA3-4551-8E08-AC248FE89301</DefaultChildTemplateUUID>
             <Children>
-                <BinderItem UUID="A20E3F50-263F-4FF4-BD87-BA34CD6084D6" Type="Text" Created="2019-10-19 18:39:14 -0400" Modified="2019-10-19 19:08:50 -0400">
+                <BinderItem UUID="A20E3F50-263F-4FF4-BD87-BA34CD6084D6" Type="Text" Created="2019-10-19 18:39:14 -0400" Modified="2022-06-12 15:58:34 -0400">
                     <Title>Bill Brewster</Title>
                     <MetaData>
                         <IncludeInCompile>Yes</IncludeInCompile>
@@ -257,7 +260,7 @@
                         <IconFileName>Characters (Character Sheet)</IconFileName>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>54,0</TextSelection>
+                        <TextSelection>55,0</TextSelection>
                     </TextSettings>
                 </BinderItem>
                 <BinderItem UUID="1A6E8460-32EC-4FA6-946E-6715EE508A46" Type="Text" Created="2019-10-19 18:45:28 -0400" Modified="2019-10-19 18:49:19 -0400">
@@ -502,7 +505,7 @@
                                                 <IconFileName>Locations (Location Sheet)</IconFileName>
                                             </MetaData>
                                             <TextSettings>
-                                                <TextSelection>9,0</TextSelection>
+                                                <TextSelection>0,0</TextSelection>
                                             </TextSettings>
                                         </BinderItem>
                                         <BinderItem UUID="437ECB90-D2E8-4590-9113-0D7D3D407848" Type="Text" Created="2019-09-15 19:19:22 -0400" Modified="2019-09-15 19:19:57 -0400">
@@ -1193,10 +1196,10 @@
     </ProjectBookmarks>
     <ProjectTargets Notify="No">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="Yes" Deadline="2011-04-12 08:24:39 -0400" IgnoreDeadline="Yes">0</DraftTarget>
-        <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="No" NextResetDate="2022-06-04 01:00:00 -0400" ResetType="Time" ResetTime="00:00" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
-        <PreviousSession Words="0" Characters="0" Date="2022-06-03 15:58:57 -0400"/>
+        <SessionTarget Type="Words" CountDraftOnly="Yes" AllowNegatives="No" NextResetDate="2022-06-13 01:00:00 -0400" ResetType="Time" ResetTime="00:00" DeterminedFromDeadline="No" WritingDays="" CanWriteOnDeadlineDate="No">0</SessionTarget>
+        <PreviousSession Words="0" Characters="0" Date="2022-06-12 14:52:56 -0400"/>
     </ProjectTargets>
-    <RecentWritingHistory Date="2022-06-03 00:00:00 -0400">
+    <RecentWritingHistory Date="2022-06-13 00:00:00 -0400">
         <DraftWordCount>0</DraftWordCount>
         <DraftCharCount>0</DraftCharCount>
         <OtherWordCount>0</OtherWordCount>
